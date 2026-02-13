@@ -31,11 +31,14 @@ export default function Navbar() {
     <header className="fixed top-0 right-0 left-0 z-50 border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 text-lg font-bold tracking-tight text-zinc-50">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-br from-blue-500 to-purple-600 text-xs font-bold text-white">
-            {SITE_OWNER.initials}
-          </span>
-          <span className="hidden sm:inline">{SITE_OWNER.fullName}</span>
+        <Link href="/" className="group flex items-center gap-2 text-lg font-bold tracking-tight text-zinc-50">
+          <motion.span
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            {SITE_OWNER.fullName}
+          </motion.span>
         </Link>
 
         {/* Desktop nav */}

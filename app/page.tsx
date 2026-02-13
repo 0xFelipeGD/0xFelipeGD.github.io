@@ -31,9 +31,16 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="relative h-40 w-40 shrink-0 overflow-hidden rounded-full border-2 border-zinc-700 shadow-2xl sm:h-48 sm:w-48 md:h-56 md:w-56"
+              className="relative h-56 w-56 shrink-0 overflow-hidden rounded-full border-2 border-zinc-700 shadow-2xl sm:h-64 sm:w-64 md:h-92 md:w-92"
             >
-              <Image src={SITE_OWNER.avatarSrc} alt={SITE_OWNER.firstName} fill className="object-cover" priority />
+              <Image
+                src={SITE_OWNER.avatarSrc}
+                alt={SITE_OWNER.firstName}
+                width={368}
+                height={368}
+                className="object-cover object-center transition-transform hover:scale-105"
+                priority
+              />
             </motion.div>
 
             {/* Text content */}

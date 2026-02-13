@@ -11,7 +11,7 @@ export const SITE_OWNER = {
   fullName: "Felipe Gonçalves Diogo",
   initials: "FD",
   role: "Dual-Career Professional",
-  avatarSrc: "/images/avatar.jpg",
+  avatarSrc: "/images/Me2.jpg",
   // CVs – one for each career
   cvWebDev: "/files/Web_Developer_2026.pdf",
   cvEngineer: "/files/Engineer_2026.pdf",
