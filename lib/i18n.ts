@@ -84,8 +84,8 @@ const translations = {
 
   // ── Project page ───────────────────────────────────────────────────────
   "project.backToProjects": {
-    en: "← Back to projects",
-    pt: "← Voltar aos projetos",
+    en: "Back to projects",
+    pt: "Voltar aos projetos",
   },
 
   // ── Hobbies ────────────────────────────────────────────────────────────

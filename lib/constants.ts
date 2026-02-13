@@ -230,7 +230,7 @@ export const PROJECTS_WEBDEV: Project[] = [
       en: "World Cup simulator using JavaScript, HTML and CSS.",
       pt: "Simulador da Copa do Mundo usando JavaScript, HTML e CSS.",
     },
-    coverImage: "/images/projects/webdev/fifa-simulator.jpg",
+    coverImage: "/images/projects/webdev/FIFA-COVER-PROJECT.png",
     tags: ["JavaScript", "HTML", "CSS"],
   },
   {
@@ -416,7 +416,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "World Cup simulator with vanilla JavaScript",
       pt: "Simulador da Copa do Mundo com JavaScript vanilla",
     },
-    bannerImage: "/images/projects/webdev/fifa-simulator.jpg",
+    bannerImage: "/images/projects/webdev/FIFA2030.png",
     career: "webdev",
     sections: [
       {
