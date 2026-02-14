@@ -298,13 +298,13 @@ export const PROJECTS_ENGINEER: Project[] = [
   },
   {
     slug: "mov-monitoring",
-    title: "MOV Monitoring Platform",
+    title: "Thrust Testing Device (TTD)",
     description: {
-      en: "IoT monitoring platform with Raspberry Pi edge node, temporal databases and AI dashboards.",
-      pt: "Plataforma de monitoramento IoT com nó edge Raspberry Pi, bancos temporais e dashboards com IA.",
+      en: "Thrust Testing Device (TTD) — Used for testing and evaluation of UAV propulsion motors, with integrated sensors and real-time data acquisition.",
+      pt: "Dispositivo de Teste de Empuxo (TTD) — Utilizado para teste e avaliação de motores de propulsão de UAVs, com sensores integrados e aquisição de dados em tempo real.",
     },
-    coverImage: "/images/projects/engineer/mov-monitoring.jpg",
-    tags: ["IoT", "MQTT", "Grafana", "AI"],
+    coverImage: "/images/projects/engineer/TTD2.jpeg",
+    tags: ["IoT", "SCADA", "Power Management", "Data Acquisition"],
   },
   {
     slug: "engineer-project-5",
@@ -318,12 +318,12 @@ export const PROJECTS_ENGINEER: Project[] = [
   },
   {
     slug: "engineer-project-6",
-    title: "Project 6",
+    title: "SPIRIT UGV",
     description: {
       en: "Coming soon — add your project details here.",
       pt: "Em breve — adicione os detalhes do seu projeto aqui.",
     },
-    coverImage: "/images/projects/engineer/project-6.jpg",
+    coverImage: "/images/projects/engineer/SPIRIT-UGV.png",
     tags: ["TBD"],
   },
 ];
@@ -594,33 +594,33 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     ],
   },
   "mov-monitoring": {
-    title: "MOV Monitoring Platform",
+    title: "Thrust Testing Device (TTD)",
     subtitle: {
-      en: "IoT monitoring with edge computing and AI dashboards",
-      pt: "Monitoramento IoT com computação de borda e dashboards com IA",
+      en: "Thrust Testing Device (TTD) — Used for testing and evaluation of UAV propulsion motors",
+      pt: "Dispositivo de Teste de Empuxo (TTD) — Utilizado para teste e avaliação de motores de propulsão de UAVs",
     },
-    bannerImage: "/images/projects/engineer/mov-monitoring.jpg",
+    bannerImage: "/images/projects/engineer/bannerTTD.png",
     career: "engineer",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Create an IoT monitoring platform that collects real-time data from Raspberry Pi edge nodes deployed on UGVs, processes the data through temporal databases, and visualizes it with AI-powered dashboards.",
-          pt: "Criar uma plataforma de monitoramento IoT que coleta dados em tempo real de nós edge Raspberry Pi implantados em UGVs, processa os dados através de bancos temporais e os visualiza com dashboards potencializados por IA.",
+          en: "Create and Develop a production-grade device for testing and evaluating UAV propulsion motors, capable of measuring thrust, torque, power consumption, and other performance metrics under controlled conditions.",
+          pt: "Criar e desenvolver um dispositivo de nível produção para teste e avaliação de motores de propulsão de UAVs, capaz de medir empuxo, torque, consumo de energia e outros parâmetros de desempenho em condições controladas.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Implemented MQTT communication between edge nodes and server, configured InfluxDB for time-series storage, built Grafana dashboards with custom panels, and integrated AI for anomaly detection and predictive insights.",
-          pt: "Implementei comunicação MQTT entre nós edge e servidor, configurei InfluxDB para armazenamento de séries temporais, construí dashboards Grafana com painéis customizados e integrei IA para detecção de anomalias e insights preditivos.",
+          en: "Designed and built a Thrust Testing Device (TTD) with integrated sensors for measuring thrust, torque, and power consumption. Developed a data acquisition system using high speed networks for real-time monitoring.",
+          pt: "Projetei e construí um Dispositivo de Teste de Empuxo (TTD) com sensores integrados para medir empuxo, torque e consumo de energia. Desenvolvi um sistema de aquisição de dados usando redes de alta velocidade para monitoramento em tempo real.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A production-grade monitoring system actively used by Movewer Technologies for real-time UGV fleet monitoring and preventive maintenance.",
-          pt: "Um sistema de monitoramento de nível produção ativamente utilizado pela Movewer Technologies para monitoramento de frota UGV em tempo real e manutenção preventiva.",
+          en: "A production-grade Thrust Testing Device actively used by Psyche AeroSpace for testing and evaluation of UAV propulsion motors.",
+          pt: "Um Dispositivo de Teste de Empuxo de nível produção ativamente utilizado pela Psyche AeroSpace para teste e avaliação de motores de propulsão de UAVs.",
         },
       },
     ],
@@ -658,19 +658,33 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     ],
   },
   "engineer-project-6": {
-    title: "Project 6",
+    title: "SPIRIT UGV",
     subtitle: {
-      en: "Coming soon — placeholder project",
-      pt: "Em breve — projeto placeholder",
+      en: "A UGV Plataform for collect and analyze data in field operations, designed for agricultural and industrial applications.",
+      pt: "Uma plataforma UGV para coletar e analisar dados em operações de campo, projetada para aplicações agrícolas e industriais.",
     },
-    bannerImage: "/images/projects/engineer/project-6.jpg",
+    bannerImage: "/images/projects/engineer/SPIRIT-BANNER.png",
     career: "engineer",
     sections: [
       {
-        heading: { en: "About", pt: "Sobre" },
+        heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "This project is a placeholder. Replace this content with your own project details in lib/constants.ts.",
-          pt: "Este projeto é um placeholder. Substitua este conteúdo pelos detalhes do seu projeto em lib/constants.ts.",
+          en: "Create a UGV platform for collecting and analyzing data in agro application, analyses soil conditions.",
+          pt: "Criar uma plataforma UGV para coletar e analisar dados em operações de campo, projetada para aplicações agrícolas e industriais.",
+        },
+      },
+      {
+        heading: { en: "The Solution", pt: "A Solução" },
+        body: {
+          en: "Developed a portable controller with integrated SIEMENS automation equipment, enabling efficient on-site control and monitoring of industrial processes.",
+          pt: "Desenvolvi uma maleta controladora portátil com equipamentos de automação SIEMENS integrados, permitindo um controle e monitoramento eficientes dos processos industriais no local.",
+        },
+      },
+      {
+        heading: { en: "Results", pt: "Resultados" },
+        body: {
+          en: "A production-grade portable controller actively used for on-site industrial process control and monitoring.",
+          pt: "Uma maleta controladora portátil de nível produção ativamente utilizada para controle e monitoramento de processos industriais no local.",
         },
       },
     ],
