@@ -273,7 +273,7 @@ export const PROJECTS_ENGINEER: Project[] = [
       en: "1200 kg payload UGV (Armax) — full development with documentation, performance studies and commercial analyses.",
       pt: "UGV de 1200 kg de payload (Armax) — desenvolvimento completo com documentação, estudos de desempenho e análises comerciais.",
     },
-    coverImage: "/images/projects/engineer/ugv.jpg",
+    coverImage: "/images/projects/engineer/ARMAX.png",
     tags: ["UGV", "Control Systems", "Power"],
   },
   {
@@ -283,7 +283,7 @@ export const PROJECTS_ENGINEER: Project[] = [
       en: "Medium-payload agricultural quadcopter drone — from project planning to electrical and mechanical systems.",
       pt: "Drone quadricóptero agrícola de carga média — do planejamento ao projeto elétrico e mecânico.",
     },
-    coverImage: "/images/projects/engineer/agro-drone.jpg",
+    coverImage: "/images/projects/engineer/AgroDrone.png",
     tags: ["Drone", "Quadcopter", "Agriculture"],
   },
   {
@@ -293,7 +293,7 @@ export const PROJECTS_ENGINEER: Project[] = [
       en: "Drone-assist complex with automated refueling, energy management and intelligent control hub.",
       pt: "Complexo de assistência a drones com reabastecimento automatizado, gestão de energia e hub de controle inteligente.",
     },
-    coverImage: "/images/projects/engineer/drone-base.jpg",
+    coverImage: "/images/projects/engineer/AURA.png",
     tags: ["Distributed Systems", "IoT", "Automation"],
   },
   {
@@ -308,13 +308,13 @@ export const PROJECTS_ENGINEER: Project[] = [
   },
   {
     slug: "engineer-project-5",
-    title: "Project 5",
+    title: "SIEMENS Portable Case",
     description: {
-      en: "Coming soon — add your project details here.",
-      pt: "Em breve — adicione os detalhes do seu projeto aqui.",
+      en: "SIEMENS automation portable controller integrating industrial automation equipment for on-site control and monitoring.",
+      pt: "Maleta Controladora Portátil que integra equipamentos SIEMENS de automação Industrial",
     },
-    coverImage: "/images/projects/engineer/project-5.jpg",
-    tags: ["TBD"],
+    coverImage: "/images/projects/engineer/SIEMENS.jpeg",
+    tags: ["Siemens", "Automation", "Special Development", "Control Device"],
   },
   {
     slug: "engineer-project-6",
@@ -503,7 +503,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "1200 kg payload UGV — Armax",
       pt: "UGV de 1200 kg de payload — Armax",
     },
-    bannerImage: "/images/projects/engineer/ugv-banner.jpg",
+    bannerImage: "/images/projects/engineer/ProjectARMAX.png",
     career: "engineer",
     sections: [
       {
@@ -535,7 +535,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Medium-payload agricultural quadcopter drone",
       pt: "Drone quadricóptero agrícola de carga média",
     },
-    bannerImage: "/images/projects/engineer/agro-drone.jpg",
+    bannerImage: "/images/projects/engineer/drone-banner.png",
     career: "engineer",
     sections: [
       {
@@ -567,7 +567,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Autonomous drone support complex with intelligent control hub",
       pt: "Complexo autônomo de suporte a drones com hub de controle inteligente",
     },
-    bannerImage: "/images/projects/engineer/drone-base.jpg",
+    bannerImage: "/images/projects/engineer/AURA-BANNER.png",
     career: "engineer",
     sections: [
       {
@@ -626,19 +626,33 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     ],
   },
   "engineer-project-5": {
-    title: "Project 5",
+    title: "SIEMENS Portable Case",
     subtitle: {
-      en: "Coming soon — placeholder project",
-      pt: "Em breve — projeto placeholder",
+      en: "Portable controller integrating SIEMENS automation equipment for on-site operations",
+      pt: "Maleta Controladora Portátil que integra equipamentos SIEMENS de automação Industrial",
     },
-    bannerImage: "/images/projects/engineer/project-5.jpg",
+    bannerImage: "/images/projects/engineer/Case-banner.png",
     career: "engineer",
     sections: [
       {
-        heading: { en: "About", pt: "Sobre" },
+        heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "This project is a placeholder. Replace this content with your own project details in lib/constants.ts.",
-          pt: "Este projeto é um placeholder. Substitua este conteúdo pelos detalhes do seu projeto em lib/constants.ts.",
+          en: "Create a portable controller that integrates SIEMENS automation equipment for on-site operations, allowing for efficient control and monitoring of industrial processes.",
+          pt: "Criar uma maleta controladora portátil que integra equipamentos de automação SIEMENS para operações no local, permitindo um controle e monitoramento eficientes dos processos industriais.",
+        },
+      },
+      {
+        heading: { en: "The Solution", pt: "A Solução" },
+        body: {
+          en: "Developed a portable controller with integrated SIEMENS automation equipment, enabling efficient on-site control and monitoring of industrial processes.",
+          pt: "Desenvolvi uma maleta controladora portátil com equipamentos de automação SIEMENS integrados, permitindo um controle e monitoramento eficientes dos processos industriais no local.",
+        },
+      },
+      {
+        heading: { en: "Results", pt: "Resultados" },
+        body: {
+          en: "A production-grade portable controller actively used for on-site industrial process control and monitoring.",
+          pt: "Uma maleta controladora portátil de nível produção ativamente utilizada para controle e monitoramento de processos industriais no local.",
         },
       },
     ],
