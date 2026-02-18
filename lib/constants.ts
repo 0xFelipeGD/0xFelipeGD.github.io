@@ -240,7 +240,7 @@ export const PROJECTS_WEBDEV: Project[] = [
       en: "Coming soon",
       pt: "Em breve",
     },
-    coverImage: "/images/projects/webdev/project-4.jpg",
+    coverImage: "/images/projects/webdev/C1.png",
     tags: ["TBD"],
   },
   {
@@ -250,7 +250,7 @@ export const PROJECTS_WEBDEV: Project[] = [
       en: "Coming soon",
       pt: "Em breve",
     },
-    coverImage: "/images/projects/webdev/project-5.jpg",
+    coverImage: "/images/projects/webdev/C2.png",
     tags: ["TBD"],
   },
   {
@@ -260,7 +260,7 @@ export const PROJECTS_WEBDEV: Project[] = [
       en: "Coming soon",
       pt: "Em breve",
     },
-    coverImage: "/images/projects/webdev/project-6.jpg",
+    coverImage: "/images/projects/webdev/C3.png",
     tags: ["TBD"],
   },
 ];
@@ -448,7 +448,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Coming soon",
       pt: "Em breve",
     },
-    bannerImage: "/images/projects/webdev/project4.jpg",
+    bannerImage: "/images/projects/webdev/C1.png",
     career: "webdev",
     sections: [
       {
@@ -466,7 +466,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Coming soon",
       pt: "Em breve",
     },
-    bannerImage: "/images/projects/webdev/project5.jpg",
+    bannerImage: "/images/projects/webdev/C2.png",
     career: "webdev",
     sections: [
       {
@@ -484,7 +484,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Coming soon",
       pt: "Em breve",
     },
-    bannerImage: "/images/projects/webdev/project6.jpg",
+    bannerImage: "/images/projects/webdev/C3.png",
     career: "webdev",
     sections: [
       {
@@ -732,8 +732,8 @@ export const HOBBIES: Hobby[] = [
   {
     title: { en: "Electronics & DIY", pt: "Eletrônica & DIY" },
     description: {
-      en: "Tinkering with electronics, 3D printing and maker projects.",
-      pt: "Mexer com eletrônica, impressão 3D e projetos maker.",
+      en: "Tinkering with electronics,and maker projects.",
+      pt: "Mexer com eletrônica,e projetos.",
     },
     icon: "🔧",
     image: "/images/hobbies/Rasp.png",
