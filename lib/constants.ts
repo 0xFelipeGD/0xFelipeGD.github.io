@@ -11,7 +11,7 @@ export const SITE_OWNER = {
   fullName: "Felipe Gonçalves Diogo",
   initials: "FD",
   role: "Dual-Career Professional",
-  avatarSrc: "/images/Me2.jpg",
+  avatarSrc: "/images/me3.jpeg",
   // CVs – one for each career
   cvWebDev: "/files/Web_Developer_2026.pdf",
   cvEngineer: "/files/Engineer_2026.pdf",
@@ -210,17 +210,17 @@ export const PROJECTS_WEBDEV: Project[] = [
       en: "Full monitoring platform with MQTT, Node-Red, InfluxDB, Grafana and AI insights.",
       pt: "Plataforma completa de monitoramento com MQTT, Node-Red, InfluxDB, Grafana e insights de IA.",
     },
-    coverImage: "/images/projects/webdev/mov-platform.jpg",
+    coverImage: "/images/projects/webdev/MOV3.png",
     tags: ["MQTT", "Node-Red", "InfluxDB", "Grafana", "AI"],
   },
   {
     slug: "nextjs-web-app",
     title: "Next.js Web App",
     description: {
-      en: "FIFA World Cup 2030 Simulator built with Next.js, TypeScript and authentication.",
-      pt: "Simulador da Copa do Mundo FIFA 2030 construído com Next.js, TypeScript e autenticação.",
+      en: "A simple Web App built with Next.js, TypeScript and authentication, for didactic purposes.",
+      pt: "Um aplicativo web simples construído com Next.js, TypeScript e autenticação, para fins didáticos.",
     },
-    coverImage: "/images/projects/webdev/nextjs-app.jpg",
+    coverImage: "/images/projects/webdev/Dev3.png",
     tags: ["Next.js", "TypeScript", "Auth"],
   },
   {
@@ -237,8 +237,8 @@ export const PROJECTS_WEBDEV: Project[] = [
     slug: "webdev-project-4",
     title: "Project 4",
     description: {
-      en: "Coming soon — add your project details here.",
-      pt: "Em breve — adicione os detalhes do seu projeto aqui.",
+      en: "Coming soon",
+      pt: "Em breve",
     },
     coverImage: "/images/projects/webdev/project-4.jpg",
     tags: ["TBD"],
@@ -247,8 +247,8 @@ export const PROJECTS_WEBDEV: Project[] = [
     slug: "webdev-project-5",
     title: "Project 5",
     description: {
-      en: "Coming soon — add your project details here.",
-      pt: "Em breve — adicione os detalhes do seu projeto aqui.",
+      en: "Coming soon",
+      pt: "Em breve",
     },
     coverImage: "/images/projects/webdev/project-5.jpg",
     tags: ["TBD"],
@@ -257,8 +257,8 @@ export const PROJECTS_WEBDEV: Project[] = [
     slug: "webdev-project-6",
     title: "Project 6",
     description: {
-      en: "Coming soon — add your project details here.",
-      pt: "Em breve — adicione os detalhes do seu projeto aqui.",
+      en: "Coming soon",
+      pt: "Em breve",
     },
     coverImage: "/images/projects/webdev/project-6.jpg",
     tags: ["TBD"],
@@ -352,7 +352,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Full IoT monitoring platform with AI-powered insights",
       pt: "Plataforma completa de monitoramento IoT com insights de IA",
     },
-    bannerImage: "/images/projects/webdev/mov-platform-banner.jpg",
+    bannerImage: "/images/projects/webdev/MOV-Plataform.png",
     career: "webdev",
     sections: [
       {
@@ -365,15 +365,15 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Built a pipeline using Node-Red as the edge processing layer, InfluxDB for temporal data storage, and Grafana for interactive dashboards. AI integration provides insights beyond raw sensor data.",
-          pt: "Construí um pipeline usando Node-Red como camada de processamento edge, InfluxDB para armazenamento temporal e Grafana para dashboards interativos. Integração com IA fornece insights além dos dados brutos.",
+          en: "Built a pipeline using Node-Red as the edge processing layer, InfluxDB for temporal data storage, and Grafana for interactive dashboards. AI integration provides insights beyond raw sensor data using Python.",
+          pt: "Construí um pipeline usando Node-Red como camada de processamento edge, InfluxDB para armazenamento temporal e Grafana para dashboards interativos. Integração com IA fornece insights além dos dados brutos usando Python.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A fully functional, scalable monitoring platform deployed in production for Movewer Technologies UGV operations.",
-          pt: "Uma plataforma de monitoramento totalmente funcional e escalável implantada em produção para operações UGV da Movewer Technologies.",
+          en: "A fully functional, scalable monitoring platform deployed in production for Movewer Technologies UGV operations.(This project is currently under development, images are conceptual placeholders.)",
+          pt: "Uma plataforma de monitoramento totalmente funcional e escalável implantada em produção para operações UGV da Movewer Technologies.(Este projeto está atualmente em desenvolvimento, as imagens são placeholders conceituais.)",
         },
       },
     ],
@@ -381,10 +381,10 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   "nextjs-web-app": {
     title: "Next.js Web App",
     subtitle: {
-      en: "FIFA World Cup 2030 Simulator — Next.js, TypeScript & Auth",
-      pt: "Simulador da Copa do Mundo FIFA 2030 — Next.js, TypeScript & Auth",
+      en: "A simple Web App built with Next.js, TypeScript and authentication, for didactic purposes.",
+      pt: "Um aplicativo web simples construído com Next.js, TypeScript e autenticação, para fins didáticos.",
     },
-    bannerImage: "/images/projects/webdev/nextjs-app.jpg",
+    bannerImage: "/images/projects/webdev/Dev3.png",
     career: "webdev",
     sections: [
       {
@@ -397,8 +397,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Developed a FIFA 2030 simulator app with Next.js App Router, server components, authentication flow, and a modern UI built with Tailwind CSS.",
-          pt: "Desenvolvi um app simulador da FIFA 2030 com Next.js App Router, server components, fluxo de autenticação e UI moderna construída com Tailwind CSS.",
+          en: "Developed a Next.js app with server components, implementing authentication flows and a modern UI using Tailwind CSS. The app serves as a didactic example of Next.js capabilities.",
+          pt: "Desenvolvi um aplicativo Next.js com componentes de servidor, implementando fluxos de autenticação e uma interface moderna usando Tailwind CSS. O aplicativo serve como um exemplo didático das capacidades do Next.js.",
         },
       },
       {
@@ -445,8 +445,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   "webdev-project-4": {
     title: "Project 4",
     subtitle: {
-      en: "Coming soon — placeholder project",
-      pt: "Em breve — projeto placeholder",
+      en: "Coming soon",
+      pt: "Em breve",
     },
     bannerImage: "/images/projects/webdev/project-4.jpg",
     career: "webdev",
@@ -454,8 +454,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "About", pt: "Sobre" },
         body: {
-          en: "This project is a placeholder. Replace this content with your own project details in lib/constants.ts.",
-          pt: "Este projeto é um placeholder. Substitua este conteúdo pelos detalhes do seu projeto em lib/constants.ts.",
+          en: "Coming soon",
+          pt: "Em breve",
         },
       },
     ],
@@ -463,8 +463,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   "webdev-project-5": {
     title: "Project 5",
     subtitle: {
-      en: "Coming soon — placeholder project",
-      pt: "Em breve — projeto placeholder",
+      en: "Coming soon",
+      pt: "Em breve",
     },
     bannerImage: "/images/projects/webdev/project-5.jpg",
     career: "webdev",
@@ -472,8 +472,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "About", pt: "Sobre" },
         body: {
-          en: "This project is a placeholder. Replace this content with your own project details in lib/constants.ts.",
-          pt: "Este projeto é um placeholder. Substitua este conteúdo pelos detalhes do seu projeto em lib/constants.ts.",
+          en: "Coming soon",
+          pt: "Em breve",
         },
       },
     ],
@@ -481,8 +481,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   "webdev-project-6": {
     title: "Project 6",
     subtitle: {
-      en: "Coming soon — placeholder project",
-      pt: "Em breve — projeto placeholder",
+      en: "Coming soon",
+      pt: "Em breve",
     },
     bannerImage: "/images/projects/webdev/project-6.jpg",
     career: "webdev",
@@ -490,8 +490,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "About", pt: "Sobre" },
         body: {
-          en: "This project is a placeholder. Replace this content with your own project details in lib/constants.ts.",
-          pt: "Este projeto é um placeholder. Substitua este conteúdo pelos detalhes do seu projeto em lib/constants.ts.",
+          en: "Coming soon",
+          pt: "Em breve",
         },
       },
     ],
