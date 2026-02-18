@@ -303,7 +303,7 @@ export const PROJECTS_ENGINEER: Project[] = [
       en: "Thrust Testing Device (TTD) — Used for testing and evaluation of UAV propulsion motors, with integrated sensors and real-time data acquisition.",
       pt: "Dispositivo de Teste de Empuxo (TTD) — Utilizado para teste e avaliação de motores de propulsão de UAVs, com sensores integrados e aquisição de dados em tempo real.",
     },
-    coverImage: "/images/projects/engineer/TTD2.jpeg",
+    coverImage: "/images/projects/engineer/TTD.png",
     tags: ["IoT", "SCADA", "Power Management", "Data Acquisition"],
   },
   {
@@ -448,7 +448,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Coming soon",
       pt: "Em breve",
     },
-    bannerImage: "/images/projects/webdev/project-4.jpg",
+    bannerImage: "/images/projects/webdev/project4.jpg",
     career: "webdev",
     sections: [
       {
@@ -466,7 +466,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Coming soon",
       pt: "Em breve",
     },
-    bannerImage: "/images/projects/webdev/project-5.jpg",
+    bannerImage: "/images/projects/webdev/project5.jpg",
     career: "webdev",
     sections: [
       {
@@ -484,7 +484,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Coming soon",
       pt: "Em breve",
     },
-    bannerImage: "/images/projects/webdev/project-6.jpg",
+    bannerImage: "/images/projects/webdev/project6.jpg",
     career: "webdev",
     sections: [
       {
@@ -709,7 +709,7 @@ export const HOBBIES: Hobby[] = [
       pt: "Jogos competitivos e casuais em múltiplas plataformas.",
     },
     icon: "🎮",
-    image: "/images/hobbies/gaming.jpg",
+    image: "/images/hobbies/Game.png",
   },
   {
     title: { en: "Music", pt: "Música" },
@@ -718,7 +718,7 @@ export const HOBBIES: Hobby[] = [
       pt: "Ouvir e descobrir novos gêneros e artistas.",
     },
     icon: "🎵",
-    image: "/images/hobbies/music.jpg",
+    image: "/images/hobbies/Music.png",
   },
   {
     title: { en: "Travel", pt: "Viagens" },
@@ -727,7 +727,7 @@ export const HOBBIES: Hobby[] = [
       pt: "Explorar novas culturas, comidas e paisagens ao redor do mundo.",
     },
     icon: "✈️",
-    image: "/images/hobbies/travel.jpg",
+    image: "/images/hobbies/Travel.png",
   },
   {
     title: { en: "Electronics & DIY", pt: "Eletrônica & DIY" },
@@ -736,7 +736,7 @@ export const HOBBIES: Hobby[] = [
       pt: "Mexer com eletrônica, impressão 3D e projetos maker.",
     },
     icon: "🔧",
-    image: "/images/hobbies/electronics.jpg",
+    image: "/images/hobbies/Rasp.png",
   },
   {
     title: { en: "Fitness", pt: "Fitness" },
@@ -745,7 +745,7 @@ export const HOBBIES: Hobby[] = [
       pt: "Musculação e manter um estilo de vida ativo.",
     },
     icon: "💪",
-    image: "/images/hobbies/fitness.jpg",
+    image: "/images/hobbies/gym.png",
   },
   {
     title: { en: "Reading", pt: "Leitura" },
@@ -754,7 +754,7 @@ export const HOBBIES: Hobby[] = [
       pt: "Livros de tecnologia, ficção científica e desenvolvimento pessoal.",
     },
     icon: "📚",
-    image: "/images/hobbies/reading.jpg",
+    image: "/images/hobbies/Read.png",
   },
 ];
 

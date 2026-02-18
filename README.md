@@ -155,21 +155,32 @@ const text = t("key.name");
 
 ### Deploy to GitHub Pages
 
-1. Update `next.config.ts`:
+Este repositório está configurado para deploy automático no GitHub Pages.
 
-```typescript
-const nextConfig = {
-  output: "export",
-  basePath: "/your-repo-name",
-};
-```
-
-2. Build and deploy:
+**Como fazer deploy:**
 
 ```bash
-npm run build
-# Push the 'out' folder to gh-pages branch
+npm run deploy
 ```
+
+Esse comando vai:
+
+1. Fazer build do projeto (`next build`)
+2. Criar arquivo `.nojekyll` no diretório `out/`
+3. Publicar o conteúdo de `out/` na branch `gh-pages`
+
+**Configurar GitHub Pages (apenas primeira vez):**
+
+1. Vá para: https://github.com/0xFelipeGD/0xFelipeGD.github.io
+2. Clique em **Settings** > **Pages**
+3. Em **Source**, selecione **Deploy from a branch**
+4. Em **Branch**, selecione **gh-pages** e **/ (root)**
+5. Clique em **Save**
+
+Aguarde alguns minutos e o site estará disponível em: https://0xfelipegd.github.io/
+
+**Atualizações futuras:**
+Após a configuração inicial, basta rodar `npm run deploy` sempre que quiser publicar novas mudanças.
 
 ### Deploy to Vercel
 
