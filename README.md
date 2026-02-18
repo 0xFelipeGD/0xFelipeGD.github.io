@@ -1,36 +1,188 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Felipe Gonçalves Diogo — Personal Portfolio
 
-## Getting Started
+Modern, dual-career portfolio website built with Next.js, featuring animated UI components and internationalization (EN/PT).
 
-First, run the development server:
+🔗 **Live Demo**: [0xfelipegd.github.io](https://0xfelipegd.github.io)
+
+## ✨ Features
+
+- 🎨 **Dual Career Structure**: Separate landing pages for Web Development and Automation Engineering careers
+- 🌐 **Internationalization**: Full English/Portuguese support with easy language toggle
+- 🎭 **Animated UI**: Aceternity-inspired components with Framer Motion animations
+- 🌌 **Aurora Background**: Custom animated gradient backgrounds
+- 📱 **Fully Responsive**: Optimized for mobile, tablet, and desktop
+- 🎯 **Project Showcases**: Dynamic project detail pages with SSG
+- ⚡ **Performance**: Built with Next.js 16 + Turbopack for blazing fast builds
+- 🎨 **Tailwind CSS v4**: Modern utility-first styling
+
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Customizing Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All site content is centralized in **`lib/constants.ts`** for easy editing:
 
-## Learn More
+- **Personal Info**: Name, avatar, social links, CVs
+- **Experience**: Timeline entries for both careers
+- **Projects**: Project cards and detailed content
+- **Skills**: Technology badges
+- **Education**: Academic background
+- **Hobbies**: Personal interests
 
-To learn more about Next.js, take a look at the following resources:
+### Example: Adding a New Project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```typescript
+// In lib/constants.ts
+export const PROJECTS_WEBDEV: Project[] = [
+  {
+    slug: "my-new-project",
+    title: "My New Project",
+    description: {
+      en: "Project description in English",
+      pt: "Descrição do projeto em português",
+    },
+    coverImage: "/images/projects/webdev/my-project.jpg",
+    tags: ["React", "TypeScript", "Next.js"],
+  },
+  // ... other projects
+];
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+// Add project details in PROJECT_DETAILS
+export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
+  "my-new-project": {
+    title: "My New Project",
+    subtitle: {
+      en: "Short description",
+      pt: "Descrição curta",
+    },
+    bannerImage: "/images/projects/webdev/my-project-banner.jpg",
+    career: "webdev",
+    sections: [
+      {
+        heading: { en: "The Challenge", pt: "O Desafio" },
+        body: {
+          en: "Detailed description...",
+          pt: "Descrição detalhada...",
+        },
+      },
+      // ... more sections
+    ],
+  },
+};
+```
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Main landing page
+│   ├── career/            # Career-specific pages
+│   │   ├── webdev/        # Web Developer career
+│   │   └── engineer/      # Engineer career
+│   └── hobbies/           # Hobbies page
+├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   ├── CareerPage.tsx    # Shared career template
+│   ├── Navbar.tsx        # Navigation with dropdown
+│   └── Footer.tsx        # Site footer
+├── lib/                   # Utilities and data
+│   ├── constants.ts      # ⭐ All site content here
+│   ├── i18n.ts           # Translation keys
+│   └── locale-context.tsx # i18n React Context
+└── public/
+    ├── images/           # All images
+    │   ├── projects/     # Project screenshots
+    │   └── hobbies/      # Hobby images
+    └── files/            # Downloadable files (CVs)
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org) with App Router
+- **Language**: TypeScript 5
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com)
+- **Animations**: [Motion](https://motion.dev) (Framer Motion successor)
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Build Tool**: Turbopack
+
+## 🎨 Adding Images
+
+Place images in the `public/images/` directory:
+
+- **Avatar**: `public/images/Me.jpg`
+- **Web Dev Projects**: `public/images/projects/webdev/`
+- **Engineer Projects**: `public/images/projects/engineer/`
+- **Hobbies**: `public/images/hobbies/`
+
+Images are automatically optimized by Next.js Image component.
+
+## 🌍 Internationalization
+
+Edit translations in `lib/i18n.ts`:
+
+```typescript
+export const translations = {
+  "key.name": {
+    en: "English text",
+    pt: "Texto em português",
+  },
+};
+```
+
+Use the `useLocale()` hook in components:
+
+```typescript
+const { locale, toggleLocale, t } = useLocale();
+const text = t("key.name");
+```
+
+## 🚢 Deployment
+
+### Deploy to GitHub Pages
+
+1. Update `next.config.ts`:
+
+```typescript
+const nextConfig = {
+  output: "export",
+  basePath: "/your-repo-name",
+};
+```
+
+2. Build and deploy:
+
+```bash
+npm run build
+# Push the 'out' folder to gh-pages branch
+```
+
+### Deploy to Vercel
+
+```bash
+vercel
+```
+
+The site will auto-deploy on every push to main branch.
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+---
+
+**Built with ❤️ by Felipe Gonçalves Diogo**
