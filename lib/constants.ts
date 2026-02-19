@@ -13,8 +13,8 @@ export const SITE_OWNER = {
   role: "Dual-Career Professional",
   avatarSrc: "/images/me3.jpeg",
   // CVs – one for each career
-  cvWebDev: "/files/Web_Developer_2026.pdf",
-  cvEngineer: "/files/Engineer_2026.pdf",
+  cvWebDev: "/files/Developer__2026.pdf",
+  cvEngineer: "/files/Engineer__2026.pdf",
 };
 
 // ---------------------------------------------------------------------------
