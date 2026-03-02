@@ -1,5 +1,5 @@
 // ============================================================================
-// Web Developer Career Page — /career/webdev
+// Full-Stack Developer Career Page — /career/webdev
 // ============================================================================
 "use client";
 
@@ -11,9 +11,9 @@ export default function WebDevPage() {
     <CareerPage
       career="webdev"
       accentColor="blue"
-      titleKey="webdev.hero.title"
-      subtitleKey="webdev.hero.subtitle"
-      bioKey="webdev.hero.bio"
+      titleKey="developer.hero.title"
+      subtitleKey="developer.hero.subtitle"
+      bioKey="developer.hero.bio"
       projects={PROJECTS_WEBDEV}
       experience={EXPERIENCE_WEBDEV}
       skills={SKILLS_WEBDEV}

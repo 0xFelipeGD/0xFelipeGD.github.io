@@ -14,7 +14,7 @@ import FadeIn from "@/components/ui/FadeIn";
 interface Props {
   slug: string;
   backHref: string;
-  accentColor: "blue" | "purple";
+  accentColor: "blue" | "purple" | "green";
 }
 
 export default function ProjectDetailPage({ slug, backHref, accentColor }: Props) {
@@ -25,8 +25,10 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
     notFound();
   }
 
-  const accentText = accentColor === "blue" ? "text-blue-400" : "text-purple-400";
-  const accentBg = accentColor === "blue" ? "bg-blue-500" : "bg-purple-500";
+  const accentText =
+    accentColor === "blue" ? "text-blue-400" : accentColor === "purple" ? "text-purple-400" : "text-emerald-400";
+  const accentBg =
+    accentColor === "blue" ? "bg-blue-500" : accentColor === "purple" ? "bg-purple-500" : "bg-emerald-500";
 
   return (
     <article className="mx-auto max-w-4xl px-4 pt-28 pb-20 sm:px-6">

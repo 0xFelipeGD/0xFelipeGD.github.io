@@ -18,8 +18,8 @@ import { SITE_OWNER, EDUCATION, type Project, type Experience } from "@/lib/cons
 import type { Locale, TranslationKey } from "@/lib/i18n";
 
 interface CareerPageProps {
-  career: "webdev" | "engineer";
-  accentColor: "blue" | "purple";
+  career: "webdev" | "engineer" | "automation-it";
+  accentColor: "blue" | "purple" | "green";
   titleKey: TranslationKey;
   subtitleKey: TranslationKey;
   bioKey: TranslationKey;
@@ -43,12 +43,17 @@ export default function CareerPage({
   projectBasePath,
 }: CareerPageProps) {
   const { locale, t } = useLocale();
-  const accent = accentColor === "blue" ? "blue" : "purple";
-  const spotlightFill = accent === "blue" ? "#3b82f6" : "#8b5cf6";
-  const gradientFrom = accent === "blue" ? "from-blue-600" : "from-purple-600";
-  const gradientTo = accent === "blue" ? "to-cyan-500" : "to-pink-500";
-  const accentText = accent === "blue" ? "text-blue-400" : "text-purple-400";
-  const accentBorder = accent === "blue" ? "hover:border-blue-500/50" : "hover:border-purple-500/50";
+  const accent = accentColor;
+  const spotlightFill = accent === "blue" ? "#3b82f6" : accent === "purple" ? "#8b5cf6" : "#10b981";
+  const gradientFrom = accent === "blue" ? "from-blue-600" : accent === "purple" ? "from-purple-600" : "from-emerald-600";
+  const gradientTo = accent === "blue" ? "to-cyan-500" : accent === "purple" ? "to-pink-500" : "to-teal-400";
+  const accentText = accent === "blue" ? "text-blue-400" : accent === "purple" ? "text-purple-400" : "text-emerald-400";
+  const accentBorder =
+    accent === "blue"
+      ? "hover:border-blue-500/50"
+      : accent === "purple"
+        ? "hover:border-purple-500/50"
+        : "hover:border-emerald-500/50";
 
   return (
     <>
@@ -64,11 +69,13 @@ export default function CareerPage({
             className={`mb-6 inline-flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-semibold tracking-widest uppercase ${
               accent === "blue"
                 ? "border-blue-500/30 bg-blue-500/10 text-blue-400"
-                : "border-purple-500/30 bg-purple-500/10 text-purple-400"
+                : accent === "purple"
+                  ? "border-purple-500/30 bg-purple-500/10 text-purple-400"
+                  : "border-emerald-500/30 bg-emerald-500/10 text-emerald-400"
             }`}
           >
             <span
-              className={`h-2 w-2 rounded-full ${accent === "blue" ? "bg-blue-400" : "bg-purple-400"} animate-pulse`}
+              className={`h-2 w-2 rounded-full ${accent === "blue" ? "bg-blue-400" : accent === "purple" ? "bg-purple-400" : "bg-emerald-400"} animate-pulse`}
             />
             {t(subtitleKey)}
           </motion.div>
@@ -100,7 +107,11 @@ export default function CareerPage({
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}
             className={`mt-8 inline-flex items-center gap-2 rounded-full bg-linear-to-r ${gradientFrom} ${gradientTo} px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:opacity-90 ${
-              accent === "blue" ? "shadow-blue-500/20" : "shadow-purple-500/20"
+              accent === "blue"
+                ? "shadow-blue-500/20"
+                : accent === "purple"
+                  ? "shadow-purple-500/20"
+                  : "shadow-emerald-500/20"
             }`}
           >
             <Download size={16} />
@@ -120,7 +131,9 @@ export default function CareerPage({
             <span className="text-sm font-medium text-zinc-500">
               {locale === "en" ? "Scroll down" : "Role para baixo"}
             </span>
-            <ChevronDown className={`h-8 w-8 ${accent === "blue" ? "text-blue-400" : "text-purple-400"}`} />
+            <ChevronDown
+              className={`h-8 w-8 ${accent === "blue" ? "text-blue-400" : accent === "purple" ? "text-purple-400" : "text-emerald-400"}`}
+            />
           </motion.div>
         </div>
       </AuroraBackground>
@@ -140,7 +153,11 @@ export default function CareerPage({
                 <Link href={`${projectBasePath}/${project.slug}`} className="group block h-full">
                   <div
                     className={`flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900/60 transition-all duration-300 hover:border-zinc-700 ${accentBorder} hover:shadow-lg ${
-                      accent === "blue" ? "hover:shadow-blue-500/5" : "hover:shadow-purple-500/5"
+                      accent === "blue"
+                        ? "hover:shadow-blue-500/5"
+                        : accent === "purple"
+                          ? "hover:shadow-purple-500/5"
+                          : "hover:shadow-emerald-500/5"
                     }`}
                   >
                     <div className="relative aspect-16/10 w-full overflow-hidden bg-zinc-800">
@@ -189,7 +206,7 @@ export default function CareerPage({
                 <div className="relative">
                   <div
                     className={`absolute top-1.5 -left-6 h-3.5 w-3.5 rounded-full border-2 border-zinc-950 ${
-                      accent === "blue" ? "bg-blue-500" : "bg-purple-500"
+                      accent === "blue" ? "bg-blue-500" : accent === "purple" ? "bg-purple-500" : "bg-emerald-500"
                     }`}
                   />
                   <AnimatedCard>
@@ -203,7 +220,7 @@ export default function CareerPage({
                       {exp.bullets[locale].map((bullet, j) => (
                         <li key={j} className="flex gap-2 text-sm text-zinc-400">
                           <span
-                            className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent === "blue" ? "bg-blue-500" : "bg-purple-500"}`}
+                            className={`mt-1.5 h-1 w-1 shrink-0 rounded-full ${accent === "blue" ? "bg-blue-500" : accent === "purple" ? "bg-purple-500" : "bg-emerald-500"}`}
                           />
                           {bullet}
                         </li>

@@ -1,12 +1,12 @@
 // ============================================================================
-// Main Landing Page — Presents both careers
+// Main Landing Page — Presents all three careers
 // ============================================================================
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail, Code2, Cpu, ArrowRight } from "lucide-react";
+import { Github, Linkedin, Mail, Code2, Cpu, ArrowRight, Workflow } from "lucide-react";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 import Spotlight from "@/components/ui/Spotlight";
 import TextGenerateEffect from "@/components/ui/TextGenerateEffect";
@@ -106,16 +106,16 @@ export default function HomePage() {
           </h2>
         </FadeIn>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {/* Web Developer card */}
+        <div className="grid gap-8 md:grid-cols-3">
+          {/* Full-Stack Developer card */}
           <FadeIn delay={0.1}>
             <Link href="/career/webdev" className="block">
               <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
                   <Code2 size={28} className="text-blue-400" />
                 </div>
-                <h3 className="text-xl font-bold text-zinc-50">{t("career.webdev.title")}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.webdev.desc")}</p>
+                <h3 className="text-xl font-bold text-zinc-50">{t("career.developer.title")}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.developer.desc")}</p>
                 <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-400">
                   {t("career.viewMore")}
                 </span>
@@ -123,8 +123,24 @@ export default function HomePage() {
             </Link>
           </FadeIn>
 
-          {/* Engineer card */}
+          {/* IT Automation card */}
           <FadeIn delay={0.2}>
+            <Link href="/career/automation-it" className="block">
+              <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
+                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10">
+                  <Workflow size={28} className="text-emerald-400" />
+                </div>
+                <h3 className="text-xl font-bold text-zinc-50">{t("career.automation.title")}</h3>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.automation.desc")}</p>
+                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-400">
+                  {t("career.viewMore")}
+                </span>
+              </AnimatedCard>
+            </Link>
+          </FadeIn>
+
+          {/* Engineer card */}
+          <FadeIn delay={0.3}>
             <Link href="/career/engineer" className="block">
               <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">
