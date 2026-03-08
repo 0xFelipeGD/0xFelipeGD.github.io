@@ -65,7 +65,7 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
                 <span className={`h-2 w-2 rounded-full ${accentBg}`} />
                 <h2 className="text-xl font-bold text-zinc-50">{section.heading[locale]}</h2>
               </div>
-              <p className="mt-3 max-w-2xl text-base leading-relaxed whitespace-pre-line text-zinc-400">
+              <p className="mt-3 text-base leading-relaxed whitespace-pre-line text-zinc-400">
                 {section.body[locale]}
               </p>
               {section.image && (
