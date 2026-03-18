@@ -25,7 +25,7 @@ export default function TextGenerateEffect({
 
   useEffect(() => {
     animate("span", { opacity: 1, filter: filter ? "blur(0px)" : "none" }, { duration, delay: stagger(0.08) });
-  }, [animate, duration, filter]);
+  }, [animate, duration, filter, words]);
 
   return (
     <div className={cn("font-bold", className)} ref={scope}>
