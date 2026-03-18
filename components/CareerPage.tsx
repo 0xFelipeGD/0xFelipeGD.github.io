@@ -18,7 +18,7 @@ import { SITE_OWNER, EDUCATION, type Project, type Experience } from "@/lib/cons
 import type { Locale, TranslationKey } from "@/lib/i18n";
 
 interface CareerPageProps {
-  career: "webdev" | "engineer" | "automation-it";
+  career: "dev" | "engineer" | "automation-it";
   accentColor: "blue" | "purple" | "green";
   titleKey: TranslationKey;
   subtitleKey: TranslationKey;
@@ -252,15 +252,19 @@ export default function CareerPage({
               {t("section.education")}
             </h2>
           </FadeIn>
-          <FadeIn delay={0.1}>
-            <AnimatedCard>
-              <h3 className="font-semibold text-zinc-50">{EDUCATION.school}</h3>
-              <p className={`mt-1 text-sm font-medium ${accentText}`}>{EDUCATION.degree[locale]}</p>
-              <p className="mt-1 text-xs text-zinc-500">
-                {EDUCATION.period} • {EDUCATION.location}
-              </p>
-            </AnimatedCard>
-          </FadeIn>
+          <div className="space-y-4">
+            {EDUCATION.map((edu, i) => (
+              <FadeIn key={i} delay={i * 0.1}>
+                <AnimatedCard>
+                  <h3 className="font-semibold text-zinc-50">{edu.school}</h3>
+                  <p className={`mt-1 text-sm font-medium ${accentText}`}>{edu.degree[locale]}</p>
+                  <p className="mt-1 text-xs text-zinc-500">
+                    {edu.period} • {edu.location}
+                  </p>
+                </AnimatedCard>
+              </FadeIn>
+            ))}
+          </div>
         </section>
       </div>
     </>

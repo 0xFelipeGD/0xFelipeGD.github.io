@@ -109,7 +109,7 @@ export default function HomePage() {
         <div className="grid gap-8 md:grid-cols-3">
           {/* Full-Stack Developer card */}
           <FadeIn delay={0.1}>
-            <Link href="/career/webdev" className="block">
+            <Link href="/career/dev" className="block">
               <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
                 <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
                   <Code2 size={28} className="text-blue-400" />

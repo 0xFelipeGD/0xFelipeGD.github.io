@@ -74,7 +74,7 @@ export default function Navbar() {
                       {PROJECTS_WEBDEV.map((p) => (
                         <Link
                           key={p.slug}
-                          href={`/career/webdev/projects/${p.slug}`}
+                          href={`/career/dev/projects/${p.slug}`}
                           onClick={() => setProjectsOpen(false)}
                           className="block rounded-lg px-3 py-1.5 text-sm text-zinc-400 transition-colors hover:bg-zinc-800 hover:text-zinc-50"
                         >
@@ -82,7 +82,7 @@ export default function Navbar() {
                         </Link>
                       ))}
                       <Link
-                        href="/career/webdev"
+                        href="/career/dev"
                         onClick={() => setProjectsOpen(false)}
                         className="mt-2 block px-3 text-xs font-medium text-blue-400 hover:text-blue-300"
                       >
@@ -145,7 +145,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <NavLink href="/career/webdev">{t("nav.developer")}</NavLink>
+          <NavLink href="/career/dev">{t("nav.developer")}</NavLink>
           <NavLink href="/career/automation-it">{t("nav.automation")}</NavLink>
           <NavLink href="/career/engineer">{t("nav.engineer")}</NavLink>
           <NavLink href="/hobbies">{t("nav.hobbies")}</NavLink>
@@ -193,7 +193,7 @@ export default function Navbar() {
               <MobileLink href="/" onClick={() => setMobileOpen(false)}>
                 {t("nav.home")}
               </MobileLink>
-              <MobileLink href="/career/webdev" onClick={() => setMobileOpen(false)}>
+              <MobileLink href="/career/dev" onClick={() => setMobileOpen(false)}>
                 {t("nav.developer")}
               </MobileLink>
               <MobileLink href="/career/automation-it" onClick={() => setMobileOpen(false)}>
@@ -215,7 +215,7 @@ export default function Navbar() {
                 {PROJECTS_WEBDEV.map((p) => (
                   <MobileLink
                     key={p.slug}
-                    href={`/career/webdev/projects/${p.slug}`}
+                    href={`/career/dev/projects/${p.slug}`}
                     onClick={() => setMobileOpen(false)}
                     indent
                   >

@@ -21,8 +21,8 @@ const translations = {
     pt: "Profissional de Dupla Carreira",
   },
   "hero.bio": {
-    en: "Control & Automation Engineer, IT Automation Developer and Full-Stack Developer. Startup founder building innovative software and hardware solutions for Industry 4.0 and UGVs. Based in Portugal.",
-    pt: "Engenheiro de Controle e Automação, Desenvolvedor de Automação IT e Full-Stack. Fundador de startup construindo soluções inovadoras de software e hardware para Indústria 4.0 e UGVs. Baseado em Portugal.",
+    en: "Control & Automation Engineer, IT Automation Specialist and Full-Stack Developer. Startup founder focused on unmanned ground vehicles (UGVs), delivering autonomous solutions to industrial, agricultural and logistics clients. Developing automations is my passion. Based in Portugal 🇵🇹🇪🇺",
+    pt: "Engenheiro de Controle e Automação, Especialista em Automação IT e Desenvolvedor Full-Stack. Fundador de startup focada em veículos terrestres não tripulados (UGVs), entregando soluções autônomas para clientes industriais, agrícolas e logísticos. Desenvolver automações é minha paixão. Baseado em Portugal 🇵🇹🇪🇺",
   },
   "hero.downloadCV": { en: "Download CV", pt: "Baixar CV" },
   "hero.explore": {
@@ -52,8 +52,8 @@ const translations = {
     pt: "Engenheiro",
   },
   "career.engineer.desc": {
-    en: "Control systems, UGV/drone development, embedded systems, SCADA, IoT solutions, electrical panels and Industry 4.0 integrations.",
-    pt: "Sistemas de controle, desenvolvimento de UGVs/drones, sistemas embarcados, SCADA, soluções IoT, painéis elétricos e integrações Indústria 4.0.",
+    en: "Control systems, PLC programming, UGV/drone development, embedded systems, SCADA, IoT solutions, electrical panels and Industry 4.0 integrations.",
+    pt: "Sistemas de controle, programação de CLPs, desenvolvimento de UGVs/drones, sistemas embarcados, SCADA, soluções IoT, painéis elétricos e integrações Indústria 4.0.",
   },
   "career.viewMore": { en: "View projects →", pt: "Ver projetos →" },
 
@@ -63,12 +63,12 @@ const translations = {
     pt: "Desenvolvedor Full-Stack",
   },
   "developer.hero.subtitle": {
-    en: "Building modern web experiences with cutting-edge technologies",
-    pt: "Construindo experiências web modernas com tecnologias de ponta",
+    en: "Building web apps, data pipelines and AI-integrated products",
+    pt: "Construindo aplicações web, pipelines de dados e produtos integrados com IA",
   },
   "developer.hero.bio": {
-    en: "Full-stack developer experienced with Next.js, TypeScript, React, Node.js, Docker, MongoDB, PostgreSQL, Vercel and modern CI/CD pipelines. Founder of Movewertech Technologies, building production-grade web and IoT platforms from scratch.",
-    pt: "Desenvolvedor full-stack experiente com Next.js, TypeScript, React, Node.js, Docker, MongoDB, PostgreSQL, Vercel e pipelines CI/CD modernos. Fundador da Movewertech Technologies, construindo plataformas web e IoT de nível produção do zero.",
+    en: "Full-Stack Developer and Automation Engineer with 4+ years building end-to-end systems — from data pipelines and analysis with Python to production web apps with Next.js and React. Passionate about AI-integrated SaaS products. Strong Python and JS/TS background. Founder of Movewer Technologies.",
+    pt: "Desenvolvedor Full-Stack e Engenheiro de Automação com 4+ anos construindo sistemas ponta a ponta — de pipelines de dados e análise com Python a aplicações web em produção com Next.js e React. Apaixonado por produtos SaaS integrados com IA. Forte background em Python e JS/TS. Fundador da Movewer Technologies.",
   },
 
   "automation.hero.title": {
@@ -80,8 +80,8 @@ const translations = {
     pt: "Construindo workflows inteligentes e sistemas de automação com IA",
   },
   "automation.hero.bio": {
-    en: "IT Automation Developer with 4+ years building end-to-end automation systems — from industrial IoT pipelines to AI-driven workflows with n8n, Node-RED, MQTT and REST APIs. Experienced deploying production-grade platforms integrating generative AI, event-driven architectures and cloud-connected data pipelines.",
-    pt: "Desenvolvedor de Automação IT com 4+ anos construindo sistemas de automação ponta a ponta — desde pipelines IoT industriais até workflows com IA usando n8n, Node-RED, MQTT e REST APIs. Experiente em implantar plataformas de nível produção integrando IA generativa, arquiteturas orientadas a eventos e pipelines de dados na nuvem.",
+    en: "Automation Specialist with 5+ years building end-to-end automation systems — from event-driven pipelines and AI integrations to production web apps and cloud-connected data architectures. Strong Python and JS/TS background with hands-on experience in n8n, Make, REST APIs and low-code/pro-code solutions. Founder of Movewer Technologies.",
+    pt: "Especialista em Automação com 5+ anos construindo sistemas de automação ponta a ponta — de pipelines orientados a eventos e integrações de IA a aplicações web em produção e arquiteturas de dados na nuvem. Forte background em Python e JS/TS com experiência prática em n8n, Make, REST APIs e soluções low-code/pro-code. Fundador da Movewer Technologies.",
   },
 
   "engineer.hero.title": {
@@ -89,12 +89,12 @@ const translations = {
     pt: "Engenheiro",
   },
   "engineer.hero.subtitle": {
-    en: "Designing intelligent systems from concept to deployment",
-    pt: "Projetando sistemas inteligentes do conceito ao deploy",
+    en: "From industrial control cabinets to autonomous UGV platforms",
+    pt: "De painéis de controle industrial a plataformas UGV autônomas",
   },
   "engineer.hero.bio": {
-    en: "Control & Automation Engineer with 6+ years of hands-on experience — delivering a 1,200 kg UGV and a production-grade IIoT monitoring platform from scratch, while wiring industrial panels, programming PLCs and leading engineering teams. Deep expertise across the full Industry 4.0 stack. Founder of Movewer Technologies.",
-    pt: "Engenheiro de Controle e Automação com 6+ anos de experiência prática — entregou um UGV de 1.200 kg e uma plataforma de monitoramento IIoT de nível produção do zero, enquanto cabeava painéis industriais, programava CLPs e liderava equipes. Expertise profunda em todo o stack Indústria 4.0. Fundador da Movewer Technologies.",
+    en: "Mechatronic, Automation and Control Engineer with 8+ years of hands-on experience delivering industrial automation projects — PLC and SCADA programming, electrical and automation design, UGV/drone development, and full Industry 4.0 solutions from field devices to cloud dashboards. Equally comfortable in a control cabinet or a code editor. Founder of Movewer Technologies.",
+    pt: "Engenheiro Mecatrônico, de Automação e Controle com 8+ anos de experiência prática entregando projetos de automação industrial — programação de CLPs e SCADA, projeto elétrico e de automação, desenvolvimento de UGVs/drones e soluções Indústria 4.0 completas, do dispositivo de campo ao dashboard na nuvem. Igualmente confortável em um painel elétrico ou em um editor de código. Fundador da Movewer Technologies.",
   },
 
   // ── Sections ───────────────────────────────────────────────────────────

@@ -41,90 +41,67 @@ export interface Experience {
 
 export const EXPERIENCE_WEBDEV: Experience[] = [
   {
-    company: "Movewertech Technologies",
+    company: "Personal Projects",
     role: {
-      en: "Founder & Full-Stack Developer",
-      pt: "Fundador & Desenvolvedor Full-Stack",
+      en: "Full-Stack Developer & Automation Engineer",
+      pt: "Desenvolvedor Full-Stack & Engenheiro de Automação",
     },
-    period: "Jun 2025 – Present",
-    location: "Braga, Portugal",
+    period: "2024 – Present",
+    location: "Lisbon, Portugal",
     bullets: {
       en: [
-        "Designed and built a full-stack web platform using Next.js, TypeScript and React, with SSR, dynamic dashboards and real-time data visualization.",
-        "Developed a RESTful API backend in Python, handling data ingestion from IoT sensors and delivering AI-generated insights to the frontend.",
-        "Containerized the entire application with Docker, deployed on a VPS with CI/CD via GitHub Actions; production frontend hosted on Vercel.",
-        "Managed the complete product lifecycle: architecture, development, testing, deployment and iteration — solo and end-to-end.",
+        "Built a social media automation pipeline using n8n and Make that generates posts from predefined topics, routes approval via Telegram, and auto-publishes to LinkedIn on confirmation.",
+        "Developed a Python data pipeline for automated ingestion, transformation and reporting — pulling from REST APIs, processing with pandas, and persisting to PostgreSQL on a schedule.",
+        "Architected Julius, an AI-powered personal finance PWA (Next.js 15, Supabase, OpenAI API) where an AI agent extracts, categorizes and persists financial entries from natural language input.",
       ],
       pt: [
-        "Projetou e construiu plataforma web full-stack com Next.js, TypeScript e React, com SSR, dashboards dinâmicos e visualização em tempo real.",
-        "Desenvolveu backend de API RESTful em Python, integrando sensores IoT e entregando insights de IA ao frontend.",
-        "Containerizou toda a aplicação com Docker, implantada em VPS com CI/CD via GitHub Actions; frontend em produção no Vercel.",
-        "Gerenciou o ciclo completo do produto: arquitetura, desenvolvimento, testes, deploy e iteração — solo e ponta a ponta.",
+        "Construiu um pipeline de automação de mídias sociais usando n8n e Make que gera posts a partir de temas predefinidos, roteia aprovação via Telegram e publica automaticamente no LinkedIn.",
+        "Desenvolveu um pipeline de dados em Python para ingestão, transformação e relatórios automatizados — consumindo REST APIs, processando com pandas e persistindo no PostgreSQL em schedule.",
+        "Arquitetou o Julius, um PWA de finanças pessoais com IA (Next.js 15, Supabase, OpenAI API) onde um agente de IA extrai, categoriza e persiste lançamentos financeiros a partir de linguagem natural.",
       ],
     },
   },
-  {
-    company: "Psyche AeroSpace",
-    role: {
-      en: "Engineering Team Lead",
-      pt: "Líder de Equipe de Engenharia",
-    },
-    period: "Jun 2024 – Jun 2025",
-    location: "São Paulo, Brazil",
-    bullets: {
-      en: [
-        "Led a cross-functional team of 5 engineers, managing technical roadmaps and delivery using Scrum and Kanban on Jira.",
-        "Drove technical decisions that contributed directly to new fundraising rounds.",
-      ],
-      pt: [
-        "Liderou equipe cross-funcional de 5 engenheiros, gerenciando roadmaps técnicos e entregas com Scrum e Kanban no Jira.",
-        "Conduziu decisões técnicas que contribuíram diretamente para novas rodadas de captação.",
-      ],
-    },
-  },
-];
-
-export const EXPERIENCE_ENGINEER: Experience[] = [
   {
     company: "Movewer Technologies",
-    role: { en: "Founder & Automation Engineer", pt: "Fundador & Engenheiro de Automação" },
+    role: {
+      en: "Founder & Lead IT Automation Engineer",
+      pt: "Fundador & Engenheiro Líder de Automação IT",
+    },
     period: "Jun 2025 – Present",
-    location: "Portugal",
+    location: "Lisbon, Portugal",
     bullets: {
       en: [
-        "Architected end-to-end Industry 4.0 solutions for UGV platforms: control systems, power electronics, wireless communication, remote-control stations and multi-sensor integration.",
-        "Built a full-stack Industrial IoT Monitoring Platform using MQTT, Python, Node-RED, InfluxDB and Grafana with AI-driven analytics.",
-        "Defined IT/OT convergence architecture, bridging field-level devices to cloud dashboards with real-time data pipelines and automated alerting.",
-        "Collaborated with a mechanical specialist to co-design modular UGV systems aligned with client requirements and safety standards.",
+        "Architected and deployed a production data monitoring platform using MQTT, Node-RED, InfluxDB and Grafana, with an AI layer that generates actionable insights from raw sensor streams via REST APIs and webhooks.",
+        "Built a Python REST API for data ingestion and processing; containerized the full infrastructure with Docker, deployed on a Linux VPS with CI/CD via GitHub Actions, and served the production frontend on Vercel.",
+        "Designed end-to-end automation workflows connecting edge devices (Raspberry Pi) to cloud dashboards, covering ingestion, processing, real-time alerting and AI-driven reporting.",
+        "Sole technical owner across the full development lifecycle: requirements → architecture → deployment → iteration.",
       ],
       pt: [
-        "Arquitetou soluções Indústria 4.0 ponta a ponta para plataformas UGV: sistemas de controle, eletrônica de potência, comunicação sem fio e integração multissensorial.",
-        "Construiu Plataforma IIoT de Monitoramento full-stack com MQTT, Python, Node-RED, InfluxDB e Grafana com analytics de IA.",
-        "Definiu arquitetura de convergência IT/OT, conectando dispositivos de campo a dashboards na nuvem com pipelines em tempo real.",
-        "Colaborou com especialista mecânico para co-projetar sistemas UGV modulares alinhados com requisitos e normas de segurança.",
+        "Arquitetou e implantou uma plataforma de monitoramento de dados em produção usando MQTT, Node-RED, InfluxDB e Grafana, com camada de IA que gera insights acionáveis de streams de sensores via REST APIs e webhooks.",
+        "Construiu API REST em Python para ingestão e processamento de dados; containerizou toda a infraestrutura com Docker, implantada em VPS Linux com CI/CD via GitHub Actions, frontend em produção no Vercel.",
+        "Projetou workflows de automação ponta a ponta conectando dispositivos edge (Raspberry Pi) a dashboards na nuvem: ingestão, processamento, alertas em tempo real e reports de IA.",
+        "Responsável técnico único em todo o ciclo: requisitos → arquitetura → deploy → iteração.",
       ],
     },
   },
   {
     company: "Psyche AeroSpace",
     role: {
-      en: "Automation Executive Manager",
-      pt: "Gerente Executivo de Automação",
+      en: "Automation Executive Manager / Engineering Team Lead",
+      pt: "Gerente Executivo de Automação / Líder de Equipe de Engenharia",
     },
     period: "Jun 2024 – Jun 2025",
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Built the Automation and UGV divisions from zero; systems delivered contributed directly to a new fundraising round.",
-        "Led cross-functional team of 5 engineers across two product lines, reducing time-to-prototype by ~30% through structured Scrum sprints.",
-        "Owned full development lifecycle of UGV systems — control, power and communication — coordinating mechanical and electronics teams.",
-        "Delivered a 10 kg-payload agricultural quadcopter from concept to flight-ready prototype in under 6 months.",
+        "Structured the automation division from scratch and delivered intelligent control and workflow systems, contributing directly to new fundraising rounds.",
+        "Developed internal automation workflows using Python, Node.js and low-code tools to streamline operations and improve team efficiency.",
+        "Managed a cross-functional team of 5 engineers using Scrum/Kanban on JIRA, coordinating multi-project delivery on time and within budget.",
       ],
       pt: [
-        "Construiu as divisões de Automação e UGV do zero; sistemas entregues contribuíram diretamente para nova rodada de captação.",
-        "Liderou equipe cross-funcional de 5 engenheiros em duas linhas de produto, reduzindo tempo de protótipo em ~30%.",
-        "Responsável pelo ciclo completo de desenvolvimento de sistemas UGV — controle, potência e comunicação.",
-        "Entregou quadricóptero agrícola de 10 kg do conceito ao protótipo pronto para voo em menos de 6 meses.",
+        "Estruturou a divisão de automação do zero e entregou sistemas de controle e workflows inteligentes, contribuindo diretamente para novas rodadas de captação.",
+        "Desenvolveu workflows de automação interna usando Python, Node.js e ferramentas low-code para otimizar operações e melhorar eficiência da equipe.",
+        "Gerenciou equipe cross-funcional de 5 engenheiros com Scrum/Kanban no JIRA, coordenando entregas em prazo e orçamento.",
       ],
     },
   },
@@ -138,42 +115,39 @@ export const EXPERIENCE_ENGINEER: Experience[] = [
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Engineered 20+ special industrial machines integrating mechatronic systems, IoT connectivity, SCADA supervision and industrial protocols (Modbus, Profinet, EtherCAT).",
-        "Designed and executed full electrical panel projects end-to-end: load calculations, schematics (EPLAN/AutoCAD), assembly, commissioning and field testing.",
-        "Programmed PLCs and configured HMI/SCADA systems (TIA Portal, CODESYS, Indusoft) for manufacturing and process automation.",
-        "Served as regional distributor for Siemens, Rockwell, Bosch, Wecon and Kinco; built 35+ industrial client partnerships over 6 years.",
+        "Developed and deployed industrial automation systems with IoT, SCADA and data-flow integrations — building deep expertise in end-to-end process automation and system integration.",
+        "Executed full project cycles: system design, programming (Python, structured text), testing, troubleshooting and client-facing technical documentation.",
+        "Built commercial automation partnerships with 35+ companies (Siemens, Bosch, Rockwell).",
       ],
       pt: [
-        "Engenheirou 20+ máquinas industriais especiais com sistemas mecatrônicos, IoT, SCADA e protocolos industriais (Modbus, Profinet, EtherCAT).",
-        "Projetou e executou projetos elétricos completos de painéis: cálculos, esquemáticos (EPLAN/AutoCAD), montagem e comissionamento.",
-        "Programou CLPs e configurou HMI/SCADA (TIA Portal, CODESYS, Indusoft) para automação de manufatura e processos.",
-        "Atuou como distribuidor regional de Siemens, Rockwell, Bosch, Wecon e Kinco; 35+ parcerias industriais em 6 anos.",
+        "Desenvolveu e implantou sistemas de automação industrial com IoT, SCADA e integrações de fluxo de dados — construindo expertise profunda em automação de processos e integração de sistemas.",
+        "Ciclos completos de projeto: design de sistema, programação (Python, texto estruturado), testes, troubleshooting e documentação técnica para clientes.",
+        "Construiu parcerias comerciais de automação com 35+ empresas (Siemens, Bosch, Rockwell).",
       ],
     },
   },
 ];
 
-export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
+export const EXPERIENCE_ENGINEER: Experience[] = [
   {
-    company: "Movewertech Technologies",
-    role: {
-      en: "Founder & Lead IT Automation Engineer",
-      pt: "Fundador & Engenheiro Líder de Automação IT",
-    },
+    company: "Movewer Technologies",
+    role: { en: "Founder & Automation Engineer", pt: "Fundador & Engenheiro de Automação" },
     period: "Jun 2025 – Present",
-    location: "Lisbon, Portugal",
+    location: "Portugal",
     bullets: {
       en: [
-        "Architected and deployed MOV Platform — a full-stack IoT monitoring solution on Linux VPS using MQTT, Node-RED, InfluxDB and Grafana, with an AI layer that generates actionable insights from raw sensor streams.",
-        "Designed end-to-end automation workflows connecting edge devices (Raspberry Pi) to cloud dashboards: data ingestion, processing, real-time alerting and AI-driven reporting via REST APIs and webhooks.",
-        "Built Julius, a fully automated AI-powered personal finance bot using n8n, OpenAI API and Google Sheets — no manual input required.",
-        "Sole technical owner across full dev lifecycle: requirements gathering → architecture → deployment → iteration.",
+        "Engineered special industrial machines — developing electrical schematics, integrating mechatronic systems, PLC and SCADA programming.",
+        "Architected end-to-end Industry 4.0 solutions for UGV platforms: control systems, power electronics, wireless communication, remote-control stations and multi-sensor integration.",
+        "Built a full-stack Industrial IoT Monitoring Platform using MQTT, Python, Node-RED, InfluxDB and Grafana; integrated AI-driven analytics to surface actionable insights beyond raw sensor data.",
+        "Defined IT/OT convergence architecture, bridging field-level devices to cloud dashboards with real-time data pipelines and automated alerting.",
+        "Collaborated with a mechanical specialist to co-design several modular UGV systems aligned with client requirements and safety standards, including a high-payload UGV (1200 kg).",
       ],
       pt: [
-        "Arquitetou e implantou a MOV Platform — solução IoT full-stack em VPS Linux com MQTT, Node-RED, InfluxDB e Grafana, com camada de IA que gera insights acionáveis de streams de sensores.",
-        "Projetou workflows de automação ponta a ponta conectando dispositivos edge (Raspberry Pi) a dashboards na nuvem: ingestão, processamento, alertas em tempo real e reports de IA via REST APIs e webhooks.",
-        "Construiu o Julius, bot financeiro pessoal com IA usando n8n, OpenAI API e Google Sheets — sem input manual.",
-        "Responsável técnico único em todo o ciclo: levantamento → arquitetura → deploy → iteração.",
+        "Engenheirou máquinas industriais especiais — desenvolvendo esquemáticos elétricos, integrando sistemas mecatrônicos, programação de CLPs e SCADA.",
+        "Arquitetou soluções Indústria 4.0 ponta a ponta para plataformas UGV: sistemas de controle, eletrônica de potência, comunicação sem fio, estações de controle remoto e integração multissensorial.",
+        "Construiu Plataforma IIoT de Monitoramento full-stack com MQTT, Python, Node-RED, InfluxDB e Grafana; integrou analytics de IA para insights acionáveis além dos dados brutos.",
+        "Definiu arquitetura de convergência IT/OT, conectando dispositivos de campo a dashboards na nuvem com pipelines em tempo real e alertas automatizados.",
+        "Colaborou com especialista mecânico para co-projetar diversos sistemas UGV modulares alinhados com requisitos e normas de segurança, incluindo UGV de alta carga (1200 kg).",
       ],
     },
   },
@@ -187,35 +161,126 @@ export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Structured automation division from scratch and delivered intelligent control and workflow systems, contributing directly to new fundraising rounds.",
-        "Managed team of 5 engineers using Scrum/Kanban on JIRA, coordinating multi-project delivery on time and within budget.",
-        "Translated complex operational requirements into technical user stories, functional workflows and automation logic.",
+        "Built the Automation and UGV divisions from zero; systems delivered contributed directly to a new fundraising round, with technical demonstrations cited as key proof points by company leadership.",
+        "Led a cross-functional team of 5 engineers across two product lines (agricultural UGVs and drone-support infrastructure), reducing time-to-prototype by ~30% through structured Scrum sprints.",
+        "Owned the full development lifecycle of UGV systems — control, power and communication — coordinating with mechanical and electronics teams across tight delivery timelines.",
+        "Delivered a 10 kg-payload agricultural quadcopter from concept to flight-ready prototype in under 6 months, including electrical project, mechanical integration and flight-control and telemetry systems.",
       ],
       pt: [
-        "Estruturou a divisão de automação do zero, entregando sistemas de controle e workflows inteligentes que contribuíram para novas rodadas de captação.",
-        "Gerenciou equipe de 5 engenheiros com Scrum/Kanban no JIRA, coordenando entregas em prazo e orçamento.",
-        "Traduziu requisitos operacionais complexos em histórias de usuário técnicas e lógica de automação.",
+        "Construiu as divisões de Automação e UGV do zero; sistemas entregues contribuíram diretamente para nova rodada de captação, com demonstrações técnicas citadas como proof points pela liderança.",
+        "Liderou equipe cross-funcional de 5 engenheiros em duas linhas de produto (UGVs agrícolas e infraestrutura de suporte a drones), reduzindo tempo de protótipo em ~30% com sprints Scrum estruturados.",
+        "Responsável pelo ciclo completo de desenvolvimento de sistemas UGV — controle, potência e comunicação — coordenando equipes mecânica e eletrônica em prazos apertados.",
+        "Entregou quadricóptero agrícola de 10 kg do conceito ao protótipo pronto para voo em menos de 6 meses, incluindo projeto elétrico, integração mecânica e sistemas de controle de voo e telemetria.",
       ],
     },
   },
   {
     company: "Controvale",
     role: {
-      en: "Automation & Application Junior Engineer",
-      pt: "Engenheiro Jr. de Automação e Aplicação",
+      en: "Automation Engineer",
+      pt: "Engenheiro de Automação",
     },
     period: "Jun 2018 – Jun 2024",
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Developed and deployed industrial automation systems with IoT, SCADA and data-flow integrations.",
-        "Executed full project cycles: system design, programming (Python, structured text), testing and client-facing documentation.",
-        "Built commercial automation partnerships with 35+ companies (Siemens, Bosch, Rockwell).",
+        "Engineered 20+ special industrial machines integrating mechatronic systems, IoT connectivity, SCADA supervision and industrial communication protocols (Modbus, Profinet, EtherCAT); average project delivered on time and within 5% budget variance.",
+        "Designed and executed full industrial electrical panel projects end-to-end: load calculations, schematics (EPLAN/AutoCAD), component specification, physical assembly, commissioning and field testing.",
+        "Programmed PLCs and configured HMI/SCADA systems (TIA Portal, CODESYS, Indusoft) for manufacturing and process automation projects.",
+        "Served as regional distributor for Wecon and Kinco; built and maintained a portfolio of 35+ industrial client partnerships over 6 years.",
       ],
       pt: [
-        "Desenvolveu e implantou sistemas de automação industrial com IoT, SCADA e integrações de fluxo de dados.",
-        "Ciclos completos de projeto: design, programação (Python, texto estruturado), testes e documentação para clientes.",
-        "Construiu parcerias comerciais de automação com 35+ empresas (Siemens, Bosch, Rockwell).",
+        "Engenheirou 20+ máquinas industriais especiais integrando sistemas mecatrônicos, IoT, SCADA e protocolos industriais (Modbus, Profinet, EtherCAT); projetos entregues no prazo e com variação de 5% no orçamento.",
+        "Projetou e executou projetos elétricos de painéis industriais ponta a ponta: cálculos de carga, esquemáticos (EPLAN/AutoCAD), especificação de componentes, montagem, comissionamento e testes.",
+        "Programou CLPs e configurou HMI/SCADA (TIA Portal, CODESYS, Indusoft) para projetos de automação de manufatura e processos.",
+        "Atuou como distribuidor regional de Wecon e Kinco; construiu e manteve portfólio de 35+ parcerias industriais em 6 anos.",
+      ],
+    },
+  },
+];
+
+export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
+  {
+    company: "Personal Projects",
+    role: {
+      en: "Full-Stack Developer & Automation Engineer",
+      pt: "Desenvolvedor Full-Stack & Engenheiro de Automação",
+    },
+    period: "2024 – Present",
+    location: "Lisbon, Portugal",
+    bullets: {
+      en: [
+        "Built a social media automation pipeline using n8n and Make that generates posts from predefined topics, routes approval via Telegram, and auto-publishes to LinkedIn on confirmation.",
+        "Developed a Python data pipeline for automated ingestion, transformation and reporting — pulling from REST APIs, processing with pandas, and persisting to PostgreSQL on a schedule.",
+        "Architected Julius, an AI-powered personal finance PWA (Next.js 15, Supabase, OpenAI API) where an AI agent extracts, categorizes and persists financial entries from natural language input.",
+      ],
+      pt: [
+        "Construiu um pipeline de automação de mídias sociais usando n8n e Make que gera posts a partir de temas predefinidos, roteia aprovação via Telegram e publica automaticamente no LinkedIn.",
+        "Desenvolveu um pipeline de dados em Python para ingestão, transformação e relatórios automatizados — consumindo REST APIs, processando com pandas e persistindo no PostgreSQL.",
+        "Arquitetou o Julius, um PWA de finanças pessoais com IA (Next.js 15, Supabase, OpenAI API) onde um agente de IA extrai, categoriza e persiste lançamentos financeiros a partir de linguagem natural.",
+      ],
+    },
+  },
+  {
+    company: "Movewer Technologies",
+    role: {
+      en: "Founder & Lead IT Automation Engineer",
+      pt: "Fundador & Engenheiro Líder de Automação IT",
+    },
+    period: "Jun 2025 – Present",
+    location: "Lisbon, Portugal",
+    bullets: {
+      en: [
+        "Architected and deployed AI Data Platform — a full-stack IoT data solution on Linux VPS using MQTT, Node-RED, InfluxDB and Grafana, with an AI layer that generates actionable insights from raw sensor streams.",
+        "Designed end-to-end automation workflows connecting edge devices (Raspberry Pi) to cloud dashboards: data ingestion, processing, real-time alerting and AI-driven reporting via REST APIs and webhooks.",
+        "Built Julius, a fully automated AI-powered personal finance bot using n8n, OpenAI API and Google Sheets — no manual input required.",
+        "Sole technical owner across full dev lifecycle: requirements gathering → architecture → deployment → iteration.",
+      ],
+      pt: [
+        "Arquitetou e implantou a AI Data Platform — solução de dados IoT full-stack em VPS Linux com MQTT, Node-RED, InfluxDB e Grafana, com camada de IA que gera insights acionáveis de streams de sensores.",
+        "Projetou workflows de automação ponta a ponta conectando dispositivos edge (Raspberry Pi) a dashboards na nuvem: ingestão, processamento, alertas em tempo real e reports de IA via REST APIs e webhooks.",
+        "Construiu o Julius, bot financeiro pessoal com IA usando n8n, OpenAI API e Google Sheets — sem input manual.",
+        "Responsável técnico único em todo o ciclo: levantamento → arquitetura → deploy → iteração.",
+      ],
+    },
+  },
+  {
+    company: "Psyche AeroSpace",
+    role: {
+      en: "Automation Executive Manager / Engineering Team Lead",
+      pt: "Gerente Executivo de Automação / Líder de Equipe de Engenharia",
+    },
+    period: "Jun 2024 – Jun 2025",
+    location: "São Paulo, Brazil",
+    bullets: {
+      en: [
+        "Developed internal automation workflows using Python, Node.js and low-code tools to streamline operations and improve team efficiency.",
+        "Managed a cross-functional team of 5 engineers using Scrum/Kanban on JIRA, coordinating multi-project delivery on time and within budget.",
+        "Translated complex operational requirements into technical user stories, functional workflows and automation logic — bridging business stakeholders and engineering execution.",
+      ],
+      pt: [
+        "Desenvolveu workflows de automação interna usando Python, Node.js e ferramentas low-code para otimizar operações e melhorar eficiência.",
+        "Gerenciou equipe cross-funcional de 5 engenheiros com Scrum/Kanban no JIRA, coordenando entregas em prazo e orçamento.",
+        "Traduziu requisitos operacionais complexos em histórias de usuário técnicas, workflows funcionais e lógica de automação — ponte entre stakeholders e execução técnica.",
+      ],
+    },
+  },
+  {
+    company: "Controvale",
+    role: {
+      en: "Automation Engineer",
+      pt: "Engenheiro de Automação",
+    },
+    period: "Jun 2018 – Jun 2024",
+    location: "São Paulo, Brazil",
+    bullets: {
+      en: [
+        "Developed and deployed industrial automation systems with IoT, SCADA and data-flow integrations — building deep expertise in end-to-end process automation and system integration.",
+        "Executed full project cycles: system design, programming (Python, structured text), testing, troubleshooting and client-facing technical documentation.",
+      ],
+      pt: [
+        "Desenvolveu e implantou sistemas de automação industrial com IoT, SCADA e integrações de fluxo de dados — construindo expertise profunda em automação de processos e integração de sistemas.",
+        "Ciclos completos de projeto: design de sistema, programação (Python, texto estruturado), testes, troubleshooting e documentação técnica para clientes.",
       ],
     },
   },
@@ -225,84 +290,113 @@ export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
 // 4. Skills
 // ---------------------------------------------------------------------------
 export const SKILLS_WEBDEV = [
-  "Next.js",
-  "React",
+  "Python",
   "TypeScript",
   "JavaScript (ES6+)",
+  "React",
+  "Next.js",
   "Node.js",
-  "Python",
-  "REST API Design",
-  "MongoDB",
-  "PostgreSQL / SQL",
-  "Docker",
-  "Vercel",
-  "Git / GitHub",
-  "GitHub Actions (CI/CD)",
+  "Express.js",
+  "FastAPI",
+  "Angular",
   "Tailwind CSS",
-  "OpenAI API",
-  "SSR / SSG",
-  "WebSockets",
+  "PostgreSQL",
+  "MongoDB",
+  "InfluxDB",
+  "Prisma ORM",
+  "Supabase",
+  "pandas / NumPy",
+  "Data Pipelines / ETL",
+  "OpenAI API / Claude API",
+  "AI Agents / LLM Integration",
+  "Docker",
+  "GitHub Actions (CI/CD)",
+  "AWS / Vercel",
+  "REST / WebSockets",
+  "Git / GitHub",
+  "Solidity / Web3",
   "Agile (Scrum/Kanban)",
 ];
 
 export const SKILLS_ENGINEER = [
-  "PLC (TIA Portal, CODESYS, GX Works)",
-  "SCADA / HMI (Indusoft, WinCC)",
-  "Modbus RTU/TCP",
-  "Profinet / EtherCAT",
-  "OPC-UA / LoRa",
-  "IIoT Architecture",
+  "PLC Programming (TIA Portal, CODESYS, GX Works)",
+  "SCADA/HMI (AVEVA, WinCC, Indusoft)",
+  "Industrial Protocols (Modbus, Profinet, EtherCAT, OPC-UA, LoRa)",
+  "Electrical Panel Design & Wiring",
   "IT/OT Convergence",
+  "IIoT Architecture",
   "Edge Computing",
-  "Electrical Panel Design",
   "Control Systems",
   "Power Electronics",
   "Embedded Systems",
-  "UGV Development",
+  "Motion Control",
+  "UGV/AGV Development",
   "Drone Systems",
-  "Python / Node.js",
-  "MQTT / Node-RED",
-  "SolidWorks / EPLAN",
+  "Python / Node.js / TypeScript",
+  "MQTT / Node-RED / InfluxDB",
+  "SolidWorks / EPLAN / AutoCAD Electrical",
+  "MATLAB / LabView",
   "Raspberry Pi / NVIDIA Jetson",
   "Industry 4.0",
-  "Scrum / Kanban",
+  "Scrum / Kanban / JIRA",
 ];
 
 export const SKILLS_AUTOMATION_IT = [
   "n8n",
+  "Make (Integromat)",
+  "Zapier",
   "Node-RED",
   "Python",
-  "REST / Webhook APIs",
-  "MQTT",
-  "OpenAI API",
-  "Prompt Engineering",
-  "LLM Workflow Integration",
-  "InfluxDB",
-  "Grafana",
-  "Power BI",
   "JavaScript / TypeScript",
-  "Linux / VPS",
+  "REST / Webhook APIs",
+  "Event-Driven Pipelines",
+  "AI APIs (OpenAI, Claude)",
+  "AI Agents / Prompt Engineering",
+  "LLM Workflow Integration",
+  "MQTT / OPC-UA",
+  "InfluxDB (Time-Series)",
+  "PostgreSQL",
+  "Grafana / Power BI",
   "Docker",
+  "Linux / VPS",
   "Git / GitHub",
-  "CI/CD",
-  "Raspberry Pi",
+  "CI/CD (GitHub Actions)",
+  "Raspberry Pi / Jetson Nano",
+  "SCADA / Embedded Systems",
   "Power Automate",
-  "Industry 4.0",
   "Scrum / Kanban",
 ];
 
 // ---------------------------------------------------------------------------
 // 5. Education
 // ---------------------------------------------------------------------------
-export const EDUCATION = {
-  school: "Federal Institute of São Paulo (IFSP)",
-  degree: {
-    en: "Bachelor of Control and Automation Engineering",
-    pt: "Bacharelado em Engenharia de Controle e Automação",
+export interface Education {
+  school: string;
+  degree: { en: string; pt: string };
+  period: string;
+  location: string;
+}
+
+export const EDUCATION: Education[] = [
+  {
+    school: "Federal Institute of São Paulo (IFSP)",
+    degree: {
+      en: "Bachelor of Control and Automation Engineering",
+      pt: "Bacharelado em Engenharia de Controle e Automação",
+    },
+    period: "Jan 2019 – Dec 2023",
+    location: "São José dos Campos, SP",
   },
-  period: "Jan 2019 – Dec 2023",
-  location: "São José dos Campos, SP",
-};
+  {
+    school: "freeCodeCamp · One Bit Code · Self-directed study",
+    degree: {
+      en: "Full-Stack Development — 800+ hours",
+      pt: "Desenvolvimento Full-Stack — 800+ horas",
+    },
+    period: "2022 – Present",
+    location: "Online",
+  },
+];
 
 // ---------------------------------------------------------------------------
 // 6. Projects
@@ -318,11 +412,11 @@ export interface Project {
 
 export const PROJECTS_WEBDEV: Project[] = [
   {
-    slug: "mov-platform",
-    title: "MOV Platform",
+    slug: "ai-data-platform",
+    title: "AI Data Platform",
     description: {
-      en: "Full-stack IoT monitoring platform with Next.js frontend, Python REST API, real-time data pipeline and AI-powered insights. Containerized with Docker and self-hosted on a VPS.",
-      pt: "Plataforma IoT full-stack com frontend Next.js, API REST em Python, pipeline de dados em tempo real e insights de IA. Containerizada com Docker e auto-hospedada em VPS.",
+      en: "Full-stack IoT data platform with Next.js frontend, Python REST API, real-time data pipeline and AI-powered analytics. Containerized with Docker and deployed on a Linux VPS.",
+      pt: "Plataforma de dados IoT full-stack com frontend Next.js, API REST em Python, pipeline de dados em tempo real e analytics com IA. Containerizada com Docker e implantada em VPS Linux.",
     },
     coverImage: "/images/projects/webdev/MOV3.png",
     tags: ["Next.js", "Python", "Docker", "InfluxDB", "AI"],
@@ -411,34 +505,34 @@ export const PROJECTS_ENGINEER: Project[] = [
     tags: ["Distributed Systems", "IoT", "Automation"],
   },
   {
-    slug: "mov-monitoring",
+    slug: "ttd",
     title: "Thrust Testing Device (TTD)",
     description: {
-      en: "Thrust Testing Device (TTD) — Used for testing and evaluation of UAV propulsion motors, with integrated sensors and real-time data acquisition.",
-      pt: "Dispositivo de Teste de Empuxo (TTD) — Utilizado para teste e avaliação de motores de propulsão de UAVs, com sensores integrados e aquisição de dados em tempo real.",
+      en: "Production-grade special machine for testing and evaluating UAV propulsion motors — measures thrust, torque, power consumption and performance metrics under controlled conditions.",
+      pt: "Máquina especial de nível produção para teste e avaliação de motores de propulsão UAV — mede empuxo, torque, consumo de energia e métricas de desempenho em condições controladas.",
     },
     coverImage: "/images/projects/engineer/TTD.png",
-    tags: ["IoT", "SCADA", "Power Management", "Data Acquisition"],
+    tags: ["Special Machine", "Electrical Panel", "Data Acquisition"],
   },
   {
-    slug: "engineer-project-5",
+    slug: "siemens-portable-case",
     title: "SIEMENS Portable Case",
     description: {
       en: "SIEMENS automation portable controller integrating industrial automation equipment for on-site control and monitoring.",
       pt: "Maleta Controladora Portátil que integra equipamentos SIEMENS de automação Industrial",
     },
     coverImage: "/images/projects/engineer/SIEMENS.jpeg",
-    tags: ["Siemens", "Automation", "Special Development", "Control Device"],
+    tags: ["Siemens", "TIA Portal", "WinCC", "Control Device"],
   },
   {
-    slug: "engineer-project-6",
+    slug: "spirit-ugv",
     title: "SPIRIT UGV",
     description: {
-      en: "Coming soon — add your project details here.",
-      pt: "Em breve — adicione os detalhes do seu projeto aqui.",
+      en: "Modular UGV platform designed for agricultural and industrial field data collection — integrated sensors, wireless communication and autonomous navigation capabilities.",
+      pt: "Plataforma UGV modular projetada para coleta de dados em campo agrícola e industrial — sensores integrados, comunicação sem fio e capacidades de navegação autônoma.",
     },
     coverImage: "/images/projects/engineer/SPIRIT-UGV.png",
-    tags: ["TBD"],
+    tags: ["UGV", "Sensors", "Autonomous Navigation", "Field Data"],
   },
 ];
 
@@ -455,10 +549,10 @@ export const PROJECTS_AUTOMATION_IT: Project[] = [
   },
   {
     slug: "mov-platform-automation",
-    title: "MOV Platform — IT Layer",
+    title: "AI Data Platform — IT Layer",
     description: {
-      en: "Production IoT + AI monitoring platform. Edge node ingests field signals via MQTT, pipeline stores in InfluxDB, Grafana surfaces dashboards, AI layer delivers natural-language insights.",
-      pt: "Plataforma de monitoramento IoT + IA em produção. Edge node ingere sinais via MQTT, pipeline armazena no InfluxDB, Grafana exibe dashboards, camada de IA entrega insights em linguagem natural.",
+      en: "Production IoT + AI data platform. Edge node ingests field signals via MQTT, pipeline stores in InfluxDB, Grafana surfaces dashboards, AI layer delivers natural-language insights and anomaly detection.",
+      pt: "Plataforma de dados IoT + IA em produção. Edge node ingere sinais via MQTT, pipeline armazena no InfluxDB, Grafana exibe dashboards, camada de IA entrega insights e detecção de anomalias.",
     },
     coverImage: "/images/projects/automation-it/MOV.png",
     tags: ["Node-RED", "MQTT", "InfluxDB", "Grafana", "AI"],
@@ -503,7 +597,7 @@ export interface ProjectDetail {
   title: string;
   subtitle: { en: string; pt: string };
   bannerImage: string;
-  career: "webdev" | "engineer" | "automation-it";
+  career: "dev" | "engineer" | "automation-it";
   sections: {
     heading: { en: string; pt: string };
     body: { en: string; pt: string };
@@ -514,34 +608,34 @@ export interface ProjectDetail {
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
   // ── Web Dev ──────────────────────────────────────────────
-  "mov-platform": {
-    title: "MOV Platform",
+  "ai-data-platform": {
+    title: "AI Data Platform",
     subtitle: {
-      en: "Full-stack IoT monitoring platform with AI-powered insights",
-      pt: "Plataforma IoT full-stack com insights de IA",
+      en: "Full-stack IoT data platform with AI-powered analytics",
+      pt: "Plataforma de dados IoT full-stack com analytics de IA",
     },
     bannerImage: "/images/projects/webdev/MOV-Plataform.png",
-    career: "webdev",
+    career: "dev",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Developing a complete monitoring solution capable of collecting field signals via Raspberry Pi edge nodes, processing data through temporal databases, and presenting actionable insights using AI.",
-          pt: "Desenvolver uma solução completa de monitoramento capaz de coletar sinais de campo via nós edge Raspberry Pi, processar dados através de bancos temporais e apresentar insights acionáveis usando IA.",
+          en: "Industrial operations generate massive volumes of sensor data, but without a unified platform, raw signals remain siloed and underutilized. The challenge was to build a production-grade system that ingests field data from edge devices in real time, processes it through a scalable pipeline, and surfaces actionable AI-driven insights — all from a single dashboard.",
+          pt: "Operações industriais geram volumes massivos de dados de sensores, mas sem uma plataforma unificada, os sinais brutos permanecem isolados e subutilizados. O desafio era construir um sistema de nível produção que ingere dados de campo de dispositivos edge em tempo real, processa por um pipeline escalável e apresenta insights acionáveis gerados por IA — tudo em um único dashboard.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Built a pipeline using Node-Red as the edge processing layer, InfluxDB for temporal data storage, and Grafana for interactive dashboards. AI integration provides insights beyond raw sensor data using Python.",
-          pt: "Construí um pipeline usando Node-Red como camada de processamento edge, InfluxDB para armazenamento temporal e Grafana para dashboards interativos. Integração com IA fornece insights além dos dados brutos usando Python.",
+          en: "Built an end-to-end IoT data platform: Raspberry Pi edge nodes collect field signals via MQTT, Node-RED orchestrates the data flow into InfluxDB for time-series storage, and Grafana powers real-time dashboards.\n\nOn top of this pipeline, a custom Python REST API integrates an AI layer that generates natural-language insights, anomaly detection and trend forecasting from raw sensor streams.\n\nThe entire stack is containerized with Docker, deployed on a Linux VPS with CI/CD via GitHub Actions, and the production frontend is served on Vercel using Next.js with TypeScript.",
+          pt: "Construí uma plataforma de dados IoT ponta a ponta: nós edge Raspberry Pi coletam sinais de campo via MQTT, Node-RED orquestra o fluxo de dados para o InfluxDB (armazenamento time-series) e Grafana alimenta dashboards em tempo real.\n\nSobre este pipeline, uma API REST customizada em Python integra uma camada de IA que gera insights em linguagem natural, detecção de anomalias e previsão de tendências a partir de streams brutos de sensores.\n\nTodo o stack é containerizado com Docker, implantado em VPS Linux com CI/CD via GitHub Actions, e o frontend em produção é servido no Vercel com Next.js e TypeScript.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A fully functional, scalable monitoring platform deployed in production for Movewer Technologies UGV operations. (This project is currently under development, images are conceptual placeholders.)",
-          pt: "Uma plataforma de monitoramento totalmente funcional e escalável implantada em produção para operações UGV da Movewer Technologies. (Este projeto está atualmente em desenvolvimento, as imagens são placeholders conceituais.)",
+          en: "A production-deployed IIoT data platform actively used for Movewer Technologies UGV field operations — delivering real-time monitoring, AI-powered analytics and automated alerting from a single unified interface.",
+          pt: "Uma plataforma de dados IIoT implantada em produção, ativamente usada nas operações de campo de UGVs da Movewer Technologies — entregando monitoramento em tempo real, analytics com IA e alertas automatizados a partir de uma interface unificada.",
         },
       },
     ],
@@ -553,27 +647,27 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Aplicação web full-stack com SSR, autenticação e MongoDB.",
     },
     bannerImage: "/images/projects/webdev/Dev3.png",
-    career: "webdev",
+    career: "dev",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Build a full-stack web application from scratch using Next.js and TypeScript, including user authentication, dynamic content and responsive design.",
-          pt: "Construir uma aplicação web full-stack do zero usando Next.js e TypeScript, incluindo autenticação de usuários, conteúdo dinâmico e design responsivo.",
+          en: "Build a production-ready full-stack web application from scratch — with secure user authentication, dynamic server-rendered content, database persistence, and a clean, responsive UI — demonstrating end-to-end Next.js capabilities.",
+          pt: "Construir uma aplicação web full-stack pronta para produção do zero — com autenticação segura de usuários, conteúdo dinâmico renderizado no servidor, persistência em banco de dados e uma UI limpa e responsiva — demonstrando capacidades Next.js ponta a ponta.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Developed a Next.js app with server components, implementing JWT authentication flows via NextAuth, MongoDB as the database, and a modern UI using Tailwind CSS. Deployed on Vercel with CI/CD via GitHub Actions.",
-          pt: "Desenvolvi um aplicativo Next.js com componentes de servidor, implementando fluxos de autenticação JWT via NextAuth, MongoDB como banco de dados e interface moderna com Tailwind CSS. Deploy no Vercel com CI/CD via GitHub Actions.",
+          en: "Developed a Next.js application with server and client components, implementing JWT-based authentication via NextAuth with provider and credential flows. MongoDB handles data persistence through Prisma ORM.\n\nThe UI is built with Tailwind CSS for a modern, responsive experience. Deployed on Vercel with CI/CD via GitHub Actions for automated testing and deployment on every push.",
+          pt: "Desenvolvi uma aplicação Next.js com componentes de servidor e cliente, implementando autenticação JWT via NextAuth com fluxos de provedor e credenciais. MongoDB cuida da persistência via Prisma ORM.\n\nA interface é construída com Tailwind CSS para uma experiência moderna e responsiva. Deploy no Vercel com CI/CD via GitHub Actions para testes e deploy automatizados a cada push.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A polished, production-ready application demonstrating full-stack Next.js capabilities with TypeScript type safety.",
-          pt: "Uma aplicação polida e pronta para produção demonstrando capacidades full-stack do Next.js com type safety do TypeScript.",
+          en: "A polished, production-ready application showcasing full-stack Next.js proficiency — secure auth flows, server-side rendering, database integration and modern DevOps practices.",
+          pt: "Uma aplicação polida e pronta para produção demonstrando proficiência full-stack em Next.js — fluxos de autenticação seguros, renderização no servidor, integração com banco de dados e práticas DevOps modernas.",
         },
       },
     ],
@@ -585,27 +679,27 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Simulador da Copa do Mundo com JavaScript vanilla",
     },
     bannerImage: "/images/projects/webdev/FIFA2030.png",
-    career: "webdev",
+    career: "dev",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Create a fun and interactive World Cup match simulator using only vanilla web technologies — no frameworks or libraries.",
-          pt: "Criar um simulador de partidas da Copa do Mundo divertido e interativo usando apenas tecnologias web vanilla — sem frameworks ou bibliotecas.",
+          en: "Create an interactive FIFA World Cup simulator using only vanilla web technologies — no frameworks, no libraries, no build tools. Pure JavaScript, HTML5 and CSS3, delivered straight to the browser.",
+          pt: "Criar um simulador interativo da Copa do Mundo FIFA usando apenas tecnologias web vanilla — sem frameworks, sem bibliotecas, sem ferramentas de build. JavaScript puro, HTML5 e CSS3, direto no navegador.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Built a simulator with pure JavaScript, HTML5 and CSS3. Features include randomized match results, group stages, knockout brackets, and a clean visual interface.",
-          pt: "Construí um simulador com JavaScript puro, HTML5 e CSS3. Inclui resultados de partidas aleatórios, fase de grupos, chaves eliminatórias e uma interface visual limpa.",
+          en: "Built a complete World Cup simulator with dynamic bracket rendering, group-stage logic, knockout-round elimination, randomized match results with weighted probability, and a fully responsive UI.\n\nAll match simulation logic, DOM manipulation and state management are handled with vanilla JavaScript — no external dependencies.",
+          pt: "Construí um simulador completo da Copa do Mundo com renderização dinâmica de chaves, lógica de fase de grupos, eliminação por mata-mata, resultados com probabilidade ponderada e uma UI totalmente responsiva.\n\nToda a lógica de simulação, manipulação do DOM e gerenciamento de estado são feitos com JavaScript vanilla — sem dependências externas.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A lightweight, dependency-free simulator that runs entirely in the browser with smooth animations and realistic match logic.",
-          pt: "Um simulador leve e sem dependências que roda inteiramente no navegador com animações suaves e lógica de partidas realista.",
+          en: "A lightweight, zero-dependency World Cup simulator that runs entirely in the browser — smooth animations, realistic match logic and a clean visual experience built from scratch with vanilla JS.",
+          pt: "Um simulador da Copa do Mundo leve e sem dependências que roda inteiramente no navegador — animações suaves, lógica de partidas realista e experiência visual limpa construída do zero com JS vanilla.",
         },
       },
     ],
@@ -614,21 +708,21 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     title: "Project 4",
     subtitle: { en: "Coming soon", pt: "Em breve" },
     bannerImage: "/images/projects/webdev/C1.png",
-    career: "webdev",
+    career: "dev",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
   "webdev-project-5": {
     title: "Project 5",
     subtitle: { en: "Coming soon", pt: "Em breve" },
     bannerImage: "/images/projects/webdev/C2.png",
-    career: "webdev",
+    career: "dev",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
   "webdev-project-6": {
     title: "Project 6",
     subtitle: { en: "Coming soon", pt: "Em breve" },
     bannerImage: "/images/projects/webdev/C3.png",
-    career: "webdev",
+    career: "dev",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
 
@@ -645,8 +739,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Build a zero-friction personal finance tracker that eliminates manual data entry — receipts go in, structured data comes out automatically, and natural-language queries return spending insights.",
-          pt: "Construir um rastreador financeiro pessoal sem atrito que elimine entrada manual de dados — recibos entram, dados estruturados saem automaticamente, e consultas em linguagem natural retornam insights de gastos.",
+          en: "Personal finance tracking demands discipline and consistency — two things that manual spreadsheets kill over time. The goal was to build a zero-friction system where receipts go in, structured data comes out automatically, and natural-language queries return spending insights — no manual entry, no app switching, no friction.",
+          pt: "Controle financeiro pessoal exige disciplina e consistência — duas coisas que planilhas manuais matam com o tempo. O objetivo era construir um sistema sem atrito onde recibos entram, dados estruturados saem automaticamente e consultas em linguagem natural retornam insights de gastos — sem entrada manual, sem trocar de app, sem fricção.",
         },
       },
       {
@@ -666,10 +760,10 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
     ],
   },
   "mov-platform-automation": {
-    title: "MOV Platform — IT Layer",
+    title: "AI Data Platform — IT Layer",
     subtitle: {
-      en: "IoT + AI monitoring automation architecture on Linux VPS",
-      pt: "Arquitetura de automação de monitoramento IoT + IA em VPS Linux",
+      en: "IoT + AI data platform automation architecture on Linux VPS",
+      pt: "Arquitetura de automação de plataforma de dados IoT + IA em VPS Linux",
     },
     bannerImage: "/images/projects/automation-it/MOV-Platform.png",
     career: "automation-it",
@@ -677,22 +771,22 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Design an end-to-end IT automation architecture that ingests real-time field signals from IoT edge devices, routes data through a cloud pipeline, and delivers actionable AI-driven insights — without manual intervention.",
-          pt: "Projetar uma arquitetura de automação IT ponta a ponta que ingere sinais de campo em tempo real de dispositivos IoT, roteia dados por um pipeline na nuvem e entrega insights acionáveis de IA — sem intervenção manual.",
+          en: "Industrial IoT generates continuous streams of sensor data, but without automated pipelines, this data sits unused. The challenge was to design an end-to-end IT automation architecture that ingests real-time field signals from edge devices, routes data through a cloud pipeline, and delivers actionable AI-driven insights — fully automated, zero manual intervention.",
+          pt: "IoT industrial gera streams contínuos de dados de sensores, mas sem pipelines automatizados, esses dados ficam subutilizados. O desafio era projetar uma arquitetura de automação IT ponta a ponta que ingere sinais de campo em tempo real de dispositivos edge, roteia dados por um pipeline na nuvem e entrega insights acionáveis de IA — totalmente automatizado, zero intervenção manual.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Edge node (Raspberry Pi + Node-RED) ingests field signals via MQTT broker → InfluxDB time-series storage → Grafana dashboards for real-time visualization → custom AI layer delivers natural-language insights and anomaly detection beyond raw metrics.\n\nAll components deployed on a Linux VPS with automated alerting, REST API integrations and webhook-driven event processing.",
-          pt: "Nó edge (Raspberry Pi + Node-RED) ingere sinais via broker MQTT → armazenamento time-series no InfluxDB → dashboards Grafana para visualização em tempo real → camada de IA customizada entrega insights em linguagem natural e detecção de anomalias.\n\nTodos os componentes implantados em VPS Linux com alertas automatizados, integrações REST API e processamento de eventos via webhooks.",
+          en: "Edge node (Raspberry Pi + Node-RED) ingests field signals via MQTT broker → InfluxDB time-series storage → Grafana dashboards for real-time visualization → custom AI layer delivers natural-language insights, anomaly detection and trend forecasting beyond raw metrics.\n\nAll components deployed on a Linux VPS with Docker containerization, automated alerting, REST API integrations and webhook-driven event processing. CI/CD via GitHub Actions ensures zero-downtime deployments.",
+          pt: "Nó edge (Raspberry Pi + Node-RED) ingere sinais de campo via broker MQTT → armazenamento time-series no InfluxDB → dashboards Grafana para visualização em tempo real → camada de IA customizada entrega insights em linguagem natural, detecção de anomalias e previsão de tendências.\n\nTodos os componentes implantados em VPS Linux com containerização Docker, alertas automatizados, integrações REST API e processamento de eventos via webhooks. CI/CD via GitHub Actions garante deploys sem downtime.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A production-deployed IIoT monitoring platform with AI-powered insights actively used for Movewer Technologies UGV operations. (Images are conceptual placeholders — project is under active development.)",
-          pt: "Plataforma de monitoramento IIoT implantada em produção com insights de IA ativamente usada nas operações UGV da Movewer Technologies. (Imagens são placeholders conceituais — projeto em desenvolvimento ativo.)",
+          en: "A production-deployed IIoT monitoring platform with AI-powered analytics, actively used for Movewer Technologies UGV operations — delivering automated data ingestion, real-time dashboards and intelligent alerting from a single unified stack.",
+          pt: "Uma plataforma de monitoramento IIoT implantada em produção com analytics de IA, ativamente usada nas operações UGV da Movewer Technologies — entregando ingestão automatizada de dados, dashboards em tempo real e alertas inteligentes a partir de um stack unificado.",
         },
       },
     ],
@@ -771,22 +865,22 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Design and develop a high-payload UGV capable of carrying 1200 kg for agricultural and industrial applications, with full documentation and commercial viability.",
-          pt: "Projetar e desenvolver um UGV de alta carga capaz de transportar 1200 kg para aplicações agrícolas e industriais, com documentação completa e viabilidade comercial.",
+          en: "Design and develop a high-payload UGV capable of carrying 1,200 kg for industrial and agricultural applications — with full system architecture, power-electronics design, wireless control stack, and commercial feasibility analysis.",
+          pt: "Projetar e desenvolver um UGV de alta carga capaz de transportar 1.200 kg para aplicações industriais e agrícolas — com arquitetura completa, projeto de eletrônica de potência, stack de controle wireless e análise de viabilidade comercial.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Full development of the Armax UGV with assistance from a mechanical specialist. Includes control systems, power systems, communication architecture, and sensor integration.",
-          pt: "Desenvolvimento completo do UGV Armax com assistência de especialista mecânico. Inclui sistemas de controle, potência, arquitetura de comunicação e integração de sensores.",
+          en: "Full development of the Armax UGV platform in collaboration with a mechanical specialist. Delivered system architecture, power-electronics design, wireless control stack (remote-control station + telemetry), performance benchmarks and commercial feasibility studies.\n\nThe build-ready deliverable covers control systems, communication protocols, sensor integration and safety compliance — designed for modularity so the platform can be adapted to different payload configurations and operational scenarios.",
+          pt: "Desenvolvimento completo da plataforma UGV Armax em colaboração com especialista mecânico. Entregou arquitetura do sistema, projeto de eletrônica de potência, stack de controle wireless (estação de controle remoto + telemetria), benchmarks de desempenho e estudos de viabilidade comercial.\n\nO deliverable pronto para construção cobre sistemas de controle, protocolos de comunicação, integração de sensores e conformidade de segurança — projetado para modularidade, permitindo adaptação para diferentes configurações de carga e cenários operacionais.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "Project ready-to-build with all documentation, performance studies, and commercial analyses completed.",
-          pt: "Projeto pronto para construção com toda documentação, estudos de desempenho e análises comerciais concluídos.",
+          en: "A build-ready 1,200 kg UGV platform with complete documentation — system architecture, power-electronics design, wireless control stack, performance benchmarks and commercial feasibility analysis. Ready for prototype manufacturing.",
+          pt: "Uma plataforma UGV de 1.200 kg pronta para construção com documentação completa — arquitetura do sistema, projeto de eletrônica de potência, stack de controle wireless, benchmarks de desempenho e análise de viabilidade comercial. Pronta para manufatura de protótipo.",
         },
       },
     ],
@@ -803,22 +897,22 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Design a medium-payload agricultural quadcopter drone from the ground up — covering project planning, electrical systems, mechanical integration, and flight controller programming.",
-          pt: "Projetar um drone quadricóptero agrícola de carga média do zero — cobrindo planejamento de projeto, sistemas elétricos, integração mecânica e programação do controlador de voo.",
+          en: "Deliver a 10 kg-payload agricultural quadcopter from concept to flight-ready prototype — covering electrical project, mechanical integration, propulsion system selection and flight-control/telemetry systems.",
+          pt: "Entregar um quadricóptero agrícola de 10 kg de carga do conceito ao protótipo pronto para voo — cobrindo projeto elétrico, integração mecânica, seleção de sistema de propulsão e sistemas de controle de voo/telemetria.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Completed full electrical and mechanical design, selected propulsion components (motors, ESCs, propellers), designed the power distribution system, and integrated the flight controller with GPS navigation.",
-          pt: "Completei o projeto elétrico e mecânico completo, selecionei componentes de propulsão (motores, ESCs, hélices), projetei o sistema de distribuição de energia e integrei o controlador de voo com navegação GPS.",
+          en: "Completed full electrical and mechanical design: selected propulsion components (motors, ESCs, propellers), designed the power distribution system, integrated the flight controller with GPS navigation and telemetry.\n\nThe prototype was delivered in under 6 months at Psyche AeroSpace, coordinating with mechanical and electronics teams under tight delivery timelines.",
+          pt: "Completei projeto elétrico e mecânico completo: selecionei componentes de propulsão (motores, ESCs, hélices), projetei o sistema de distribuição de energia, integrei o controlador de voo com navegação GPS e telemetria.\n\nO protótipo foi entregue em menos de 6 meses na Psyche AeroSpace, coordenando com equipes mecânica e eletrônica em prazos apertados.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A fully documented drone project with all specifications, component lists, wiring diagrams, and operational parameters defined for agricultural spraying applications.",
-          pt: "Um projeto de drone totalmente documentado com todas as especificações, listas de componentes, diagramas de fiação e parâmetros operacionais definidos para aplicações de pulverização agrícola.",
+          en: "A flight-ready agricultural quadcopter prototype delivered in under 6 months — fully documented with specifications, component lists, wiring diagrams and operational parameters for agricultural spraying applications.",
+          pt: "Protótipo de quadricóptero agrícola pronto para voo entregue em menos de 6 meses — totalmente documentado com especificações, listas de componentes, diagramas de fiação e parâmetros operacionais para aplicações de pulverização agrícola.",
         },
       },
     ],
@@ -835,8 +929,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Design a drone-assist complex capable of automated refueling/recharging, energy management, weather monitoring, and coordination of multiple drone operations from a central hub.",
-          pt: "Projetar um complexo de assistência a drones capaz de reabastecimento/recarga automatizado, gestão de energia, monitoramento meteorológico e coordenação de múltiplas operações de drones a partir de um hub central.",
+          en: "Design an automated ground-support complex for high-payload agricultural drones — autonomous refueling, energy management, weather monitoring, and a centralized intelligent control hub with fully automated field-intelligence-driven workflows.",
+          pt: "Projetar um complexo automatizado de suporte terrestre para drones agrícolas de alta carga — reabastecimento autônomo, gestão de energia, monitoramento meteorológico e um hub de controle inteligente centralizado com workflows automatizados orientados por inteligência de campo.",
         },
       },
       {
@@ -855,7 +949,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       },
     ],
   },
-  "mov-monitoring": {
+  "ttd": {
     title: "Thrust Testing Device (TTD)",
     subtitle: {
       en: "Thrust Testing Device (TTD) — Used for testing and evaluation of UAV propulsion motors",
@@ -867,15 +961,15 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Create and Develop a production-grade device for testing and evaluating UAV propulsion motors, capable of measuring thrust, torque, power consumption, and other performance metrics under controlled conditions.",
+          en: "Create and develop a production-grade device for testing and evaluating UAV propulsion motors, capable of measuring thrust, torque, power consumption and other performance metrics under controlled conditions.",
           pt: "Criar e desenvolver um dispositivo de nível produção para teste e avaliação de motores de propulsão de UAVs, capaz de medir empuxo, torque, consumo de energia e outros parâmetros de desempenho em condições controladas.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Designed and built a Thrust Testing Device (TTD) with integrated sensors for measuring thrust, torque, and power consumption. Developed a data acquisition system using high speed networks for real-time monitoring.",
-          pt: "Projetei e construí um Dispositivo de Teste de Empuxo (TTD) com sensores integrados para medir empuxo, torque e consumo de energia. Desenvolvi um sistema de aquisição de dados usando redes de alta velocidade para monitoramento em tempo real.",
+          en: "Designed and built a Thrust Testing Device (TTD) with integrated sensors for measuring thrust, torque and power consumption. Developed a data acquisition system with high-speed industrial networks for real-time monitoring and logging.\n\nThe device was engineered as a production-grade special machine with a fully wired electrical panel, ready for repeated use in motor testing workflows.",
+          pt: "Projetei e construí um Dispositivo de Teste de Empuxo (TTD) com sensores integrados para medir empuxo, torque e consumo de energia. Desenvolvi um sistema de aquisição de dados com redes industriais de alta velocidade para monitoramento e registro em tempo real.\n\nO dispositivo foi engenheirado como uma máquina especial de nível produção com painel elétrico totalmente cabeado, pronto para uso repetido em workflows de teste de motores.",
         },
       },
       {
@@ -887,7 +981,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       },
     ],
   },
-  "engineer-project-5": {
+  "siemens-portable-case": {
     title: "SIEMENS Portable Case",
     subtitle: {
       en: "Portable controller integrating SIEMENS automation equipment for on-site operations",
@@ -899,31 +993,31 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Create a portable controller that integrates SIEMENS automation equipment for on-site operations, allowing for efficient control and monitoring of industrial processes.",
-          pt: "Criar uma maleta controladora portátil que integra equipamentos de automação SIEMENS para operações no local, permitindo um controle e monitoramento eficientes dos processos industriais.",
+          en: "Develop a portable automation controller that integrates SIEMENS industrial equipment — enabling efficient on-site control, monitoring and demonstration of industrial processes without fixed infrastructure.",
+          pt: "Desenvolver uma maleta controladora portátil que integra equipamentos SIEMENS de automação industrial — permitindo controle, monitoramento e demonstração eficientes de processos industriais no local, sem infraestrutura fixa.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Developed a portable controller with integrated SIEMENS automation equipment, enabling efficient on-site control and monitoring of industrial processes.",
-          pt: "Desenvolvi uma maleta controladora portátil com equipamentos de automação SIEMENS integrados, permitindo um controle e monitoramento eficientes dos processos industriais no local.",
+          en: "Developed an end-to-end portable controller integrating SIEMENS PLC (TIA Portal), HMI (WinCC) and I/O modules in a rugged carrying case. Programmed the PLC and configured the HMI for real-time process visualization and control.\n\nThe case serves as a self-contained automation lab — ideal for on-site demos, training and rapid prototyping of industrial control solutions.",
+          pt: "Desenvolvi uma maleta controladora portátil ponta a ponta integrando CLP SIEMENS (TIA Portal), IHM (WinCC) e módulos de I/O em um case robusto. Programei o CLP e configurei a IHM para visualização e controle de processos em tempo real.\n\nA maleta funciona como um laboratório de automação independente — ideal para demos no local, treinamentos e prototipagem rápida de soluções de controle industrial.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A production-grade portable controller actively used for on-site industrial process control and monitoring.",
-          pt: "Uma maleta controladora portátil de nível produção ativamente utilizada para controle e monitoramento de processos industriais no local.",
+          en: "A production-grade portable automation controller actively used for on-site industrial demonstrations, training sessions and rapid prototyping of SIEMENS-based control solutions.",
+          pt: "Uma maleta controladora portátil de nível produção ativamente utilizada para demonstrações industriais no local, sessões de treinamento e prototipagem rápida de soluções de controle baseadas em SIEMENS.",
         },
       },
     ],
   },
-  "engineer-project-6": {
+  "spirit-ugv": {
     title: "SPIRIT UGV",
     subtitle: {
-      en: "A UGV Platform for collecting and analysing data in field operations, designed for agricultural and industrial applications.",
-      pt: "Uma plataforma UGV para coletar e analisar dados em operações de campo, projetada para aplicações agrícolas e industriais.",
+      en: "Modular UGV platform for field data collection in agricultural and industrial operations.",
+      pt: "Plataforma UGV modular para coleta de dados em operações de campo agrícolas e industriais.",
     },
     bannerImage: "/images/projects/engineer/SPIRIT-BANNER.png",
     career: "engineer",
@@ -931,22 +1025,22 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
         body: {
-          en: "Create a UGV platform for collecting and analyzing data in agro applications, including soil condition analysis.",
-          pt: "Criar uma plataforma UGV para coletar e analisar dados em operações de campo, projetada para aplicações agrícolas e industriais.",
+          en: "Design a modular UGV platform for field data collection and analysis in agricultural and industrial applications — with integrated sensors, wireless communication and the ability to operate autonomously in varied terrain.",
+          pt: "Projetar uma plataforma UGV modular para coleta e análise de dados em campo, em aplicações agrícolas e industriais — com sensores integrados, comunicação sem fio e capacidade de operação autônoma em terrenos variados.",
         },
       },
       {
         heading: { en: "The Solution", pt: "A Solução" },
         body: {
-          en: "Developed a modular UGV platform with integrated sensors for data collection and field analysis.",
-          pt: "Desenvolveu uma plataforma UGV modular com sensores integrados para coleta de dados e análise de campo.",
+          en: "Developed a modular UGV platform (SPIRIT) with integrated multi-sensor array for environmental data collection, wireless telemetry for real-time data streaming, and a control architecture designed for semi-autonomous field navigation.\n\nThe platform's modular design allows rapid reconfiguration for different sensor payloads and operational requirements across agricultural monitoring, soil analysis and industrial inspection use cases.",
+          pt: "Desenvolvi uma plataforma UGV modular (SPIRIT) com array multi-sensor integrado para coleta de dados ambientais, telemetria wireless para streaming de dados em tempo real e uma arquitetura de controle projetada para navegação semi-autônoma em campo.\n\nO design modular da plataforma permite reconfiguração rápida para diferentes cargas de sensores e requisitos operacionais em monitoramento agrícola, análise de solo e inspeção industrial.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A field-ready UGV platform designed for agricultural and industrial data collection and analysis operations.",
-          pt: "Uma plataforma UGV pronta para campo projetada para operações de coleta e análise de dados agrícolas e industriais.",
+          en: "A field-ready modular UGV platform designed for agricultural and industrial data collection — featuring integrated sensors, wireless communication and autonomous navigation capabilities, ready for deployment across multiple operational scenarios.",
+          pt: "Uma plataforma UGV modular pronta para campo, projetada para coleta de dados agrícolas e industriais — com sensores integrados, comunicação sem fio e capacidades de navegação autônoma, pronta para implantação em múltiplos cenários operacionais.",
         },
       },
     ],
@@ -1025,7 +1119,7 @@ export const HOBBIES: Hobby[] = [
 // ---------------------------------------------------------------------------
 export const NAV_LINKS = [
   { label: "nav.home" as const, href: "/" },
-  { label: "nav.developer" as const, href: "/career/webdev" },
+  { label: "nav.developer" as const, href: "/career/dev" },
   { label: "nav.automation" as const, href: "/career/automation-it" },
   { label: "nav.engineer" as const, href: "/career/engineer" },
   { label: "nav.hobbies" as const, href: "/hobbies" },

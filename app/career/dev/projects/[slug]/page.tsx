@@ -1,5 +1,5 @@
 // ============================================================================
-// Project Detail — /career/webdev/projects/[slug]
+// Project Detail — /career/dev/projects/[slug]
 // ============================================================================
 import ProjectDetailPage from "@/components/ProjectDetailPage";
 import { PROJECTS_WEBDEV, PROJECT_DETAILS } from "@/lib/constants";
@@ -16,5 +16,5 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  return <ProjectDetailPage slug={slug} backHref="/career/webdev" accentColor="blue" />;
+  return <ProjectDetailPage slug={slug} backHref="/career/dev" accentColor="blue" />;
 }
