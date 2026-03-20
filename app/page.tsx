@@ -110,15 +110,17 @@ export default function HomePage() {
           {/* Full-Stack Developer card */}
           <FadeIn delay={0.1}>
             <Link href="/career/dev" className="block">
-              <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
-                  <Code2 size={28} className="text-blue-400" />
+              <AnimatedCard className="h-full p-8">
+                <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
+                    <Code2 size={28} className="text-blue-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-50">{t("career.developer.title")}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.developer.desc")}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-400">
+                    {t("career.viewMore")}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-50">{t("career.developer.title")}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.developer.desc")}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-400">
-                  {t("career.viewMore")}
-                </span>
               </AnimatedCard>
             </Link>
           </FadeIn>
@@ -126,15 +128,17 @@ export default function HomePage() {
           {/* IT Automation card */}
           <FadeIn delay={0.2}>
             <Link href="/career/automation-it" className="block">
-              <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10">
-                  <Workflow size={28} className="text-emerald-400" />
+              <AnimatedCard className="h-full p-8">
+                <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10">
+                    <Workflow size={28} className="text-emerald-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-50">{t("career.automation.title")}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.automation.desc")}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-400">
+                    {t("career.viewMore")}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-50">{t("career.automation.title")}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.automation.desc")}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-400">
-                  {t("career.viewMore")}
-                </span>
               </AnimatedCard>
             </Link>
           </FadeIn>
@@ -142,15 +146,17 @@ export default function HomePage() {
           {/* Engineer card */}
           <FadeIn delay={0.3}>
             <Link href="/career/engineer" className="block">
-              <AnimatedCard className="flex h-full flex-col items-center p-8 text-center md:items-start md:text-left">
-                <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">
-                  <Cpu size={28} className="text-purple-400" />
+              <AnimatedCard className="h-full p-8">
+                <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">
+                    <Cpu size={28} className="text-purple-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-zinc-50">{t("career.engineer.title")}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.engineer.desc")}</p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-purple-400">
+                    {t("career.viewMore")}
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-zinc-50">{t("career.engineer.title")}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.engineer.desc")}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-purple-400">
-                  {t("career.viewMore")}
-                </span>
               </AnimatedCard>
             </Link>
           </FadeIn>
