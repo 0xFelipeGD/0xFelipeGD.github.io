@@ -60,7 +60,7 @@ export default function CareerPage({
       {/* ── Hero ────────────────────────────────────────────────── */}
       <AuroraBackground className="relative">
         <Spotlight className="-top-40 left-0 md:left-60" fill={spotlightFill} />
-        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-40 pb-28 text-center sm:px-6">
+        <div className="mx-auto flex max-w-5xl flex-col items-center justify-center px-4 pt-28 pb-20 text-center sm:px-6 sm:pt-40 sm:pb-28">
           {/* Accent badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -81,10 +81,10 @@ export default function CareerPage({
           </motion.div>
 
           {/* Title */}
-          <div className="flex min-h-45 items-center justify-center sm:min-h-50 md:min-h-60">
+          <div className="flex min-h-36 items-center justify-center sm:min-h-45 md:min-h-60">
             <TextGenerateEffect
               words={t(titleKey)}
-              className={`bg-linear-to-r ${gradientFrom} ${gradientTo} bg-clip-text text-5xl font-black tracking-tight text-transparent sm:text-6xl md:text-7xl`}
+              className={`bg-linear-to-r ${gradientFrom} ${gradientTo} bg-clip-text text-4xl font-black tracking-tight text-transparent sm:text-5xl md:text-7xl`}
             />
           </div>
 

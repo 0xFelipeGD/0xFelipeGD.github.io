@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-zinc-800 bg-zinc-950">
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-6 py-8 sm:flex-row sm:justify-between">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 py-8 sm:flex-row sm:justify-between sm:px-6">
         <p className="text-sm text-zinc-500">
           © {FOOTER_YEAR} {SITE_OWNER.fullName}. {t("footer.rights")}
         </p>

@@ -24,7 +24,7 @@ export default function HomePage() {
       <AuroraBackground className="relative min-h-screen">
         <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#3b82f6" />
 
-        <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-4 sm:px-6">
+        <div className="mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-4 pt-20 sm:px-6 sm:pt-0">
           <div className="flex flex-col items-center gap-8 text-center md:flex-row md:gap-16 md:text-left">
             {/* Avatar */}
             <motion.div

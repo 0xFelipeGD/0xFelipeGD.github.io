@@ -11,7 +11,7 @@ export default function NotFound() {
 
   return (
     <div className="flex min-h-[60vh] flex-col items-center justify-center px-6 text-center">
-      <h1 className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-7xl font-black text-transparent">
+      <h1 className="bg-linear-to-r from-blue-400 to-purple-500 bg-clip-text text-5xl font-black text-transparent sm:text-7xl">
         404
       </h1>
       <p className="mt-4 text-lg text-zinc-400">{locale === "en" ? "Page not found." : "Página não encontrada."}</p>
