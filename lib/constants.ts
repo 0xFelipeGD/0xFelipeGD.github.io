@@ -568,11 +568,14 @@ export const PROJECTS_AUTOMATION_IT: Project[] = [
     tags: ["n8n", "Make", "Telegram Bot", "OpenAI API", "LinkedIn API"],
   },
   {
-    slug: "automation-project-4",
-    title: "Project 4",
-    description: { en: "Coming soon", pt: "Em breve" },
-    coverImage: "/images/projects/automation-it/C2.png",
-    tags: ["TBD"],
+    slug: "hotas-remote-control",
+    title: "HOTAS Warthog — Internet Remote Control",
+    description: {
+      en: "Real-time remote control system over the internet using a military HOTAS joystick, MQTT over TLS, Raspberry Pi, and WebRTC live video — with a fail-safe watchdog and an industrial-brutalist operator UI built in React.",
+      pt: "Sistema de controle remoto em tempo real pela internet usando joystick militar HOTAS, MQTT sobre TLS, Raspberry Pi e vídeo ao vivo WebRTC — com watchdog fail-safe e UI industrial-brutalista do operador em React.",
+    },
+    coverImage: "/images/projects/automation-it/hotas-remote-control-tab.png",
+    tags: ["Python", "MQTT", "Raspberry Pi", "React", "WebRTC", "IoT"],
   },
   {
     slug: "automation-project-5",
@@ -602,6 +605,7 @@ export interface ProjectDetail {
     heading: { en: string; pt: string };
     body: { en: string; pt: string };
     image?: string;
+    images?: string[];
     imageCaption?: { en: string; pt: string };
   }[];
 }
@@ -830,12 +834,67 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       },
     ],
   },
-  "automation-project-4": {
-    title: "Project 4",
-    subtitle: { en: "Coming soon", pt: "Em breve" },
-    bannerImage: "/images/projects/automation-it/C2.png",
+  "hotas-remote-control": {
+    title: "HOTAS Warthog — Internet Remote Control",
+    subtitle: {
+      en: "Real-time remote control of hardware over the internet with a military-grade HOTAS joystick, MQTT, Raspberry Pi and WebRTC",
+      pt: "Controle remoto de hardware em tempo real pela internet com joystick militar HOTAS, MQTT, Raspberry Pi e WebRTC",
+    },
+    bannerImage: "/images/projects/automation-it/hotas-remote-control-tab.png",
     career: "automation-it",
-    sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
+    sections: [
+      {
+        heading: { en: "The Challenge", pt: "O Desafio" },
+        body: {
+          en: "Controlling physical hardware over the internet in real time — with the precision and responsiveness of a local wired connection. The goal was to let an operator sit at a desk with a Thrustmaster HOTAS Warthog A-10C (military-spec flight stick and throttle), and have every axis movement and button press travel across the internet to a Raspberry Pi driving motors on a remote device — with minimal latency, live video feedback, full telemetry, and a fail-safe system that guarantees the device stops immediately if communication is lost.\n\nThe first target platform is a UGV (Unmanned Ground Vehicle), but the architecture is fully generic — anything controllable via GPIO, PWM, serial or I2C can be driven remotely with this system.",
+          pt: "Controlar hardware físico pela internet em tempo real — com a precisão e responsividade de uma conexão local cabeada. O objetivo era permitir que um operador sente na frente de um HOTAS Warthog A-10C da Thrustmaster (manche e throttle de especificação militar), e cada movimento de eixo e botão pressionado viaje pela internet até um Raspberry Pi acionando motores em um dispositivo remoto — com latência mínima, vídeo ao vivo, telemetria completa e um sistema fail-safe que garante parada imediata se a comunicação cair.\n\nA primeira plataforma-alvo é um UGV (Veículo Terrestre Não-Tripulado), mas a arquitetura é totalmente genérica — qualquer coisa controlável via GPIO, PWM, serial ou I2C pode ser operada remotamente com este sistema.",
+        },
+        image: "/images/projects/automation-it/hotas-remote-workstation.jpeg",
+        imageCaption: {
+          en: "Operator workstation — laptop running RCS, HOTAS Warthog stick and throttle, Raspberry Pi, and accessories",
+          pt: "Estação do operador — laptop rodando o RCS, manche e throttle HOTAS Warthog, Raspberry Pi e acessórios",
+        },
+      },
+      {
+        heading: { en: "The Architecture", pt: "A Arquitetura" },
+        body: {
+          en: "Three independent software components, each running on a different machine, communicating via MQTT over TLS:\n\nThe RCS (Remote Control Station) runs on the operator's Linux PC. It reads the HOTAS via evdev (direct kernel-level input), normalizes all axes and buttons, and transmits control data at 50 Hz to the cloud. It also renders a desktop-native UI (React + Tailwind CSS inside pywebview) with four tabs: live video via WebRTC, real-time HOTAS mapping, telemetry gauges, and latency breakdown.\n\nThe MQTT Broker (Mosquitto on a VPS) is the cloud rendezvous point — TLS-only, authenticated, with ACLs restricting each client to its exact topics. No plaintext, no anonymous connections.\n\nThe Embedded Software on the Raspberry Pi receives control commands, runs a motor mixer (arcade or tank mode), applies acceleration ramps, and drives the hardware backend (GPIO PWM, PCA9685 for ESCs, or serial for PLCs — all pluggable via config). It also reads sensors at 1 Hz, publishes telemetry at 2 Hz, streams live video via WebRTC using aiortc + Pi Camera Module 3 NoIR, and runs a safety watchdog checking operator presence 10 times per second.\n\nBoth the RCS and embedded software follow the same ROS2-inspired architecture: independent nodes communicating exclusively through an internal pub/sub bus, with a thread-safe StateManager and a Launcher handling ordered startup/shutdown.",
+          pt: "Três componentes de software independentes, cada um rodando em uma máquina diferente, comunicando via MQTT sobre TLS:\n\nO RCS (Remote Control Station) roda no PC Linux do operador. Lê o HOTAS via evdev (input direto do kernel), normaliza todos os eixos e botões, e transmite dados de controle a 50 Hz para a nuvem. Também renderiza uma UI nativa desktop (React + Tailwind CSS dentro do pywebview) com quatro abas: vídeo ao vivo via WebRTC, mapeamento do HOTAS em tempo real, gauges de telemetria e breakdown de latência.\n\nO Broker MQTT (Mosquitto em VPS) é o ponto de encontro na nuvem — apenas TLS, autenticado, com ACLs restringindo cada cliente aos seus tópicos exatos. Sem plaintext, sem conexões anônimas.\n\nO Software Embarcado no Raspberry Pi recebe comandos de controle, executa um mixer de motores (modo arcade ou tank), aplica rampas de aceleração e aciona o backend de hardware (GPIO PWM, PCA9685 para ESCs, ou serial para CLPs — tudo plugável via config). Também lê sensores a 1 Hz, publica telemetria a 2 Hz, transmite vídeo ao vivo via WebRTC usando aiortc + Pi Camera Module 3 NoIR, e roda um watchdog de segurança verificando presença do operador 10 vezes por segundo.\n\nTanto o RCS quanto o embarcado seguem a mesma arquitetura inspirada em ROS2: nodes independentes comunicando exclusivamente por um barramento pub/sub interno, com StateManager thread-safe e Launcher gerenciando startup/shutdown ordenado.",
+        },
+        image: "/images/projects/automation-it/hotas-remote-hotas-closeup.jpg",
+        imageCaption: {
+          en: "Thrustmaster HOTAS Warthog A-10C — throttle quadrant and flight stick",
+          pt: "Thrustmaster HOTAS Warthog A-10C — throttle e manche",
+        },
+      },
+      {
+        heading: { en: "The Operator Interface", pt: "A Interface do Operador" },
+        body: {
+          en: "The operator UI is a React 19 + Tailwind CSS 4 application served inside a native desktop window via pywebview. The design language is \"Industrial Brutalism\" — inspired by Lockheed Martin operations terminals. Near-black background, zero border-radius, JetBrains Mono typography, CRT effects with scanlines and noise. Gold accent, green for OK, red for alerts.\n\nFour tabs give the operator full situational awareness:\n\n• CONTROL — live video feed from the vehicle camera via WebRTC, with crosshair, tactical reticle, and a HUD sidebar showing latency, link status, and arm state.\n• MAPPING — full HOTAS visualization with XY pads and all buttons updating in real time at 50 Hz.\n• TELEMETRY — gauges for speed, battery voltage, motor temperature, GPS coordinates, with sparkline history charts.\n• LATENCY — complete RTT breakdown with jitter, packet loss metrics, and SVG sparklines.",
+          pt: "A UI do operador é uma aplicação React 19 + Tailwind CSS 4 servida dentro de uma janela desktop nativa via pywebview. A linguagem de design é \"Industrial Brutalism\" — inspirada em terminais de operações da Lockheed Martin. Fundo quase preto, zero border-radius, tipografia JetBrains Mono, efeitos CRT com scanlines e noise. Acento dourado, verde para OK, vermelho para alertas.\n\nQuatro abas dão ao operador consciência situacional completa:\n\n• CONTROL — vídeo ao vivo da câmera do veículo via WebRTC, com crosshair, mira tática e HUD lateral com latência, status do link e estado de armamento.\n• MAPPING — visualização completa do HOTAS com pads XY e todos os botões atualizando em tempo real a 50 Hz.\n• TELEMETRY — gauges de velocidade, tensão da bateria, temperatura dos motores, coordenadas GPS, com sparklines de histórico.\n• LATENCY — breakdown completo de RTT com jitter, packet loss e sparklines SVG.",
+        },
+        images: [
+          "/images/projects/automation-it/hotas-remote-video-feed.png",
+          "/images/projects/automation-it/hotas-remote-mapping-terminal.png",
+          "/images/projects/automation-it/hotas-remote-grafana-mapping.png",
+          "/images/projects/automation-it/hotas-remote-mapping-tab.png",
+        ],
+      },
+      {
+        heading: { en: "Safety & Communication", pt: "Segurança & Comunicação" },
+        body: {
+          en: "The safety system is the most critical aspect of the project. If communication drops — unstable internet, PC shutdown, anything — the device must stop immediately. No margin for uncontrolled movement.\n\nThe RCS sends a heartbeat every second, separate from control commands. The Pi monitors heartbeat age 10 times per second. If 3 seconds pass without a heartbeat, an emergency relay activates on GPIO, physically locking the motors while a software ramp brings all outputs to zero in half a second.\n\nThe design is fail-safe by hardware: if the Raspberry Pi loses power, GPIOs float, the relay engages, motors lock. The system starts disarmed and only arms upon receiving the first operator heartbeat. Recovery is automatic when communication resumes.\n\nThe three components communicate over eleven MQTT topics on TLS port 8883. Control and heartbeat use QoS 0 (latency over delivery guarantee at 50 Hz — losing one packet is invisible, the next arrives in 20ms). Telemetry and WebRTC signaling use QoS 1. A dedicated ping/pong mechanism where the Pi echoes immediately (bypassing internal bus) allows the RCS to calculate RTT, jitter and packet loss with precision.",
+          pt: "O sistema de segurança é o aspecto mais crítico do projeto. Se a comunicação cair — internet instável, PC desligou, qualquer coisa — o dispositivo precisa parar imediatamente. Sem margem para movimento descontrolado.\n\nO RCS envia um heartbeat a cada segundo, separado dos comandos de controle. O Pi monitora a idade do heartbeat 10 vezes por segundo. Se passarem 3 segundos sem heartbeat, um relé de emergência ativa no GPIO, travando os motores fisicamente enquanto uma rampa de software leva todos os outputs a zero em meio segundo.\n\nO design é fail-safe por hardware: se o Raspberry Pi perder energia, os GPIOs flutuam, o relé engata, motores travam. O sistema inicia desarmado e só arma ao receber o primeiro heartbeat do operador. A recuperação é automática quando a comunicação retoma.\n\nOs três componentes comunicam por onze tópicos MQTT na porta TLS 8883. Controle e heartbeat usam QoS 0 (latência sobre garantia de entrega a 50 Hz — perder um pacote é invisível, o próximo chega em 20ms). Telemetria e sinalização WebRTC usam QoS 1. Um mecanismo dedicado de ping/pong onde o Pi faz echo imediato (sem passar pelo barramento interno) permite ao RCS calcular RTT, jitter e packet loss com precisão.",
+        },
+      },
+      {
+        heading: { en: "Results", pt: "Resultados" },
+        body: {
+          en: "A production-grade remote control system that turns a military HOTAS joystick into a real-time internet controller for any hardware platform. Three independently deployable software components — operator station, cloud broker, and embedded controller — communicating securely over MQTT/TLS with WebRTC live video.\n\nKey metrics: 50 Hz control loop, sub-second latency over public internet, 3-second fail-safe timeout with hardware-level motor lockout, live 720p video at 30 fps via TURN relay, and a complete test suite (32 + 36 + 6 tests across the three projects).\n\nThe entire system was developed using a monorepo with Git submodules and specialized AI agents per component, with a shared interface contract as single source of truth — enabling parallel development with full interface consistency.",
+          pt: "Um sistema de controle remoto de nível produção que transforma um joystick militar HOTAS em um controlador de internet em tempo real para qualquer plataforma de hardware. Três componentes de software independentemente implantáveis — estação do operador, broker na nuvem e controlador embarcado — comunicando com segurança sobre MQTT/TLS com vídeo ao vivo WebRTC.\n\nMétricas-chave: loop de controle a 50 Hz, latência sub-segundo pela internet pública, timeout fail-safe de 3 segundos com travamento de motores por hardware, vídeo ao vivo 720p a 30 fps via relay TURN, e suíte de testes completa (32 + 36 + 6 testes nos três projetos).\n\nO sistema inteiro foi desenvolvido usando um monorepo com Git submodules e agentes de IA especializados por componente, com um contrato de interface compartilhado como single source of truth — permitindo desenvolvimento paralelo com consistência total de interfaces.",
+        },
+      },
+    ],
   },
   "automation-project-5": {
     title: "Project 5",

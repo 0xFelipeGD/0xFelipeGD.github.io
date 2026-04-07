@@ -85,6 +85,25 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
                   )}
                 </figure>
               )}
+              {section.images && section.images.length > 0 && (
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {section.images.map((img, j) => (
+                    <div
+                      key={j}
+                      className={`relative aspect-video overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900${
+                        section.images!.length % 2 !== 0 && j === 0 ? " sm:col-span-2" : ""
+                      }`}
+                    >
+                      <Image
+                        src={img}
+                        alt={`${section.heading[locale]} — ${j + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </FadeIn>
         ))}
