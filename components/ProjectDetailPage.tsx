@@ -52,7 +52,7 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
       {/* Banner */}
       <FadeIn delay={0.2}>
         <div className="relative mt-8 aspect-video w-full overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
-          <Image src={detail.bannerImage} alt={detail.title} fill className="object-cover" priority />
+          <Image src={detail.bannerImage} alt={detail.title} fill className="object-contain" priority />
         </div>
       </FadeIn>
 
@@ -75,7 +75,7 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
                       src={section.image}
                       alt={section.imageCaption?.[locale] ?? section.heading[locale]}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                   {section.imageCaption && (
@@ -98,7 +98,7 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
                         src={img}
                         alt={`${section.heading[locale]} — ${j + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                   ))}
