@@ -6,7 +6,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail, Code2, Cpu, ArrowRight, Workflow } from "lucide-react";
+import { Github, Linkedin, Mail, Factory, Cpu, ArrowRight, Workflow } from "lucide-react";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 import Spotlight from "@/components/ui/Spotlight";
 import TextGenerateEffect from "@/components/ui/TextGenerateEffect";
@@ -45,18 +45,9 @@ export default function HomePage() {
 
             {/* Text content */}
             <div className="flex max-w-xl flex-col items-center md:items-start">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="text-sm font-medium tracking-widest text-blue-400 uppercase"
-              >
-                {t("hero.subtitle")}
-              </motion.p>
-
               <TextGenerateEffect
                 words={t("hero.greeting")}
-                className="mt-3 text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl md:text-6xl"
+                className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl md:text-6xl"
               />
 
               <motion.p
@@ -107,16 +98,16 @@ export default function HomePage() {
         </FadeIn>
 
         <div className="grid gap-8 md:grid-cols-3">
-          {/* Full-Stack Developer card */}
-          <FadeIn delay={0.1}>
-            <Link href="/career/dev" className="block">
+          {/* Industry 4.0 card */}
+          <FadeIn delay={0.1} className="h-full">
+            <Link href="/career/industry" className="block h-full">
               <AnimatedCard className="h-full p-8">
                 <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
-                    <Code2 size={28} className="text-blue-400" />
+                    <Factory size={28} className="text-blue-400" />
                   </div>
-                  <h3 className="text-xl font-bold text-zinc-50">{t("career.developer.title")}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.developer.desc")}</p>
+                  <h3 className="text-xl font-bold text-zinc-50">{t("career.industry.title")}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.industry.desc")}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-400">
                     {t("career.viewMore")}
                   </span>
@@ -126,8 +117,8 @@ export default function HomePage() {
           </FadeIn>
 
           {/* IT Automation card */}
-          <FadeIn delay={0.2}>
-            <Link href="/career/automation-it" className="block">
+          <FadeIn delay={0.2} className="h-full">
+            <Link href="/career/automation-it" className="block h-full">
               <AnimatedCard className="h-full p-8">
                 <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10">
@@ -144,8 +135,8 @@ export default function HomePage() {
           </FadeIn>
 
           {/* Engineer card */}
-          <FadeIn delay={0.3}>
-            <Link href="/career/engineer" className="block">
+          <FadeIn delay={0.3} className="h-full">
+            <Link href="/career/engineer" className="block h-full">
               <AnimatedCard className="h-full p-8">
                 <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
                   <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">

@@ -8,7 +8,7 @@ export type Locale = "en" | "pt";
 const translations = {
   // ── Navbar ──────────────────────────────────────────────────────────────
   "nav.home": { en: "Home", pt: "Início" },
-  "nav.developer": { en: "Full-Stack Dev", pt: "Dev Full-Stack" },
+  "nav.industry": { en: "Industry 4.0", pt: "Indústria 4.0" },
   "nav.automation": { en: "IT Automation", pt: "Automação IT" },
   "nav.engineer": { en: "Engineer", pt: "Engenheiro" },
   "nav.hobbies": { en: "Hobbies", pt: "Hobbies" },
@@ -16,13 +16,9 @@ const translations = {
 
   // ── Hero (main landing) ────────────────────────────────────────────────
   "hero.greeting": { en: "Hi, I'm Felipe!", pt: "Olá, eu sou o Felipe!" },
-  "hero.subtitle": {
-    en: "Dual-Career Professional",
-    pt: "Profissional de Dupla Carreira",
-  },
   "hero.bio": {
-    en: "Control & Automation Engineer, IT Automation Specialist and Full-Stack Developer. Startup founder focused on unmanned ground vehicles (UGVs), delivering autonomous solutions to industrial, agricultural and logistics clients. Developing automations is my passion. Based in Portugal 🇵🇹🇪🇺",
-    pt: "Engenheiro de Controle e Automação, Especialista em Automação IT e Desenvolvedor Full-Stack. Fundador de startup focada em veículos terrestres não tripulados (UGVs), entregando soluções autônomas para clientes industriais, agrícolas e logísticos. Desenvolver automações é minha paixão. Baseado em Portugal 🇵🇹🇪🇺",
+    en: "Control & Automation Engineer, IT Automation Specialist and Industry 4.0 Architect — bridging field devices, industrial IoT and AI-driven analytics. Startup founder focused on unmanned ground vehicles (UGVs), delivering autonomous solutions to industrial, agricultural and logistics clients. Developing automations is my passion. Based in Portugal 🇵🇹🇪🇺",
+    pt: "Engenheiro de Controle e Automação, Especialista em Automação IT e Arquiteto de Indústria 4.0 — conectando dispositivos de campo, IoT industrial e analytics com IA. Fundador de startup focada em veículos terrestres não tripulados (UGVs), entregando soluções autônomas para clientes industriais, agrícolas e logísticos. Desenvolver automações é minha paixão. Baseado em Portugal 🇵🇹🇪🇺",
   },
   "hero.downloadCV": { en: "Download CV", pt: "Baixar CV" },
   "hero.explore": {
@@ -31,13 +27,13 @@ const translations = {
   },
 
   // ── Career cards on main page ──────────────────────────────────────────
-  "career.developer.title": {
-    en: "Full-Stack Developer",
-    pt: "Desenvolvedor Full-Stack",
+  "career.industry.title": {
+    en: "Industry 4.0",
+    pt: "Indústria 4.0",
   },
-  "career.developer.desc": {
-    en: "Full-stack web and software development with Next.js, TypeScript, React, Node.js, databases, Docker and modern cloud deployments.",
-    pt: "Desenvolvimento web e software full-stack com Next.js, TypeScript, React, Node.js, bancos de dados, Docker e deploy em nuvem moderna.",
+  "career.industry.desc": {
+    en: "Industrial IoT and edge-to-cloud architectures — MQTT, OPC-UA, Node-RED, time-series databases, Grafana dashboards and AI analytics for connected operations.",
+    pt: "IoT industrial e arquiteturas edge-to-cloud — MQTT, OPC-UA, Node-RED, bancos time-series, dashboards Grafana e analytics com IA para operações conectadas.",
   },
   "career.automation.title": {
     en: "IT Automation Developer",
@@ -58,17 +54,17 @@ const translations = {
   "career.viewMore": { en: "View projects →", pt: "Ver projetos →" },
 
   // ── Career pages ───────────────────────────────────────────────────────
-  "developer.hero.title": {
-    en: "Full-Stack Developer",
-    pt: "Desenvolvedor Full-Stack",
+  "industry.hero.title": {
+    en: "Industry 4.0",
+    pt: "Indústria 4.0",
   },
-  "developer.hero.subtitle": {
-    en: "Building web apps, data pipelines and AI-integrated products",
-    pt: "Construindo aplicações web, pipelines de dados e produtos integrados com IA",
+  "industry.hero.subtitle": {
+    en: "Bridging field devices to the cloud — IIoT, edge computing and intelligent industrial automation",
+    pt: "Conectando dispositivos de campo à nuvem — IIoT, edge computing e automação industrial inteligente",
   },
-  "developer.hero.bio": {
-    en: "Full-Stack Developer and Automation Engineer with 4+ years building end-to-end systems — from data pipelines and analysis with Python to production web apps with Next.js and React. Passionate about AI-integrated SaaS products. Strong Python and JS/TS background. Founder of Movewer Technologies.",
-    pt: "Desenvolvedor Full-Stack e Engenheiro de Automação com 4+ anos construindo sistemas ponta a ponta — de pipelines de dados e análise com Python a aplicações web em produção com Next.js e React. Apaixonado por produtos SaaS integrados com IA. Forte background em Python e JS/TS. Fundador da Movewer Technologies.",
+  "industry.hero.bio": {
+    en: "Industry 4.0 specialist focused on IT/OT convergence — building end-to-end industrial IoT platforms, edge-to-cloud data pipelines, MQTT-driven architectures with TLS-grade security and AI-augmented analytics for unmanned vehicles, factories and field operations. Founder of Movewer Technologies.",
+    pt: "Especialista em Indústria 4.0 focado em convergência IT/OT — construindo plataformas IIoT ponta a ponta, pipelines de dados edge-to-cloud, arquiteturas orientadas a MQTT com segurança nível TLS e analytics aumentado por IA para veículos não-tripulados, fábricas e operações de campo. Fundador da Movewer Technologies.",
   },
 
   "automation.hero.title": {

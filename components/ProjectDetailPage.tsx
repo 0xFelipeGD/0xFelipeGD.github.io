@@ -6,7 +6,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { PROJECT_DETAILS } from "@/lib/constants";
 import { useLocale } from "@/lib/locale-context";
 import FadeIn from "@/components/ui/FadeIn";
@@ -29,6 +29,12 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
     accentColor === "blue" ? "text-blue-400" : accentColor === "purple" ? "text-purple-400" : "text-emerald-400";
   const accentBg =
     accentColor === "blue" ? "bg-blue-500" : accentColor === "purple" ? "bg-purple-500" : "bg-emerald-500";
+  const accentGradient =
+    accentColor === "blue"
+      ? "from-blue-600 to-cyan-500 shadow-blue-500/20"
+      : accentColor === "purple"
+        ? "from-purple-600 to-pink-500 shadow-purple-500/20"
+        : "from-emerald-600 to-teal-400 shadow-emerald-500/20";
 
   return (
     <article className="mx-auto max-w-4xl px-4 pt-28 pb-20 sm:px-6">
@@ -47,6 +53,17 @@ export default function ProjectDetailPage({ slug, backHref, accentColor }: Props
       <FadeIn delay={0.1}>
         <h1 className="text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">{detail.title}</h1>
         <p className={`mt-2 text-base ${accentText}`}>{detail.subtitle[locale]}</p>
+        {detail.liveUrl && (
+          <a
+            href={detail.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`mt-5 inline-flex items-center gap-2 rounded-full bg-linear-to-r ${accentGradient} px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-105 hover:opacity-90`}
+          >
+            {locale === "en" ? "Try it live" : "Experimente agora"}
+            <ExternalLink size={16} />
+          </a>
+        )}
       </FadeIn>
 
       {/* Banner */}

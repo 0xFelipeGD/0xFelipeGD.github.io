@@ -13,7 +13,7 @@ export const SITE_OWNER = {
   role: "Dual-Career Professional",
   avatarSrc: "/images/me3.jpeg",
   // CVs — one for each career
-  cvWebDev: "/files/Developer_2026.pdf",
+  cvIndustry: "/files/Engineer_2026.pdf",
   cvEngineer: "/files/Engineer_2026.pdf",
   cvAutomationIT: "/files/Automation_IT_Engineer_2026.pdf",
 };
@@ -39,90 +39,69 @@ export interface Experience {
   bullets: { en: string[]; pt: string[] };
 }
 
-export const EXPERIENCE_WEBDEV: Experience[] = [
-  {
-    company: "Personal Projects",
-    role: {
-      en: "Full-Stack Developer & Automation Engineer",
-      pt: "Desenvolvedor Full-Stack & Engenheiro de Automação",
-    },
-    period: "2024 – Present",
-    location: "Lisbon, Portugal",
-    bullets: {
-      en: [
-        "Built a social media automation pipeline using n8n and Make that generates posts from predefined topics, routes approval via Telegram, and auto-publishes to LinkedIn on confirmation.",
-        "Developed a Python data pipeline for automated ingestion, transformation and reporting — pulling from REST APIs, processing with pandas, and persisting to PostgreSQL on a schedule.",
-        "Architected Julius, an AI-powered personal finance PWA (Next.js 15, Supabase, OpenAI API) where an AI agent extracts, categorizes and persists financial entries from natural language input.",
-      ],
-      pt: [
-        "Construiu um pipeline de automação de mídias sociais usando n8n e Make que gera posts a partir de temas predefinidos, roteia aprovação via Telegram e publica automaticamente no LinkedIn.",
-        "Desenvolveu um pipeline de dados em Python para ingestão, transformação e relatórios automatizados — consumindo REST APIs, processando com pandas e persistindo no PostgreSQL em schedule.",
-        "Arquitetou o Julius, um PWA de finanças pessoais com IA (Next.js 15, Supabase, OpenAI API) onde um agente de IA extrai, categoriza e persiste lançamentos financeiros a partir de linguagem natural.",
-      ],
-    },
-  },
+export const EXPERIENCE_INDUSTRY: Experience[] = [
   {
     company: "Movewer Technologies",
     role: {
-      en: "Founder & Lead IT Automation Engineer",
-      pt: "Fundador & Engenheiro Líder de Automação IT",
+      en: "Founder & Industry 4.0 Architect",
+      pt: "Fundador & Arquiteto Indústria 4.0",
     },
     period: "Jun 2025 – Present",
     location: "Lisbon, Portugal",
     bullets: {
       en: [
-        "Architected and deployed a production data monitoring platform using MQTT, Node-RED, InfluxDB and Grafana, with an AI layer that generates actionable insights from raw sensor streams via REST APIs and webhooks.",
-        "Built a Python REST API for data ingestion and processing; containerized the full infrastructure with Docker, deployed on a Linux VPS with CI/CD via GitHub Actions, and served the production frontend on Vercel.",
-        "Designed end-to-end automation workflows connecting edge devices (Raspberry Pi) to cloud dashboards, covering ingestion, processing, real-time alerting and AI-driven reporting.",
-        "Sole technical owner across the full development lifecycle: requirements → architecture → deployment → iteration.",
+        "Architected and deployed a production-grade Industrial IoT platform — Mosquitto over TLS, Telegraf, InfluxDB, Grafana and Python analytics — fully containerized with Docker Compose, with an AI layer turning raw sensor streams into actionable insights.",
+        "Built an internet-grade remote control system for unmanned vehicles using military HOTAS hardware, MQTT-over-TLS messaging, WebRTC live video and a hardware-level fail-safe watchdog — proving real-time IT/OT convergence over the public internet.",
+        "Designed end-to-end edge-to-cloud pipelines (Raspberry Pi field nodes → MQTT broker → time-series database → live dashboards → AI alerting) with security in six layers: network, transport, authentication, container isolation, healthchecks and encrypted backups.",
+        "Sole technical owner across the full Industry 4.0 stack lifecycle: architecture → infrastructure → deployment → iteration.",
       ],
       pt: [
-        "Arquitetou e implantou uma plataforma de monitoramento de dados em produção usando MQTT, Node-RED, InfluxDB e Grafana, com camada de IA que gera insights acionáveis de streams de sensores via REST APIs e webhooks.",
-        "Construiu API REST em Python para ingestão e processamento de dados; containerizou toda a infraestrutura com Docker, implantada em VPS Linux com CI/CD via GitHub Actions, frontend em produção no Vercel.",
-        "Projetou workflows de automação ponta a ponta conectando dispositivos edge (Raspberry Pi) a dashboards na nuvem: ingestão, processamento, alertas em tempo real e reports de IA.",
-        "Responsável técnico único em todo o ciclo: requisitos → arquitetura → deploy → iteração.",
+        "Arquitetou e implantou uma plataforma IIoT de nível produção — Mosquitto sobre TLS, Telegraf, InfluxDB, Grafana e analytics em Python — totalmente containerizada com Docker Compose, com uma camada de IA transformando streams brutos de sensores em insights acionáveis.",
+        "Construiu um sistema de controle remoto pela internet para veículos não-tripulados usando hardware militar HOTAS, mensageria MQTT sobre TLS, vídeo ao vivo WebRTC e watchdog fail-safe por hardware — provando convergência IT/OT em tempo real pela internet pública.",
+        "Projetou pipelines edge-to-cloud ponta a ponta (nós de campo Raspberry Pi → broker MQTT → banco time-series → dashboards ao vivo → alertas com IA) com segurança em seis camadas: rede, transporte, autenticação, isolamento de container, healthchecks e backups criptografados.",
+        "Responsável técnico único por todo o ciclo da stack Indústria 4.0: arquitetura → infraestrutura → deploy → iteração.",
       ],
     },
   },
   {
     company: "Psyche AeroSpace",
     role: {
-      en: "Automation Executive Manager / Engineering Team Lead",
-      pt: "Gerente Executivo de Automação / Líder de Equipe de Engenharia",
+      en: "Industry 4.0 Engineering Lead",
+      pt: "Líder de Engenharia Indústria 4.0",
     },
     period: "Jun 2024 – Jun 2025",
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Structured the automation division from scratch and delivered intelligent control and workflow systems, contributing directly to new fundraising rounds.",
-        "Developed internal automation workflows using Python, Node.js and low-code tools to streamline operations and improve team efficiency.",
-        "Managed a cross-functional team of 5 engineers using Scrum/Kanban on JIRA, coordinating multi-project delivery on time and within budget.",
+        "Built an Industrial IoT and automation division from zero — delivering control systems, telemetry and Industry 4.0 architectures for UGVs and drones supporting agricultural and industrial operations.",
+        "Led a cross-functional team of 5 engineers across hardware, firmware, electronics and data systems, coordinating multi-project delivery on Scrum/Kanban boards.",
+        "Owned the full Industry 4.0 stack — sensors, edge devices, wireless communication, telemetry, dashboards and operator interfaces — for unmanned vehicle field operations.",
       ],
       pt: [
-        "Estruturou a divisão de automação do zero e entregou sistemas de controle e workflows inteligentes, contribuindo diretamente para novas rodadas de captação.",
-        "Desenvolveu workflows de automação interna usando Python, Node.js e ferramentas low-code para otimizar operações e melhorar eficiência da equipe.",
-        "Gerenciou equipe cross-funcional de 5 engenheiros com Scrum/Kanban no JIRA, coordenando entregas em prazo e orçamento.",
+        "Construiu uma divisão de IoT industrial e automação do zero — entregando sistemas de controle, telemetria e arquiteturas Indústria 4.0 para UGVs e drones em operações agrícolas e industriais.",
+        "Liderou equipe cross-funcional de 5 engenheiros em hardware, firmware, eletrônica e sistemas de dados, coordenando múltiplos projetos em Scrum/Kanban.",
+        "Foi responsável pela stack Indústria 4.0 completa — sensores, dispositivos edge, comunicação sem fio, telemetria, dashboards e interfaces de operador — para operações de campo com veículos não-tripulados.",
       ],
     },
   },
   {
     company: "Controvale",
     role: {
-      en: "Automation Engineer",
-      pt: "Engenheiro de Automação",
+      en: "Industrial Automation Engineer",
+      pt: "Engenheiro de Automação Industrial",
     },
     period: "Jun 2018 – Jun 2024",
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Developed and deployed industrial automation systems with IoT, SCADA and data-flow integrations — building deep expertise in end-to-end process automation and system integration.",
-        "Executed full project cycles: system design, programming (Python, structured text), testing, troubleshooting and client-facing technical documentation.",
-        "Built commercial automation partnerships with 35+ companies (Siemens, Bosch, Rockwell).",
+        "Engineered 20+ Industry 4.0 ready industrial machines integrating mechatronic systems, IoT connectivity, SCADA supervision and industrial protocols — Modbus, Profinet, EtherCAT and OPC-UA.",
+        "Designed and commissioned full industrial electrical panel projects end-to-end (EPLAN/AutoCAD), including PLC/HMI/SCADA programming with Siemens TIA Portal, CODESYS and Indusoft.",
+        "Built and maintained commercial Industry 4.0 partnerships with 35+ industrial clients across automation vendors (Siemens, Bosch, Rockwell, Wecon, Kinco).",
       ],
       pt: [
-        "Desenvolveu e implantou sistemas de automação industrial com IoT, SCADA e integrações de fluxo de dados — construindo expertise profunda em automação de processos e integração de sistemas.",
-        "Ciclos completos de projeto: design de sistema, programação (Python, texto estruturado), testes, troubleshooting e documentação técnica para clientes.",
-        "Construiu parcerias comerciais de automação com 35+ empresas (Siemens, Bosch, Rockwell).",
+        "Engenheirou 20+ máquinas industriais prontas para Indústria 4.0 integrando sistemas mecatrônicos, IoT, SCADA e protocolos industriais — Modbus, Profinet, EtherCAT e OPC-UA.",
+        "Projetou e comissionou projetos elétricos de painéis industriais ponta a ponta (EPLAN/AutoCAD), incluindo programação CLP/IHM/SCADA com Siemens TIA Portal, CODESYS e Indusoft.",
+        "Construiu e manteve parcerias comerciais de Indústria 4.0 com 35+ clientes industriais nos principais fornecedores de automação (Siemens, Bosch, Rockwell, Wecon, Kinco).",
       ],
     },
   },
@@ -289,33 +268,30 @@ export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
 // ---------------------------------------------------------------------------
 // 4. Skills
 // ---------------------------------------------------------------------------
-export const SKILLS_WEBDEV = [
-  "Python",
-  "TypeScript",
-  "JavaScript (ES6+)",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Express.js",
-  "FastAPI",
-  "Angular",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "MongoDB",
-  "InfluxDB",
-  "Prisma ORM",
-  "Supabase",
-  "pandas / NumPy",
-  "Data Pipelines / ETL",
-  "OpenAI API / Claude API",
-  "AI Agents / LLM Integration",
-  "Docker",
-  "GitHub Actions (CI/CD)",
-  "AWS / Vercel",
-  "REST / WebSockets",
-  "Git / GitHub",
-  "Solidity / Web3",
-  "Agile (Scrum/Kanban)",
+export const SKILLS_INDUSTRY = [
+  "Industrial IoT (IIoT)",
+  "IT/OT Convergence",
+  "MQTT / Mosquitto / TLS",
+  "OPC-UA",
+  "Modbus / Profinet / EtherCAT",
+  "Node-RED",
+  "Telegraf",
+  "InfluxDB / Time-Series DBs",
+  "Grafana",
+  "PLC / SCADA",
+  "Edge Computing",
+  "Raspberry Pi / NVIDIA Jetson / ESP32",
+  "Docker / Docker Compose",
+  "Linux / VPS Operations",
+  "Python (Analytics, Data Pipelines)",
+  "Node.js / TypeScript",
+  "WebRTC",
+  "Industrial Cybersecurity",
+  "AI / LLM-driven Analytics",
+  "Real-time Alerting",
+  "Digital Twin Concepts",
+  "CI/CD (GitHub Actions)",
+  "System Architecture & Monitoring",
 ];
 
 export const SKILLS_ENGINEER = [
@@ -410,65 +386,53 @@ export interface Project {
   tags: string[];
 }
 
-export const PROJECTS_WEBDEV: Project[] = [
+export const PROJECTS_INDUSTRY: Project[] = [
   {
-    slug: "ai-data-platform",
+    slug: "ai-data-platform-iot",
     title: "AI Data Platform",
     description: {
-      en: "Full-stack IoT data platform with Next.js frontend, Python REST API, real-time data pipeline and AI-powered analytics. Containerized with Docker and deployed on a Linux VPS.",
-      pt: "Plataforma de dados IoT full-stack com frontend Next.js, API REST em Python, pipeline de dados em tempo real e analytics com IA. Containerizada com Docker e implantada em VPS Linux.",
+      en: "Self-hosted industrial IoT monitoring platform. Six containerized services — Mosquitto, Telegraf, InfluxDB, Grafana, Python analytics and Nginx — orchestrated via Docker Compose with full dev/prod separation, layered TLS security and multi-tier backups.",
+      pt: "Plataforma self-hosted de monitoramento industrial IoT. Seis serviços containerizados — Mosquitto, Telegraf, InfluxDB, Grafana, analytics em Python e Nginx — orquestrados via Docker Compose com separação dev/prod completa, segurança em camadas com TLS e backups multi-camada.",
     },
-    coverImage: "/images/projects/webdev/MOV3.png",
-    tags: ["Next.js", "Python", "Docker", "InfluxDB", "AI"],
+    coverImage: "/images/projects/industry/ai-data-platform-architecture.png",
+    tags: ["Docker", "MQTT", "InfluxDB", "Grafana", "Telegraf", "Python", "TLS"],
   },
   {
-    slug: "nextjs-web-app",
-    title: "Next.js Web App",
+    slug: "hotas-remote-control",
+    title: "HOTAS Warthog — Internet Remote Control",
     description: {
-      en: "Full-stack web application with SSR, API routes, JWT authentication via NextAuth, MongoDB database and production deployment on Vercel with CI/CD via GitHub.",
-      pt: "Aplicação web full-stack com SSR, rotas de API, autenticação JWT via NextAuth, banco MongoDB e deploy em produção no Vercel com CI/CD.",
+      en: "Real-time remote control system over the internet using a military HOTAS joystick, MQTT over TLS, Raspberry Pi, and WebRTC live video — with a fail-safe watchdog and an industrial-brutalist operator UI built in React.",
+      pt: "Sistema de controle remoto em tempo real pela internet usando joystick militar HOTAS, MQTT sobre TLS, Raspberry Pi e vídeo ao vivo WebRTC — com watchdog fail-safe e UI industrial-brutalista do operador em React.",
     },
-    coverImage: "/images/projects/webdev/Dev3.png",
-    tags: ["Next.js", "TypeScript", "NextAuth", "MongoDB"],
+    coverImage: "/images/projects/industry/hotas-remote-workstation.jpeg",
+    tags: ["Python", "MQTT", "Raspberry Pi", "React", "WebRTC", "IoT"],
   },
   {
-    slug: "fifa-simulator",
-    title: "FIFA 2030 Simulator",
-    description: {
-      en: "Interactive browser-based app with dynamic bracket rendering, match simulation logic and responsive UI — built with vanilla JavaScript, HTML5 and CSS3.",
-      pt: "App interativo no navegador com renderização dinâmica de chaves, lógica de simulação de partidas e UI responsiva — JavaScript puro, HTML5 e CSS3.",
-    },
-    coverImage: "/images/projects/webdev/FIFA-COVER-PROJECT.png",
-    tags: ["JavaScript", "HTML5", "CSS3"],
+    slug: "industry-project-3",
+    title: "Project 3",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C1.png",
+    tags: ["TBD"],
   },
   {
-    slug: "webdev-project-4",
+    slug: "industry-project-4",
     title: "Project 4",
-    description: {
-      en: "Coming soon",
-      pt: "Em breve",
-    },
-    coverImage: "/images/projects/webdev/C1.png",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C2.png",
     tags: ["TBD"],
   },
   {
-    slug: "webdev-project-5",
+    slug: "industry-project-5",
     title: "Project 5",
-    description: {
-      en: "Coming soon",
-      pt: "Em breve",
-    },
-    coverImage: "/images/projects/webdev/C2.png",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C3.png",
     tags: ["TBD"],
   },
   {
-    slug: "webdev-project-6",
+    slug: "industry-project-6",
     title: "Project 6",
-    description: {
-      en: "Coming soon",
-      pt: "Em breve",
-    },
-    coverImage: "/images/projects/webdev/C3.png",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C4.png",
     tags: ["TBD"],
   },
 ];
@@ -539,23 +503,13 @@ export const PROJECTS_ENGINEER: Project[] = [
 export const PROJECTS_AUTOMATION_IT: Project[] = [
   {
     slug: "julius-finance-bot",
-    title: "Julius — AI Finance Bot",
+    title: "Julius — AI Finance SaaS",
     description: {
-      en: "Fully automated personal finance workflow in n8n: AI agent extracts data from receipts, logs entries to Google Sheets and answers natural-language financial queries.",
-      pt: "Workflow financeiro pessoal automatizado em n8n: agente de IA extrai dados de recibos, registra no Google Sheets e responde consultas financeiras em linguagem natural.",
+      en: "AI-powered personal finance PWA. Log expenses by chatting with a personality (Julius, Trump, Lagarde…) or snapping a receipt photo — GPT-4o extracts the transaction, you confirm it, the dashboard updates instantly. Built with Next.js 14, Supabase, OpenAI, React Query and Tailwind.",
+      pt: "PWA de finanças pessoais com IA. Registre gastos conversando com uma personalidade (Julius, Trump, Lagarde…) ou tirando foto de recibo — o GPT-4o extrai a transação, você confirma e o dashboard atualiza na hora. Feito com Next.js 14, Supabase, OpenAI, React Query e Tailwind.",
     },
-    coverImage: "/images/projects/automation-it/Julius.png",
-    tags: ["n8n", "OpenAI API", "Google Sheets", "Webhooks"],
-  },
-  {
-    slug: "ai-data-platform-iot",
-    title: "AI Data Platform",
-    description: {
-      en: "Self-hosted industrial IoT monitoring platform. Six containerized services — Mosquitto, Telegraf, InfluxDB, Grafana, Python analytics and Nginx — orchestrated via Docker Compose with full dev/prod separation, layered TLS security and multi-tier backups.",
-      pt: "Plataforma self-hosted de monitoramento industrial IoT. Seis serviços containerizados — Mosquitto, Telegraf, InfluxDB, Grafana, analytics em Python e Nginx — orquestrados via Docker Compose com separação dev/prod completa, segurança em camadas com TLS e backups multi-camada.",
-    },
-    coverImage: "/images/projects/automation-it/ai-data-platform-architecture.png",
-    tags: ["Docker", "MQTT", "InfluxDB", "Grafana", "Telegraf", "Python", "TLS"],
+    coverImage: "/images/projects/automation-it/julius-chat-conversation.jpeg",
+    tags: ["Next.js 14", "TypeScript", "Supabase", "OpenAI GPT-4o", "PWA", "Tailwind"],
   },
   {
     slug: "linkedin-auto-post",
@@ -568,14 +522,18 @@ export const PROJECTS_AUTOMATION_IT: Project[] = [
     tags: ["n8n", "Make", "Telegram Bot", "OpenAI API", "LinkedIn API"],
   },
   {
-    slug: "hotas-remote-control",
-    title: "HOTAS Warthog — Internet Remote Control",
-    description: {
-      en: "Real-time remote control system over the internet using a military HOTAS joystick, MQTT over TLS, Raspberry Pi, and WebRTC live video — with a fail-safe watchdog and an industrial-brutalist operator UI built in React.",
-      pt: "Sistema de controle remoto em tempo real pela internet usando joystick militar HOTAS, MQTT sobre TLS, Raspberry Pi e vídeo ao vivo WebRTC — com watchdog fail-safe e UI industrial-brutalista do operador em React.",
-    },
-    coverImage: "/images/projects/automation-it/hotas-remote-control-tab.png",
-    tags: ["Python", "MQTT", "Raspberry Pi", "React", "WebRTC", "IoT"],
+    slug: "automation-project-3",
+    title: "Project 3",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/automation-it/C1.png",
+    tags: ["TBD"],
+  },
+  {
+    slug: "automation-project-4",
+    title: "Project 4",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/automation-it/C2.png",
+    tags: ["TBD"],
   },
   {
     slug: "automation-project-5",
@@ -600,7 +558,8 @@ export interface ProjectDetail {
   title: string;
   subtitle: { en: string; pt: string };
   bannerImage: string;
-  career: "dev" | "engineer" | "automation-it";
+  career: "industry" | "engineer" | "automation-it";
+  liveUrl?: string;
   sections: {
     heading: { en: string; pt: string };
     body: { en: string; pt: string };
@@ -611,154 +570,107 @@ export interface ProjectDetail {
 }
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
-  // ── Web Dev ──────────────────────────────────────────────
-  "ai-data-platform": {
-    title: "AI Data Platform",
-    subtitle: {
-      en: "Full-stack IoT data platform with AI-powered analytics",
-      pt: "Plataforma de dados IoT full-stack com analytics de IA",
-    },
-    bannerImage: "/images/projects/webdev/MOV-Plataform.png",
-    career: "dev",
-    sections: [
-      {
-        heading: { en: "The Challenge", pt: "O Desafio" },
-        body: {
-          en: "Industrial operations generate massive volumes of sensor data, but without a unified platform, raw signals remain siloed and underutilized. The challenge was to build a production-grade system that ingests field data from edge devices in real time, processes it through a scalable pipeline, and surfaces actionable AI-driven insights — all from a single dashboard.",
-          pt: "Operações industriais geram volumes massivos de dados de sensores, mas sem uma plataforma unificada, os sinais brutos permanecem isolados e subutilizados. O desafio era construir um sistema de nível produção que ingere dados de campo de dispositivos edge em tempo real, processa por um pipeline escalável e apresenta insights acionáveis gerados por IA — tudo em um único dashboard.",
-        },
-      },
-      {
-        heading: { en: "The Solution", pt: "A Solução" },
-        body: {
-          en: "Built an end-to-end IoT data platform: Raspberry Pi edge nodes collect field signals via MQTT, Node-RED orchestrates the data flow into InfluxDB for time-series storage, and Grafana powers real-time dashboards.\n\nOn top of this pipeline, a custom Python REST API integrates an AI layer that generates natural-language insights, anomaly detection and trend forecasting from raw sensor streams.\n\nThe entire stack is containerized with Docker, deployed on a Linux VPS with CI/CD via GitHub Actions, and the production frontend is served on Vercel using Next.js with TypeScript.",
-          pt: "Construí uma plataforma de dados IoT ponta a ponta: nós edge Raspberry Pi coletam sinais de campo via MQTT, Node-RED orquestra o fluxo de dados para o InfluxDB (armazenamento time-series) e Grafana alimenta dashboards em tempo real.\n\nSobre este pipeline, uma API REST customizada em Python integra uma camada de IA que gera insights em linguagem natural, detecção de anomalias e previsão de tendências a partir de streams brutos de sensores.\n\nTodo o stack é containerizado com Docker, implantado em VPS Linux com CI/CD via GitHub Actions, e o frontend em produção é servido no Vercel com Next.js e TypeScript.",
-        },
-      },
-      {
-        heading: { en: "Results", pt: "Resultados" },
-        body: {
-          en: "A production-deployed IIoT data platform actively used for Movewer Technologies UGV field operations — delivering real-time monitoring, AI-powered analytics and automated alerting from a single unified interface.",
-          pt: "Uma plataforma de dados IIoT implantada em produção, ativamente usada nas operações de campo de UGVs da Movewer Technologies — entregando monitoramento em tempo real, analytics com IA e alertas automatizados a partir de uma interface unificada.",
-        },
-      },
-    ],
+  // ── Industry 4.0 placeholders ────────────────────────────
+  "industry-project-3": {
+    title: "Project 3",
+    subtitle: { en: "Coming soon", pt: "Em breve" },
+    bannerImage: "/images/projects/industry/C1.png",
+    career: "industry",
+    sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
-  "nextjs-web-app": {
-    title: "Next.js Web App",
-    subtitle: {
-      en: "Full-stack web application with SSR, authentication and MongoDB.",
-      pt: "Aplicação web full-stack com SSR, autenticação e MongoDB.",
-    },
-    bannerImage: "/images/projects/webdev/Dev3.png",
-    career: "dev",
-    sections: [
-      {
-        heading: { en: "The Challenge", pt: "O Desafio" },
-        body: {
-          en: "Build a production-ready full-stack web application from scratch — with secure user authentication, dynamic server-rendered content, database persistence, and a clean, responsive UI — demonstrating end-to-end Next.js capabilities.",
-          pt: "Construir uma aplicação web full-stack pronta para produção do zero — com autenticação segura de usuários, conteúdo dinâmico renderizado no servidor, persistência em banco de dados e uma UI limpa e responsiva — demonstrando capacidades Next.js ponta a ponta.",
-        },
-      },
-      {
-        heading: { en: "The Solution", pt: "A Solução" },
-        body: {
-          en: "Developed a Next.js application with server and client components, implementing JWT-based authentication via NextAuth with provider and credential flows. MongoDB handles data persistence through Prisma ORM.\n\nThe UI is built with Tailwind CSS for a modern, responsive experience. Deployed on Vercel with CI/CD via GitHub Actions for automated testing and deployment on every push.",
-          pt: "Desenvolvi uma aplicação Next.js com componentes de servidor e cliente, implementando autenticação JWT via NextAuth com fluxos de provedor e credenciais. MongoDB cuida da persistência via Prisma ORM.\n\nA interface é construída com Tailwind CSS para uma experiência moderna e responsiva. Deploy no Vercel com CI/CD via GitHub Actions para testes e deploy automatizados a cada push.",
-        },
-      },
-      {
-        heading: { en: "Results", pt: "Resultados" },
-        body: {
-          en: "A polished, production-ready application showcasing full-stack Next.js proficiency — secure auth flows, server-side rendering, database integration and modern DevOps practices.",
-          pt: "Uma aplicação polida e pronta para produção demonstrando proficiência full-stack em Next.js — fluxos de autenticação seguros, renderização no servidor, integração com banco de dados e práticas DevOps modernas.",
-        },
-      },
-    ],
-  },
-  "fifa-simulator": {
-    title: "FIFA 2030 Simulator",
-    subtitle: {
-      en: "World Cup simulator with vanilla JavaScript",
-      pt: "Simulador da Copa do Mundo com JavaScript vanilla",
-    },
-    bannerImage: "/images/projects/webdev/FIFA2030.png",
-    career: "dev",
-    sections: [
-      {
-        heading: { en: "The Challenge", pt: "O Desafio" },
-        body: {
-          en: "Create an interactive FIFA World Cup simulator using only vanilla web technologies — no frameworks, no libraries, no build tools. Pure JavaScript, HTML5 and CSS3, delivered straight to the browser.",
-          pt: "Criar um simulador interativo da Copa do Mundo FIFA usando apenas tecnologias web vanilla — sem frameworks, sem bibliotecas, sem ferramentas de build. JavaScript puro, HTML5 e CSS3, direto no navegador.",
-        },
-      },
-      {
-        heading: { en: "The Solution", pt: "A Solução" },
-        body: {
-          en: "Built a complete World Cup simulator with dynamic bracket rendering, group-stage logic, knockout-round elimination, randomized match results with weighted probability, and a fully responsive UI.\n\nAll match simulation logic, DOM manipulation and state management are handled with vanilla JavaScript — no external dependencies.",
-          pt: "Construí um simulador completo da Copa do Mundo com renderização dinâmica de chaves, lógica de fase de grupos, eliminação por mata-mata, resultados com probabilidade ponderada e uma UI totalmente responsiva.\n\nToda a lógica de simulação, manipulação do DOM e gerenciamento de estado são feitos com JavaScript vanilla — sem dependências externas.",
-        },
-      },
-      {
-        heading: { en: "Results", pt: "Resultados" },
-        body: {
-          en: "A lightweight, zero-dependency World Cup simulator that runs entirely in the browser — smooth animations, realistic match logic and a clean visual experience built from scratch with vanilla JS.",
-          pt: "Um simulador da Copa do Mundo leve e sem dependências que roda inteiramente no navegador — animações suaves, lógica de partidas realista e experiência visual limpa construída do zero com JS vanilla.",
-        },
-      },
-    ],
-  },
-  "webdev-project-4": {
+  "industry-project-4": {
     title: "Project 4",
     subtitle: { en: "Coming soon", pt: "Em breve" },
-    bannerImage: "/images/projects/webdev/C1.png",
-    career: "dev",
+    bannerImage: "/images/projects/industry/C2.png",
+    career: "industry",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
-  "webdev-project-5": {
+  "industry-project-5": {
     title: "Project 5",
     subtitle: { en: "Coming soon", pt: "Em breve" },
-    bannerImage: "/images/projects/webdev/C2.png",
-    career: "dev",
+    bannerImage: "/images/projects/industry/C3.png",
+    career: "industry",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
-  "webdev-project-6": {
+  "industry-project-6": {
     title: "Project 6",
     subtitle: { en: "Coming soon", pt: "Em breve" },
-    bannerImage: "/images/projects/webdev/C3.png",
-    career: "dev",
+    bannerImage: "/images/projects/industry/C4.png",
+    career: "industry",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
 
   // ── IT Automation ─────────────────────────────────────────
   "julius-finance-bot": {
-    title: "Julius — AI Finance Bot",
+    title: "Julius — AI Finance SaaS",
     subtitle: {
-      en: "AI-powered personal finance automation built with n8n and OpenAI",
-      pt: "Automação de finanças pessoais com IA usando n8n e OpenAI",
+      en: "An AI-powered personal finance PWA — chat your way through expense tracking",
+      pt: "Um PWA de finanças pessoais com IA — registre seus gastos conversando",
     },
-    bannerImage: "/images/projects/automation-it/Julius.png",
+    bannerImage: "/images/projects/automation-it/julius-dashboard.jpeg",
     career: "automation-it",
+    liveUrl: "https://julius-psi.vercel.app/login",
     sections: [
       {
-        heading: { en: "The Challenge", pt: "O Desafio" },
+        heading: { en: "What Julius Is", pt: "O que é o Julius" },
         body: {
-          en: "Personal finance tracking demands discipline and consistency — two things that manual spreadsheets kill over time. The goal was to build a zero-friction system where receipts go in, structured data comes out automatically, and natural-language queries return spending insights — no manual entry, no app switching, no friction.",
-          pt: "Controle financeiro pessoal exige disciplina e consistência — duas coisas que planilhas manuais matam com o tempo. O objetivo era construir um sistema sem atrito onde recibos entram, dados estruturados saem automaticamente e consultas em linguagem natural retornam insights de gastos — sem entrada manual, sem trocar de app, sem fricção.",
+          en: "Julius is a financial app that helps you organise your day-to-day expenses by talking to an AI personality — like sending a WhatsApp message, but to Julius (or Dona Hermínia, Seu Madruga, Trump, Christine Lagarde…). It's fun, a little comedic, and makes tracking expenses actually enjoyable.\n\nBecause it's a Progressive Web App built with Next.js 14, it lives in your pocket. The moment you spend money, log it: type something like \"spent €3 on lunch\" or snap a photo of the receipt. Julius detects the category automatically using GPT-4o — so you don't have to think about it. A live dashboard tracks where your money is going day by day, with CSV/PDF exports for full financial control.",
+          pt: "Julius é um app de finanças que te ajuda a organizar os gastos do dia a dia conversando com uma personalidade IA — como mandar uma mensagem no WhatsApp, mas para o Julius (ou Dona Hermínia, Seu Madruga, Trump, Christine Lagarde…). É divertido, levemente cômico, e torna o controle de gastos prazeroso.\n\nComo é um Progressive Web App feito com Next.js 14, ele vive no seu bolso. Na hora que você gasta, registra: digita algo como \"gastei €3 no almoço\" ou tira foto do recibo. O Julius detecta a categoria automaticamente usando GPT-4o — sem você precisar pensar. Um dashboard ao vivo mostra onde o dinheiro vai dia a dia, com export CSV/PDF para controle financeiro completo.",
+        },
+        image: "/images/projects/automation-it/julius-chat-conversation.jpeg",
+        imageCaption: {
+          en: "Chat with Julius — natural language in, structured expenses out",
+          pt: "Conversando com o Julius — linguagem natural entra, gastos estruturados saem",
         },
       },
       {
-        heading: { en: "The Solution", pt: "A Solução" },
+        heading: { en: "The Chat Flow & Two-Step Commit", pt: "O Fluxo do Chat & Confirmação em Duas Etapas" },
         body: {
-          en: "Built a fully automated workflow in n8n: receipts are sent via chat, an AI agent (OpenAI) extracts structured data (vendor, amount, category, date) and automatically logs entries into a Google Sheets ledger.\n\nExtended Julius with a conversational layer acting as a personal financial manager: users query spending summaries, category breakdowns and budget insights via natural-language chat, with responses grounded in live spreadsheet data.\n\nDesigned the full workflow architecture including webhook triggers, AI prompt engineering for reliable structured extraction, error handling and dynamic Sheets integration.",
-          pt: "Construí um workflow totalmente automatizado em n8n: recibos são enviados via chat, um agente de IA (OpenAI) extrai dados estruturados (fornecedor, valor, categoria, data) e registra automaticamente no Google Sheets.\n\nEstendeu o Julius com uma camada conversacional como gerente financeiro pessoal: usuários consultam resumos, breakdowns por categoria e insights de orçamento via chat em linguagem natural.\n\nProjetou toda a arquitetura do workflow: triggers de webhook, prompt engineering para extração estruturada confiável, tratamento de erros e integração dinâmica com Sheets.",
+          en: "Julius never saves a transaction automatically — the user always confirms. The flow:\n\nUser types → optimistic UI insert → POST to the julius-chat Supabase Edge Function (Deno + TypeScript) → OpenAI API with response_format: json_object → JSON back → render in chat.\n\nThe Edge Function picks the system prompt for the active persona and region, injects today's date, and forces JSON output. OpenAI replies with one of two shapes — either a plain conversation, or a registo with the extracted transaction (valor, tag, descricao, dia, hora). When a registo is detected, a TransactionConfirm card appears and the pending transaction is cached in localStorage so it survives navigation.\n\nOn confirm: the session token is refreshed if expiring (mobile PWA safety), the date is converted from DD/MM/YYYY to ISO, the row is inserted into Supabase, the local cache is cleared, and React Query invalidates ['transactions'] + ['stats'] so the Extrato and Dashboard refresh automatically — no reload needed. A double-click guard prevents duplicate inserts.",
+          pt: "O Julius nunca salva uma transação automaticamente — o usuário sempre confirma. O fluxo:\n\nUsuário digita → insert otimista na UI → POST para a Edge Function julius-chat no Supabase (Deno + TypeScript) → API da OpenAI com response_format: json_object → JSON de volta → renderiza no chat.\n\nA Edge Function escolhe o system prompt da persona ativa e da região, injeta a data de hoje, e força output JSON. A OpenAI devolve uma de duas formas — ou uma conversa, ou um registo com a transação extraída (valor, tag, descricao, dia, hora). Quando um registo é detectado, um card TransactionConfirm aparece e a transação pendente é guardada no localStorage para sobreviver à navegação.\n\nNo confirmar: o token da sessão é refrescado se estiver para expirar (segurança PWA mobile), a data é convertida de DD/MM/AAAA para ISO, a linha é inserida no Supabase, o cache local é limpo, e o React Query invalida ['transactions'] + ['stats'] para Extrato e Dashboard atualizarem sozinhos — sem reload. Um guard contra double-click previne inserts duplicados.",
+        },
+        image: "/images/projects/automation-it/julius-chat-confirm.jpeg",
+        imageCaption: {
+          en: "Transaction confirmation card — Julius extracts, the user commits",
+          pt: "Card de confirmação — o Julius extrai, o usuário confirma",
+        },
+      },
+      {
+        heading: { en: "Dashboard, Extrato & Reports", pt: "Dashboard, Extrato & Relatórios" },
+        body: {
+          en: "The Dashboard is the visual brain — Recharts powers a stacked bar chart of spending per day plus a category donut chart. Stats cards show period totals and daily averages, with budget-progress bars per category that turn red when you overshoot the limites set in Settings.\n\nThe Extrato (statement) is the full transaction list — grouped by day with a friendly formatDate helper that renders \"Hoje\", \"Ontem\" or \"5 de abril\" instead of raw dates. Filter by period, category or year, edit or delete inline, and export to CSV. A monthly PDF report can also be generated — including the full category breakdown and daily spending list — perfect for personal accounting or sharing with an accountant.",
+          pt: "O Dashboard é o cérebro visual — o Recharts alimenta um gráfico de barras empilhadas de gasto por dia mais um donut chart por categoria. Stats cards mostram totais do período e médias diárias, com barras de progresso de orçamento por categoria que viram vermelhas quando você estoura os limites definidos nos Settings.\n\nO Extrato é a lista completa de transações — agrupado por dia com um helper formatDate que renderiza \"Hoje\", \"Ontem\" ou \"5 de abril\" em vez de datas cruas. Filtra por período, categoria ou ano, edita ou apaga inline, e exporta para CSV. Um relatório mensal em PDF também pode ser gerado — com a categoria completa e a lista de gastos diários — perfeito para contabilidade pessoal ou compartilhar com um contador.",
+        },
+        images: [
+          "/images/projects/automation-it/julius-dashboard.jpeg",
+          "/images/projects/automation-it/julius-extrato.jpeg",
+          "/images/projects/automation-it/julius-financial-report.jpeg",
+        ],
+      },
+      {
+        heading: { en: "The Persona System", pt: "O Sistema de Personas" },
+        body: {
+          en: "Julius is not the only AI personality. There's a full registry of personas — Julius, Dona Hermínia, Seu Madruga, Fernando, Christine Lagarde, Trump, Obama — each with its own character, system prompt, and available regions (PT / BR / EU / US). Each persona is a typed PersonaConfig object exporting: an id, a system-prompt function (locale-aware), an availableRegions list, and getConfirmMessages() which returns an array of functions generating random \"transaction confirmed\" quips in that character's voice.\n\nThe active persona is stored in user_settings.persona, loaded into a Zustand store on boot, and passed to the Edge Function as persona_id — which calls getPrompt(persona_id, region) to build the right system prompt. Adding a new persona is a single new file under lib/prompts/personas/.",
+          pt: "O Julius não é a única personalidade IA. Existe um registry completo de personas — Julius, Dona Hermínia, Seu Madruga, Fernando, Christine Lagarde, Trump, Obama — cada uma com seu caráter, system prompt e regiões disponíveis (PT / BR / EU / US). Cada persona é um objeto PersonaConfig tipado que exporta: um id, uma função de system prompt (sensível ao locale), uma lista availableRegions, e getConfirmMessages() que retorna um array de funções gerando frases aleatórias de \"transação confirmada\" na voz do personagem.\n\nA persona ativa é guardada em user_settings.persona, carregada num store Zustand no boot, e passada para a Edge Function como persona_id — que chama getPrompt(persona_id, region) pra montar o system prompt certo. Adicionar uma nova persona é só criar um novo arquivo em lib/prompts/personas/.",
+        },
+        image: "/images/projects/automation-it/julius-settings.jpeg",
+        imageCaption: {
+          en: "Settings — region, currency, persona, budget limits and account controls",
+          pt: "Settings — região, moeda, persona, limites de orçamento e controles da conta",
+        },
+      },
+      {
+        heading: { en: "Stack & Architecture", pt: "Stack & Arquitetura" },
+        body: {
+          en: "• Framework — Next.js 14 (App Router) + TypeScript, file-based routing and server components, PWA-ready manifest with installable icons and aggressive token auto-refresh for background-suspended mobile browsers.\n• Styling — Tailwind CSS 4 with a custom theme of CSS variables (julius-card, julius-text, julius-muted, julius-border, julius-accent, julius-success, julius-danger, julius-warning, julius-outer) all defined in app/globals.css. shadcn/ui as the base component layer.\n• Backend-as-a-service — Supabase: Auth (magic link + password), Postgres database, and Deno-based Edge Functions hosting the julius-chat and delete-account endpoints.\n• Server state — React Query (@tanstack/react-query) with two query keys driving everything: ['transactions', periodo, tag?, year?] and ['stats', periodo, tag?, year?]. Every mutation invalidates both, triggering a background refetch with no manual reload.\n• Client state — Zustand for in-memory user settings (currency, enabled categories, budget limites, region, persona). Components read from Zustand only, never directly from Supabase.\n• AI — OpenAI gpt-4o-mini for text and gpt-4o for receipt image scanning, both forced to JSON output.\n• Charts — Recharts for the stacked bar chart and donut chart on the dashboard.\n• Deployment — Vercel for the frontend, Supabase Cloud for the backend, deployed as a fully managed serverless stack.\n\nDatabase schema: three tables — transacoes, user_settings and chat_history — with RLS enforced through auth.users foreign keys. Categories live in a single source of truth (lib/categories.ts) with a strict TypeScript Tag union — adding a category requires touching exactly three files.",
+          pt: "• Framework — Next.js 14 (App Router) + TypeScript, roteamento por arquivos e server components, manifest PWA pronto com ícones instaláveis e refresh agressivo de token para browsers mobile suspensos em background.\n• Styling — Tailwind CSS 4 com tema customizado de CSS variables (julius-card, julius-text, julius-muted, julius-border, julius-accent, julius-success, julius-danger, julius-warning, julius-outer) todas definidas em app/globals.css. shadcn/ui como camada base de componentes.\n• Backend-as-a-service — Supabase: Auth (magic link + senha), banco Postgres e Edge Functions em Deno hospedando os endpoints julius-chat e delete-account.\n• Estado de servidor — React Query (@tanstack/react-query) com duas query keys orquestrando tudo: ['transactions', periodo, tag?, year?] e ['stats', periodo, tag?, year?]. Toda mutação invalida as duas, disparando refetch em background sem reload manual.\n• Estado de cliente — Zustand pra settings em memória (moeda, categorias ativas, limites de orçamento, região, persona). Componentes leem só do Zustand, nunca direto do Supabase.\n• IA — OpenAI gpt-4o-mini para texto e gpt-4o para escaneamento de imagens de recibo, ambos com output forçado a JSON.\n• Gráficos — Recharts para o gráfico de barras empilhadas e o donut chart no dashboard.\n• Deploy — Vercel pro frontend, Supabase Cloud pro backend, implantado como stack serverless totalmente gerenciado.\n\nSchema do banco: três tabelas — transacoes, user_settings e chat_history — com RLS forçado por foreign keys de auth.users. As categorias vivem numa única fonte da verdade (lib/categories.ts) com um union Tag estrito do TypeScript — adicionar categoria exige tocar exatamente três arquivos.",
         },
       },
       {
         heading: { en: "Results", pt: "Resultados" },
         body: {
-          en: "A production-grade personal finance automation that runs fully autonomously — zero manual input, real-time ledger updates and conversational financial insights on demand.",
-          pt: "Uma automação financeira pessoal de nível produção que roda de forma totalmente autônoma — zero input manual, atualizações em tempo real e insights financeiros conversacionais sob demanda.",
+          en: "Julius is live in production at julius-psi.vercel.app — a fully working AI-driven personal finance PWA used daily, with chat-based expense logging, AI receipt scanning, conversational personas, real-time dashboards, CSV/PDF exports and a tight feedback loop between mutation and UI thanks to React Query's invalidation strategy. Built end-to-end as a solo project — frontend, Edge Functions, prompt engineering, database schema, RLS policies and PWA install flow.",
+          pt: "O Julius está no ar em produção em julius-psi.vercel.app — um PWA de finanças pessoais com IA totalmente funcional usado no dia a dia, com registro de gastos por chat, scan de recibos por IA, personas conversacionais, dashboards em tempo real, export CSV/PDF e um loop de feedback apertado entre mutação e UI graças à estratégia de invalidação do React Query. Construído ponta a ponta como projeto solo — frontend, Edge Functions, prompt engineering, schema do banco, políticas RLS e fluxo de install do PWA.",
         },
       },
     ],
@@ -769,8 +681,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Self-hosted industrial IoT monitoring platform — six containerized services orchestrated by Docker Compose, with full dev/prod separation and layered security",
       pt: "Plataforma self-hosted de monitoramento industrial IoT — seis serviços containerizados orquestrados por Docker Compose, com separação dev/prod completa e segurança em camadas",
     },
-    bannerImage: "/images/projects/automation-it/ai-data-platform-architecture.png",
-    career: "automation-it",
+    bannerImage: "/images/projects/industry/ai-data-platform-architecture.png",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -778,7 +690,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
           en: "Build a production-grade industrial IoT monitoring platform with one fundamental rule: total control over the data. No third-party SaaS, no monthly subscription, no vendor lock-in. A sensor publishes a measurement via MQTT and seconds later it's already on a live Grafana dashboard, written to a time-series database, and processed by an analytics service that can fire alerts — all running in containers, anywhere, from a developer laptop to an Ubuntu VPS in the cloud.\n\nThe second non-negotiable was real separation between development and production. The same docker-compose.yml must run on a dev machine without TLS and with debug ports open, and on the VPS under an overlay that closes everything, enforces TLS on MQTT, and exposes Grafana only behind Nginx with HTTPS Let's Encrypt. Same code, same volume state, different environments — without if/else scattered across config files.",
           pt: "Construir uma plataforma de monitoramento IoT industrial de nível produção com uma regra fundamental: controle total sobre os dados. Nada de SaaS de terceiros, nada de mensalidade, nada de vendor lock-in. Um sensor publica uma medição via MQTT e segundos depois ela já está num dashboard Grafana ao vivo, gravada num banco de séries temporais, e processada por um serviço analítico que pode disparar alertas — tudo rodando em containers, em qualquer lugar, do laptop do desenvolvedor à VPS Ubuntu na nuvem.\n\nA segunda premissa inegociável era a separação real entre desenvolvimento e produção. O mesmo docker-compose.yml precisa rodar na máquina de dev sem TLS e com portas abertas para debug, e na VPS sob um overlay que fecha tudo, exige TLS no MQTT e expõe o Grafana apenas via Nginx com HTTPS Let's Encrypt. Mesmo código, mesmo estado dos volumes, ambientes diferentes — sem if/else espalhados pelos arquivos de configuração.",
         },
-        image: "/images/projects/automation-it/ai-data-platform-concept.jpg",
+        image: "/images/projects/industry/ai-data-platform-concept.jpg",
         imageCaption: {
           en: "Concept render — visualization only, not the actual deployment",
           pt: "Render conceitual — apenas visualização, não o deployment real",
@@ -790,7 +702,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
           en: "Six services orchestrated by Docker Compose, each in an isolated container, all running as non-root users:\n\n• Mosquitto — the entry point. Sensors (ESP32, Raspberry Pi, Node-RED gateways, any MQTT client) publish structured JSON to a hierarchical topic (mov/dados/#). Authentication is mandatory in both environments — never anonymous — with passwords generated by OpenSSL with 256 bits of entropy and hashed inside the container by a custom entrypoint that reads credentials from the .env.\n\n• Telegraf — the collector. Subscribes to mov/dados/# and writes each message to InfluxDB using the json_v2 parser configured to extract timestamp, tags (device, location, type, client) and fields (numeric values like temperature, humidity, pressure). A single declarative .conf file — no code, no maintenance.\n\n• InfluxDB — the heart. Time-series database optimized for high volumes of sensor data, with Flux queries for efficient temporal aggregation. Self-initializes on first boot via DOCKER_INFLUXDB_INIT_* variables. In production, the database has no exposed port — only reachable through the internal Docker network.\n\n• Grafana — the interface. Connects to InfluxDB through a YAML-provisioned datasource, so nothing needs to be created in the UI. Dashboards are .json files in provisioning/dashboards/ loaded automatically with updateIntervalSeconds: 10.\n\n• Python Analytics — the analytical brain. A lean script (main.py) running in an infinite loop, reading the latest temperature from InfluxDB every 10 seconds, comparing against a configurable threshold (default 30°C), classifying as Normal or CRITICAL, and writing the insight back to the database. Threshold and interval are parameterized via environment variables.\n\n• Backup container — Alpine minimalist, no custom code, mounts grafana_data and influxdb_data read-only, generates daily .tar.gz files with 7-day local retention.\n\nThe data flow: [IoT Sensors] → [MQTT] → [Mosquitto] → [Telegraf] → [InfluxDB] ↔ [Grafana], with Python Analytics reading from and writing back to InfluxDB, and the backup service spanning Grafana and InfluxDB volumes — feeding both local archives and an optional encrypted remote layer.",
           pt: "Seis serviços orquestrados por Docker Compose, cada um num container isolado, todos rodando como usuários não-root:\n\n• Mosquitto — o ponto de entrada. Sensores (ESP32, Raspberry Pi, gateways Node-RED, qualquer cliente MQTT) publicam JSON estruturado num tópico hierárquico (mov/dados/#). A autenticação é obrigatória nos dois ambientes — nunca anônimo — com senhas geradas pelo OpenSSL com 256 bits de entropia e hashed dentro do container por um entrypoint custom que lê as credenciais do .env.\n\n• Telegraf — o coletor. Assina mov/dados/# e grava cada mensagem no InfluxDB usando o parser json_v2 configurado para extrair timestamp, tags (dispositivo, localização, tipo, cliente) e fields (valores numéricos como temperatura, umidade, pressão). Um único arquivo .conf declarativo — sem código, sem manutenção.\n\n• InfluxDB — o coração. Banco de séries temporais otimizado para volumes altos de dados sensoriais, com queries Flux para agregação temporal eficiente. Inicializa-se sozinho na primeira subida via variáveis DOCKER_INFLUXDB_INIT_*. Em produção, o banco não tem porta exposta — só acessível pela rede interna do Docker.\n\n• Grafana — a interface. Conecta no InfluxDB via uma datasource provisionada por YAML, então não precisa criar nada na UI. Dashboards são arquivos .json em provisioning/dashboards/ carregados automaticamente com updateIntervalSeconds: 10.\n\n• Analytics Python — o cérebro analítico. Um script enxuto (main.py) rodando em loop infinito, lendo a última temperatura do InfluxDB a cada 10 segundos, comparando com um threshold configurável (default 30°C), classificando como Normal ou CRÍTICO, e gravando o insight de volta no banco. Threshold e intervalo parametrizáveis via variáveis de ambiente.\n\n• Container de Backup — Alpine minimalista, sem código próprio, monta grafana_data e influxdb_data em modo read-only, gera .tar.gz diários com retenção local de 7 dias.\n\nO fluxo de dados: [Sensores IoT] → [MQTT] → [Mosquitto] → [Telegraf] → [InfluxDB] ↔ [Grafana], com Analytics Python lendo e escrevendo de volta no InfluxDB, e o serviço de backup atravessando os volumes do Grafana e InfluxDB — alimentando arquivos locais e uma camada remota criptografada opcional.",
         },
-        image: "/images/projects/automation-it/ai-data-platform-architecture.png",
+        image: "/images/projects/industry/ai-data-platform-architecture.png",
         imageCaption: {
           en: "Conceptual data flow diagram — for illustration of the architecture, not a screenshot of the running system",
           pt: "Diagrama conceitual do fluxo de dados — ilustração da arquitetura, não é uma captura do sistema em execução",
@@ -816,7 +728,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
           en: "Most of the operational complexity is hidden behind a single command: `bash scripts/setup_wizard.sh`. The wizard is an interactive Bash script that asks for the environment (Development / Staging / Production), which components to install (each one can be disabled), and Analytics parameters (threshold, interval). Then it does everything: generates the .env with random credentials, creates the directory structure with the right permissions, generates the appropriate docker-compose.override.yml, and triggers deploy.sh automatically.\n\nIn production, deploy.sh adds an extra phase: it verifies SSL certificates, generates self-signed ones if missing, updates mosquitto.conf to include the 8883 listener with TLS (only if it doesn't already exist — idempotent), and brings up the stack with both compose files.\n\nThe operational workflow is deliberately git-centric: the developer edits dashboards in local Grafana, exports them with `bash scripts/export_grafana_dashboards.sh` (which serializes each dashboard to JSON in grafana/provisioning/dashboards/), commits, pushes. On the VPS, `git pull` + `bash scripts/update.sh` detects what changed and applies it — restarting only what needs to restart, with no downtime for the rest.\n\nThe scripts are designed to be defensive: everything checks prerequisites before acting, all destructive commands ask for confirmation, and an existing .env is never overwritten (the wizard only generates if it doesn't exist).\n\nDocumentation lives in instructions/ numbered 01- through 06- to enforce linear reading: 01 is the index, 02 is local setup, 03 is daily workflow, 04 is VPS deploy, 05 is troubleshooting, 06 is MQTT certificate renewal. Each file is self-contained — the reader goes to a single file and has everything they need for that scenario.",
           pt: "A maior parte da complexidade operacional está escondida atrás de um único comando: `bash scripts/setup_wizard.sh`. O wizard é um script Bash interativo que pergunta o ambiente (Development / Staging / Production), quais componentes instalar (cada um pode ser desativado) e os parâmetros do Analytics (threshold, intervalo). Depois faz tudo: gera o .env com credenciais aleatórias, cria a estrutura de diretórios com as permissões certas, gera o docker-compose.override.yml apropriado e dispara o deploy.sh automaticamente.\n\nEm produção, o deploy.sh adiciona uma fase extra: verifica certificados SSL, gera autoassinados se faltarem, atualiza o mosquitto.conf para incluir o listener 8883 com TLS (apenas se ainda não existir — é idempotente) e sobe a stack com os dois arquivos compose.\n\nO fluxo operacional é deliberadamente git-centrado: o desenvolvedor edita dashboards no Grafana local, exporta com `bash scripts/export_grafana_dashboards.sh` (que serializa cada dashboard para JSON em grafana/provisioning/dashboards/), commita, dá push. Na VPS, `git pull` + `bash scripts/update.sh` detecta o que mudou e aplica — reiniciando apenas o que precisa reiniciar, sem downtime para o resto.\n\nOs scripts foram desenhados para serem defensivos: tudo verifica pré-requisitos antes de agir, todos os comandos destrutivos pedem confirmação, e o .env existente nunca é sobrescrito (o wizard só gera se não existir).\n\nA documentação fica em instructions/ numerada de 01- a 06- para enforçar leitura linear: 01 é o índice, 02 é o setup local, 03 é o workflow diário, 04 é o deploy em VPS, 05 é troubleshooting, 06 é renovação de certificados MQTT. Cada arquivo é autocontido — o leitor vai a um único arquivo e tem tudo que precisa para aquele cenário.",
         },
-        image: "/images/projects/automation-it/ai-data-platform-rpi-panel.webp",
+        image: "/images/projects/industry/ai-data-platform-rpi-panel.webp",
         imageCaption: {
           en: "Conceptual visualization of the edge node — the platform accepts any MQTT client, this image is illustrative only",
           pt: "Visualização conceitual do edge node — a plataforma aceita qualquer cliente MQTT, esta imagem é apenas ilustrativa",
@@ -890,8 +802,8 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       en: "Real-time remote control of hardware over the internet with a military-grade HOTAS joystick, MQTT, Raspberry Pi and WebRTC",
       pt: "Controle remoto de hardware em tempo real pela internet com joystick militar HOTAS, MQTT, Raspberry Pi e WebRTC",
     },
-    bannerImage: "/images/projects/automation-it/hotas-remote-control-tab.png",
-    career: "automation-it",
+    bannerImage: "/images/projects/industry/hotas-remote-workstation.jpeg",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -899,10 +811,10 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
           en: "Controlling physical hardware over the internet in real time — with the precision and responsiveness of a local wired connection. The goal was to let an operator sit at a desk with a Thrustmaster HOTAS Warthog A-10C (military-spec flight stick and throttle), and have every axis movement and button press travel across the internet to a Raspberry Pi driving motors on a remote device — with minimal latency, live video feedback, full telemetry, and a fail-safe system that guarantees the device stops immediately if communication is lost.\n\nThe first target platform is a UGV (Unmanned Ground Vehicle), but the architecture is fully generic — anything controllable via GPIO, PWM, serial or I2C can be driven remotely with this system.",
           pt: "Controlar hardware físico pela internet em tempo real — com a precisão e responsividade de uma conexão local cabeada. O objetivo era permitir que um operador sente na frente de um HOTAS Warthog A-10C da Thrustmaster (manche e throttle de especificação militar), e cada movimento de eixo e botão pressionado viaje pela internet até um Raspberry Pi acionando motores em um dispositivo remoto — com latência mínima, vídeo ao vivo, telemetria completa e um sistema fail-safe que garante parada imediata se a comunicação cair.\n\nA primeira plataforma-alvo é um UGV (Veículo Terrestre Não-Tripulado), mas a arquitetura é totalmente genérica — qualquer coisa controlável via GPIO, PWM, serial ou I2C pode ser operada remotamente com este sistema.",
         },
-        image: "/images/projects/automation-it/hotas-remote-workstation.jpeg",
+        image: "/images/projects/industry/hotas-remote-control-tab.png",
         imageCaption: {
-          en: "Operator workstation — laptop running RCS, HOTAS Warthog stick and throttle, Raspberry Pi, and accessories",
-          pt: "Estação do operador — laptop rodando o RCS, manche e throttle HOTAS Warthog, Raspberry Pi e acessórios",
+          en: "Operator UI — Control tab with live video, telemetry HUD and tactical reticle",
+          pt: "UI do operador — aba Control com vídeo ao vivo, HUD de telemetria e mira tática",
         },
       },
       {
@@ -911,7 +823,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
           en: "Three independent software components, each running on a different machine, communicating via MQTT over TLS:\n\nThe RCS (Remote Control Station) runs on the operator's Linux PC. It reads the HOTAS via evdev (direct kernel-level input), normalizes all axes and buttons, and transmits control data at 50 Hz to the cloud. It also renders a desktop-native UI (React + Tailwind CSS inside pywebview) with four tabs: live video via WebRTC, real-time HOTAS mapping, telemetry gauges, and latency breakdown.\n\nThe MQTT Broker (Mosquitto on a VPS) is the cloud rendezvous point — TLS-only, authenticated, with ACLs restricting each client to its exact topics. No plaintext, no anonymous connections.\n\nThe Embedded Software on the Raspberry Pi receives control commands, runs a motor mixer (arcade or tank mode), applies acceleration ramps, and drives the hardware backend (GPIO PWM, PCA9685 for ESCs, or serial for PLCs — all pluggable via config). It also reads sensors at 1 Hz, publishes telemetry at 2 Hz, streams live video via WebRTC using aiortc + Pi Camera Module 3 NoIR, and runs a safety watchdog checking operator presence 10 times per second.\n\nBoth the RCS and embedded software follow the same ROS2-inspired architecture: independent nodes communicating exclusively through an internal pub/sub bus, with a thread-safe StateManager and a Launcher handling ordered startup/shutdown.",
           pt: "Três componentes de software independentes, cada um rodando em uma máquina diferente, comunicando via MQTT sobre TLS:\n\nO RCS (Remote Control Station) roda no PC Linux do operador. Lê o HOTAS via evdev (input direto do kernel), normaliza todos os eixos e botões, e transmite dados de controle a 50 Hz para a nuvem. Também renderiza uma UI nativa desktop (React + Tailwind CSS dentro do pywebview) com quatro abas: vídeo ao vivo via WebRTC, mapeamento do HOTAS em tempo real, gauges de telemetria e breakdown de latência.\n\nO Broker MQTT (Mosquitto em VPS) é o ponto de encontro na nuvem — apenas TLS, autenticado, com ACLs restringindo cada cliente aos seus tópicos exatos. Sem plaintext, sem conexões anônimas.\n\nO Software Embarcado no Raspberry Pi recebe comandos de controle, executa um mixer de motores (modo arcade ou tank), aplica rampas de aceleração e aciona o backend de hardware (GPIO PWM, PCA9685 para ESCs, ou serial para CLPs — tudo plugável via config). Também lê sensores a 1 Hz, publica telemetria a 2 Hz, transmite vídeo ao vivo via WebRTC usando aiortc + Pi Camera Module 3 NoIR, e roda um watchdog de segurança verificando presença do operador 10 vezes por segundo.\n\nTanto o RCS quanto o embarcado seguem a mesma arquitetura inspirada em ROS2: nodes independentes comunicando exclusivamente por um barramento pub/sub interno, com StateManager thread-safe e Launcher gerenciando startup/shutdown ordenado.",
         },
-        image: "/images/projects/automation-it/hotas-remote-hotas-closeup.jpg",
+        image: "/images/projects/industry/hotas-remote-hotas-closeup.jpg",
         imageCaption: {
           en: "Thrustmaster HOTAS Warthog A-10C — throttle quadrant and flight stick",
           pt: "Thrustmaster HOTAS Warthog A-10C — throttle e manche",
@@ -924,10 +836,10 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
           pt: "A UI do operador é uma aplicação React 19 + Tailwind CSS 4 servida dentro de uma janela desktop nativa via pywebview. A linguagem de design é \"Industrial Brutalism\" — inspirada em terminais de operações da Lockheed Martin. Fundo quase preto, zero border-radius, tipografia JetBrains Mono, efeitos CRT com scanlines e noise. Acento dourado, verde para OK, vermelho para alertas.\n\nQuatro abas dão ao operador consciência situacional completa:\n\n• CONTROL — vídeo ao vivo da câmera do veículo via WebRTC, com crosshair, mira tática e HUD lateral com latência, status do link e estado de armamento.\n• MAPPING — visualização completa do HOTAS com pads XY e todos os botões atualizando em tempo real a 50 Hz.\n• TELEMETRY — gauges de velocidade, tensão da bateria, temperatura dos motores, coordenadas GPS, com sparklines de histórico.\n• LATENCY — breakdown completo de RTT com jitter, packet loss e sparklines SVG.",
         },
         images: [
-          "/images/projects/automation-it/hotas-remote-video-feed.png",
-          "/images/projects/automation-it/hotas-remote-mapping-terminal.png",
-          "/images/projects/automation-it/hotas-remote-grafana-mapping.png",
-          "/images/projects/automation-it/hotas-remote-mapping-tab.png",
+          "/images/projects/industry/hotas-remote-video-feed.png",
+          "/images/projects/industry/hotas-remote-mapping-terminal.png",
+          "/images/projects/industry/hotas-remote-grafana-mapping.png",
+          "/images/projects/industry/hotas-remote-mapping-tab.png",
         ],
       },
       {
@@ -945,6 +857,20 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
         },
       },
     ],
+  },
+  "automation-project-3": {
+    title: "Project 3",
+    subtitle: { en: "Coming soon", pt: "Em breve" },
+    bannerImage: "/images/projects/automation-it/C1.png",
+    career: "automation-it",
+    sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
+  },
+  "automation-project-4": {
+    title: "Project 4",
+    subtitle: { en: "Coming soon", pt: "Em breve" },
+    bannerImage: "/images/projects/automation-it/C2.png",
+    career: "automation-it",
+    sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
   "automation-project-5": {
     title: "Project 5",
@@ -1287,7 +1213,7 @@ export const HOBBIES: Hobby[] = [
 // ---------------------------------------------------------------------------
 export const NAV_LINKS = [
   { label: "nav.home" as const, href: "/" },
-  { label: "nav.developer" as const, href: "/career/dev" },
+  { label: "nav.industry" as const, href: "/career/industry" },
   { label: "nav.automation" as const, href: "/career/automation-it" },
   { label: "nav.engineer" as const, href: "/career/engineer" },
   { label: "nav.hobbies" as const, href: "/hobbies" },

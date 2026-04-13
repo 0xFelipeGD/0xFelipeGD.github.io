@@ -18,7 +18,7 @@ import { SITE_OWNER, EDUCATION, type Project, type Experience } from "@/lib/cons
 import type { Locale, TranslationKey } from "@/lib/i18n";
 
 interface CareerPageProps {
-  career: "dev" | "engineer" | "automation-it";
+  career: "industry" | "engineer" | "automation-it";
   accentColor: "blue" | "purple" | "green";
   titleKey: TranslationKey;
   subtitleKey: TranslationKey;

@@ -6,9 +6,9 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, ChevronDown, Globe, Code2, Cpu, Workflow } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Factory, Cpu, Workflow } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
-import { SITE_OWNER, PROJECTS_WEBDEV, PROJECTS_ENGINEER, PROJECTS_AUTOMATION_IT } from "@/lib/constants";
+import { SITE_OWNER, PROJECTS_INDUSTRY, PROJECTS_ENGINEER, PROJECTS_AUTOMATION_IT } from "@/lib/constants";
 
 export default function Navbar() {
   const { locale, toggleLocale, t } = useLocale();
@@ -65,16 +65,16 @@ export default function Navbar() {
                   className="absolute top-full left-1/2 z-50 mt-2 w-180 -translate-x-1/2 rounded-xl border border-zinc-800 bg-zinc-900/95 p-4 shadow-2xl backdrop-blur-lg"
                 >
                   <div className="grid grid-cols-3 gap-4">
-                    {/* Full-Stack Dev column */}
+                    {/* Industry 4.0 column */}
                     <div>
                       <div className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wider text-blue-400 uppercase">
-                        <Code2 size={14} />
-                        {t("nav.developer")}
+                        <Factory size={14} />
+                        {t("nav.industry")}
                       </div>
-                      {PROJECTS_WEBDEV.map((p) => (
+                      {PROJECTS_INDUSTRY.map((p) => (
                         <Link
                           key={p.slug}
-                          href={`/career/dev/projects/${p.slug}`}
+                          href={`/career/industry/projects/${p.slug}`}
                           onClick={() => setProjectsOpen(false)}
                           className="block rounded-lg px-3 py-1.5 text-sm text-zinc-400 transition-colors hover:bg-zinc-800 hover:text-zinc-50"
                         >
@@ -82,7 +82,7 @@ export default function Navbar() {
                         </Link>
                       ))}
                       <Link
-                        href="/career/dev"
+                        href="/career/industry"
                         onClick={() => setProjectsOpen(false)}
                         className="mt-2 block px-3 text-xs font-medium text-blue-400 hover:text-blue-300"
                       >
@@ -145,7 +145,7 @@ export default function Navbar() {
             </AnimatePresence>
           </div>
 
-          <NavLink href="/career/dev">{t("nav.developer")}</NavLink>
+          <NavLink href="/career/industry">{t("nav.industry")}</NavLink>
           <NavLink href="/career/automation-it">{t("nav.automation")}</NavLink>
           <NavLink href="/career/engineer">{t("nav.engineer")}</NavLink>
           <NavLink href="/hobbies">{t("nav.hobbies")}</NavLink>
@@ -193,8 +193,8 @@ export default function Navbar() {
               <MobileLink href="/" onClick={() => setMobileOpen(false)}>
                 {t("nav.home")}
               </MobileLink>
-              <MobileLink href="/career/dev" onClick={() => setMobileOpen(false)}>
-                {t("nav.developer")}
+              <MobileLink href="/career/industry" onClick={() => setMobileOpen(false)}>
+                {t("nav.industry")}
               </MobileLink>
               <MobileLink href="/career/automation-it" onClick={() => setMobileOpen(false)}>
                 {t("nav.automation")}
@@ -209,13 +209,13 @@ export default function Navbar() {
               {/* Mobile project lists */}
               <div className="mt-3 border-t border-zinc-800 pt-3">
                 <p className="mb-1 flex items-center gap-1.5 text-xs font-semibold tracking-wider text-blue-400 uppercase">
-                  <Code2 size={12} />
-                  {t("nav.developer")} — {t("nav.projects")}
+                  <Factory size={12} />
+                  {t("nav.industry")} — {t("nav.projects")}
                 </p>
-                {PROJECTS_WEBDEV.map((p) => (
+                {PROJECTS_INDUSTRY.map((p) => (
                   <MobileLink
                     key={p.slug}
-                    href={`/career/dev/projects/${p.slug}`}
+                    href={`/career/industry/projects/${p.slug}`}
                     onClick={() => setMobileOpen(false)}
                     indent
                   >
