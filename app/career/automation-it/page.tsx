@@ -1,17 +1,17 @@
 // ============================================================================
-// IT Automation Career Page — /career/automation-it
+// SaaS & Automation Career Page — /career/automation-it
 // ============================================================================
 "use client";
 
 import CareerPage from "@/components/CareerPage";
 import {
   SITE_OWNER,
-  PROJECTS_AUTOMATION_IT,
-  EXPERIENCE_AUTOMATION_IT,
-  SKILLS_AUTOMATION_IT,
+  PROJECTS_SAAS_AUTOMATION,
+  EXPERIENCE_SAAS_AUTOMATION,
+  SKILLS_SAAS_AUTOMATION,
 } from "@/lib/constants";
 
-export default function AutomationITPage() {
+export default function SaasAutomationPage() {
   return (
     <CareerPage
       career="automation-it"
@@ -19,10 +19,10 @@ export default function AutomationITPage() {
       titleKey="automation.hero.title"
       subtitleKey="automation.hero.subtitle"
       bioKey="automation.hero.bio"
-      projects={PROJECTS_AUTOMATION_IT}
-      experience={EXPERIENCE_AUTOMATION_IT}
-      skills={SKILLS_AUTOMATION_IT}
-      cvUrl={SITE_OWNER.cvAutomationIT}
+      projects={PROJECTS_SAAS_AUTOMATION}
+      experience={EXPERIENCE_SAAS_AUTOMATION}
+      skills={SKILLS_SAAS_AUTOMATION}
+      cvUrl={SITE_OWNER.cvSaasAutomation}
       projectBasePath="/career/automation-it/projects"
     />
   );

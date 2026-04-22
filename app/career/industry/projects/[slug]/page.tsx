@@ -2,10 +2,10 @@
 // Project Detail — /career/industry/projects/[slug]
 // ============================================================================
 import ProjectDetailPage from "@/components/ProjectDetailPage";
-import { PROJECTS_INDUSTRY, PROJECT_DETAILS } from "@/lib/constants";
+import { PROJECTS_INDUSTRY_ENGINEERING, PROJECT_DETAILS } from "@/lib/constants";
 
 export function generateStaticParams() {
-  return PROJECTS_INDUSTRY.map((p) => ({ slug: p.slug }));
+  return PROJECTS_INDUSTRY_ENGINEERING.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

@@ -6,9 +6,13 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Menu, X, ChevronDown, Globe, Factory, Cpu, Workflow } from "lucide-react";
+import { Menu, X, ChevronDown, Globe, Factory, Workflow } from "lucide-react";
 import { useLocale } from "@/lib/locale-context";
-import { SITE_OWNER, PROJECTS_INDUSTRY, PROJECTS_ENGINEER, PROJECTS_AUTOMATION_IT } from "@/lib/constants";
+import {
+  SITE_OWNER,
+  PROJECTS_INDUSTRY_ENGINEERING,
+  PROJECTS_SAAS_AUTOMATION,
+} from "@/lib/constants";
 
 export default function Navbar() {
   const { locale, toggleLocale, t } = useLocale();
@@ -16,7 +20,6 @@ export default function Navbar() {
   const [projectsOpen, setProjectsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Close dropdown on outside click
   useEffect(() => {
     function handleClick(e: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
@@ -62,16 +65,16 @@ export default function Navbar() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute top-full left-1/2 z-50 mt-2 w-180 -translate-x-1/2 rounded-xl border border-zinc-800 bg-zinc-900/95 p-4 shadow-2xl backdrop-blur-lg"
+                  className="absolute top-full left-1/2 z-50 mt-2 w-[42rem] -translate-x-1/2 rounded-xl border border-zinc-800 bg-zinc-900/95 p-4 shadow-2xl backdrop-blur-lg"
                 >
-                  <div className="grid grid-cols-3 gap-4">
-                    {/* Industry 4.0 column */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {/* Industry 4.0 & Engineering column */}
                     <div>
                       <div className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wider text-blue-400 uppercase">
                         <Factory size={14} />
                         {t("nav.industry")}
                       </div>
-                      {PROJECTS_INDUSTRY.map((p) => (
+                      {PROJECTS_INDUSTRY_ENGINEERING.map((p) => (
                         <Link
                           key={p.slug}
                           href={`/career/industry/projects/${p.slug}`}
@@ -90,13 +93,13 @@ export default function Navbar() {
                       </Link>
                     </div>
 
-                    {/* IT Automation column */}
+                    {/* SaaS & Automation column */}
                     <div>
                       <div className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wider text-emerald-400 uppercase">
                         <Workflow size={14} />
                         {t("nav.automation")}
                       </div>
-                      {PROJECTS_AUTOMATION_IT.map((p) => (
+                      {PROJECTS_SAAS_AUTOMATION.map((p) => (
                         <Link
                           key={p.slug}
                           href={`/career/automation-it/projects/${p.slug}`}
@@ -114,31 +117,6 @@ export default function Navbar() {
                         {t("career.viewMore")}
                       </Link>
                     </div>
-
-                    {/* Engineer column */}
-                    <div>
-                      <div className="mb-2 flex items-center gap-2 text-xs font-semibold tracking-wider text-purple-400 uppercase">
-                        <Cpu size={14} />
-                        {t("nav.engineer")}
-                      </div>
-                      {PROJECTS_ENGINEER.map((p) => (
-                        <Link
-                          key={p.slug}
-                          href={`/career/engineer/projects/${p.slug}`}
-                          onClick={() => setProjectsOpen(false)}
-                          className="block rounded-lg px-3 py-1.5 text-sm text-zinc-400 transition-colors hover:bg-zinc-800 hover:text-zinc-50"
-                        >
-                          {p.title}
-                        </Link>
-                      ))}
-                      <Link
-                        href="/career/engineer"
-                        onClick={() => setProjectsOpen(false)}
-                        className="mt-2 block px-3 text-xs font-medium text-purple-400 hover:text-purple-300"
-                      >
-                        {t("career.viewMore")}
-                      </Link>
-                    </div>
                   </div>
                 </motion.div>
               )}
@@ -147,7 +125,6 @@ export default function Navbar() {
 
           <NavLink href="/career/industry">{t("nav.industry")}</NavLink>
           <NavLink href="/career/automation-it">{t("nav.automation")}</NavLink>
-          <NavLink href="/career/engineer">{t("nav.engineer")}</NavLink>
           <NavLink href="/hobbies">{t("nav.hobbies")}</NavLink>
 
           {/* Locale toggle */}
@@ -199,9 +176,6 @@ export default function Navbar() {
               <MobileLink href="/career/automation-it" onClick={() => setMobileOpen(false)}>
                 {t("nav.automation")}
               </MobileLink>
-              <MobileLink href="/career/engineer" onClick={() => setMobileOpen(false)}>
-                {t("nav.engineer")}
-              </MobileLink>
               <MobileLink href="/hobbies" onClick={() => setMobileOpen(false)}>
                 {t("nav.hobbies")}
               </MobileLink>
@@ -212,7 +186,7 @@ export default function Navbar() {
                   <Factory size={12} />
                   {t("nav.industry")} — {t("nav.projects")}
                 </p>
-                {PROJECTS_INDUSTRY.map((p) => (
+                {PROJECTS_INDUSTRY_ENGINEERING.map((p) => (
                   <MobileLink
                     key={p.slug}
                     href={`/career/industry/projects/${p.slug}`}
@@ -227,25 +201,10 @@ export default function Navbar() {
                   <Workflow size={12} />
                   {t("nav.automation")} — {t("nav.projects")}
                 </p>
-                {PROJECTS_AUTOMATION_IT.map((p) => (
+                {PROJECTS_SAAS_AUTOMATION.map((p) => (
                   <MobileLink
                     key={p.slug}
                     href={`/career/automation-it/projects/${p.slug}`}
-                    onClick={() => setMobileOpen(false)}
-                    indent
-                  >
-                    {p.title}
-                  </MobileLink>
-                ))}
-
-                <p className="mt-3 mb-1 flex items-center gap-1.5 text-xs font-semibold tracking-wider text-purple-400 uppercase">
-                  <Cpu size={12} />
-                  {t("nav.engineer")} — {t("nav.projects")}
-                </p>
-                {PROJECTS_ENGINEER.map((p) => (
-                  <MobileLink
-                    key={p.slug}
-                    href={`/career/engineer/projects/${p.slug}`}
                     onClick={() => setMobileOpen(false)}
                     indent
                   >

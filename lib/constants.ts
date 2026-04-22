@@ -12,10 +12,10 @@ export const SITE_OWNER = {
   initials: "FD",
   role: "Dual-Career Professional",
   avatarSrc: "/images/me3.jpeg",
-  // CVs — one for each career
-  cvIndustry: "/files/Engineer_2026.pdf",
-  cvEngineer: "/files/Engineer_2026.pdf",
-  cvAutomationIT: "/files/Automation_IT_Engineer_2026.pdf",
+  // CVs — one per career (Industry 4.0 & Engineering exposes two: main + Data Engineer specialization)
+  cvIndustryEngineering: "/files/Engineer_Industry_4_0.pdf",
+  cvDataEngineer: "/files/Data_Engineer.pdf",
+  cvSaasAutomation: "/files/Automation_Engineer.pdf",
 };
 
 // ---------------------------------------------------------------------------
@@ -39,7 +39,7 @@ export interface Experience {
   bullets: { en: string[]; pt: string[] };
 }
 
-export const EXPERIENCE_INDUSTRY: Experience[] = [
+export const EXPERIENCE_INDUSTRY_ENGINEERING: Experience[] = [
   {
     company: "Movewer Technologies",
     role: {
@@ -52,35 +52,39 @@ export const EXPERIENCE_INDUSTRY: Experience[] = [
       en: [
         "Architected and deployed a production-grade Industrial IoT platform — Mosquitto over TLS, Telegraf, InfluxDB, Grafana and Python analytics — fully containerized with Docker Compose, with an AI layer turning raw sensor streams into actionable insights.",
         "Built an internet-grade remote control system for unmanned vehicles using military HOTAS hardware, MQTT-over-TLS messaging, WebRTC live video and a hardware-level fail-safe watchdog — proving real-time IT/OT convergence over the public internet.",
+        "Engineered special industrial machines and UGV platforms — electrical schematics, mechatronic integration, PLC/SCADA programming, control systems, power electronics and multi-sensor integration.",
         "Designed end-to-end edge-to-cloud pipelines (Raspberry Pi field nodes → MQTT broker → time-series database → live dashboards → AI alerting) with security in six layers: network, transport, authentication, container isolation, healthchecks and encrypted backups.",
-        "Sole technical owner across the full Industry 4.0 stack lifecycle: architecture → infrastructure → deployment → iteration.",
+        "Co-designed modular UGV systems aligned with client requirements and safety standards, including a high-payload UGV (1200 kg).",
       ],
       pt: [
         "Arquitetou e implantou uma plataforma IIoT de nível produção — Mosquitto sobre TLS, Telegraf, InfluxDB, Grafana e analytics em Python — totalmente containerizada com Docker Compose, com uma camada de IA transformando streams brutos de sensores em insights acionáveis.",
         "Construiu um sistema de controle remoto pela internet para veículos não-tripulados usando hardware militar HOTAS, mensageria MQTT sobre TLS, vídeo ao vivo WebRTC e watchdog fail-safe por hardware — provando convergência IT/OT em tempo real pela internet pública.",
+        "Engenheirou máquinas industriais especiais e plataformas UGV — esquemáticos elétricos, integração mecatrônica, programação CLP/SCADA, sistemas de controle, eletrônica de potência e integração multissensorial.",
         "Projetou pipelines edge-to-cloud ponta a ponta (nós de campo Raspberry Pi → broker MQTT → banco time-series → dashboards ao vivo → alertas com IA) com segurança em seis camadas: rede, transporte, autenticação, isolamento de container, healthchecks e backups criptografados.",
-        "Responsável técnico único por todo o ciclo da stack Indústria 4.0: arquitetura → infraestrutura → deploy → iteração.",
+        "Co-projetou sistemas UGV modulares alinhados com requisitos de clientes e normas de segurança, incluindo UGV de alta carga (1200 kg).",
       ],
     },
   },
   {
     company: "Psyche AeroSpace",
     role: {
-      en: "Industry 4.0 Engineering Lead",
-      pt: "Líder de Engenharia Indústria 4.0",
+      en: "Industry 4.0 Engineering Lead / Automation Executive Manager",
+      pt: "Líder de Engenharia Indústria 4.0 / Gerente Executivo de Automação",
     },
     period: "Jun 2024 – Jun 2025",
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Built an Industrial IoT and automation division from zero — delivering control systems, telemetry and Industry 4.0 architectures for UGVs and drones supporting agricultural and industrial operations.",
-        "Led a cross-functional team of 5 engineers across hardware, firmware, electronics and data systems, coordinating multi-project delivery on Scrum/Kanban boards.",
-        "Owned the full Industry 4.0 stack — sensors, edge devices, wireless communication, telemetry, dashboards and operator interfaces — for unmanned vehicle field operations.",
+        "Built the Automation, UGV and IoT divisions from zero; systems delivered contributed directly to a new fundraising round, with technical demonstrations cited as key proof points by company leadership.",
+        "Led a cross-functional team of 5 engineers across hardware, firmware, electronics and data systems — reducing time-to-prototype by ~30% through structured Scrum/Kanban sprints.",
+        "Owned the full Industry 4.0 stack and UGV development lifecycle — sensors, edge devices, wireless communication, telemetry, dashboards, power electronics and operator interfaces.",
+        "Delivered a 10 kg-payload agricultural quadcopter from concept to flight-ready prototype in under 6 months, including electrical project, mechanical integration and flight-control and telemetry systems.",
       ],
       pt: [
-        "Construiu uma divisão de IoT industrial e automação do zero — entregando sistemas de controle, telemetria e arquiteturas Indústria 4.0 para UGVs e drones em operações agrícolas e industriais.",
-        "Liderou equipe cross-funcional de 5 engenheiros em hardware, firmware, eletrônica e sistemas de dados, coordenando múltiplos projetos em Scrum/Kanban.",
-        "Foi responsável pela stack Indústria 4.0 completa — sensores, dispositivos edge, comunicação sem fio, telemetria, dashboards e interfaces de operador — para operações de campo com veículos não-tripulados.",
+        "Construiu as divisões de Automação, UGV e IoT do zero; sistemas entregues contribuíram diretamente para nova rodada de captação, com demonstrações técnicas citadas como proof points pela liderança.",
+        "Liderou equipe cross-funcional de 5 engenheiros em hardware, firmware, eletrônica e sistemas de dados — reduzindo tempo de protótipo em ~30% com sprints Scrum/Kanban estruturados.",
+        "Foi responsável pela stack Indústria 4.0 completa e pelo ciclo de desenvolvimento UGV — sensores, dispositivos edge, comunicação sem fio, telemetria, dashboards, eletrônica de potência e interfaces de operador.",
+        "Entregou quadricóptero agrícola de 10 kg do conceito ao protótipo pronto para voo em menos de 6 meses, incluindo projeto elétrico, integração mecânica e sistemas de controle de voo e telemetria.",
       ],
     },
   },
@@ -94,91 +98,22 @@ export const EXPERIENCE_INDUSTRY: Experience[] = [
     location: "São Paulo, Brazil",
     bullets: {
       en: [
-        "Engineered 20+ Industry 4.0 ready industrial machines integrating mechatronic systems, IoT connectivity, SCADA supervision and industrial protocols — Modbus, Profinet, EtherCAT and OPC-UA.",
-        "Designed and commissioned full industrial electrical panel projects end-to-end (EPLAN/AutoCAD), including PLC/HMI/SCADA programming with Siemens TIA Portal, CODESYS and Indusoft.",
-        "Built and maintained commercial Industry 4.0 partnerships with 35+ industrial clients across automation vendors (Siemens, Bosch, Rockwell, Wecon, Kinco).",
+        "Engineered 20+ Industry 4.0 ready special industrial machines integrating mechatronic systems, IoT connectivity, SCADA supervision and industrial protocols — Modbus, Profinet, EtherCAT and OPC-UA; projects delivered on time and within 5% budget variance.",
+        "Designed and commissioned full industrial electrical panel projects end-to-end (EPLAN/AutoCAD): load calculations, schematics, component specification, physical assembly, commissioning and field testing.",
+        "Programmed PLCs and configured HMI/SCADA systems (Siemens TIA Portal, CODESYS, Indusoft) for manufacturing and process automation projects.",
+        "Acted as regional distributor for Wecon and Kinco; built and maintained commercial Industry 4.0 partnerships with 35+ industrial clients across automation vendors (Siemens, Bosch, Rockwell, Wecon, Kinco).",
       ],
       pt: [
-        "Engenheirou 20+ máquinas industriais prontas para Indústria 4.0 integrando sistemas mecatrônicos, IoT, SCADA e protocolos industriais — Modbus, Profinet, EtherCAT e OPC-UA.",
-        "Projetou e comissionou projetos elétricos de painéis industriais ponta a ponta (EPLAN/AutoCAD), incluindo programação CLP/IHM/SCADA com Siemens TIA Portal, CODESYS e Indusoft.",
-        "Construiu e manteve parcerias comerciais de Indústria 4.0 com 35+ clientes industriais nos principais fornecedores de automação (Siemens, Bosch, Rockwell, Wecon, Kinco).",
+        "Engenheirou 20+ máquinas industriais especiais prontas para Indústria 4.0 integrando sistemas mecatrônicos, IoT, SCADA e protocolos industriais — Modbus, Profinet, EtherCAT e OPC-UA; projetos entregues no prazo e com variação de 5% no orçamento.",
+        "Projetou e comissionou projetos elétricos de painéis industriais ponta a ponta (EPLAN/AutoCAD): cálculos de carga, esquemáticos, especificação de componentes, montagem, comissionamento e testes.",
+        "Programou CLPs e configurou HMI/SCADA (Siemens TIA Portal, CODESYS, Indusoft) para projetos de automação de manufatura e processos.",
+        "Atuou como distribuidor regional de Wecon e Kinco; construiu e manteve parcerias comerciais de Indústria 4.0 com 35+ clientes industriais nos principais fornecedores de automação (Siemens, Bosch, Rockwell, Wecon, Kinco).",
       ],
     },
   },
 ];
 
-export const EXPERIENCE_ENGINEER: Experience[] = [
-  {
-    company: "Movewer Technologies",
-    role: { en: "Founder & Automation Engineer", pt: "Fundador & Engenheiro de Automação" },
-    period: "Jun 2025 – Present",
-    location: "Portugal",
-    bullets: {
-      en: [
-        "Engineered special industrial machines — developing electrical schematics, integrating mechatronic systems, PLC and SCADA programming.",
-        "Architected end-to-end Industry 4.0 solutions for UGV platforms: control systems, power electronics, wireless communication, remote-control stations and multi-sensor integration.",
-        "Built a full-stack Industrial IoT Monitoring Platform using MQTT, Python, Node-RED, InfluxDB and Grafana; integrated AI-driven analytics to surface actionable insights beyond raw sensor data.",
-        "Defined IT/OT convergence architecture, bridging field-level devices to cloud dashboards with real-time data pipelines and automated alerting.",
-        "Collaborated with a mechanical specialist to co-design several modular UGV systems aligned with client requirements and safety standards, including a high-payload UGV (1200 kg).",
-      ],
-      pt: [
-        "Engenheirou máquinas industriais especiais — desenvolvendo esquemáticos elétricos, integrando sistemas mecatrônicos, programação de CLPs e SCADA.",
-        "Arquitetou soluções Indústria 4.0 ponta a ponta para plataformas UGV: sistemas de controle, eletrônica de potência, comunicação sem fio, estações de controle remoto e integração multissensorial.",
-        "Construiu Plataforma IIoT de Monitoramento full-stack com MQTT, Python, Node-RED, InfluxDB e Grafana; integrou analytics de IA para insights acionáveis além dos dados brutos.",
-        "Definiu arquitetura de convergência IT/OT, conectando dispositivos de campo a dashboards na nuvem com pipelines em tempo real e alertas automatizados.",
-        "Colaborou com especialista mecânico para co-projetar diversos sistemas UGV modulares alinhados com requisitos e normas de segurança, incluindo UGV de alta carga (1200 kg).",
-      ],
-    },
-  },
-  {
-    company: "Psyche AeroSpace",
-    role: {
-      en: "Automation Executive Manager",
-      pt: "Gerente Executivo de Automação",
-    },
-    period: "Jun 2024 – Jun 2025",
-    location: "São Paulo, Brazil",
-    bullets: {
-      en: [
-        "Built the Automation and UGV divisions from zero; systems delivered contributed directly to a new fundraising round, with technical demonstrations cited as key proof points by company leadership.",
-        "Led a cross-functional team of 5 engineers across two product lines (agricultural UGVs and drone-support infrastructure), reducing time-to-prototype by ~30% through structured Scrum sprints.",
-        "Owned the full development lifecycle of UGV systems — control, power and communication — coordinating with mechanical and electronics teams across tight delivery timelines.",
-        "Delivered a 10 kg-payload agricultural quadcopter from concept to flight-ready prototype in under 6 months, including electrical project, mechanical integration and flight-control and telemetry systems.",
-      ],
-      pt: [
-        "Construiu as divisões de Automação e UGV do zero; sistemas entregues contribuíram diretamente para nova rodada de captação, com demonstrações técnicas citadas como proof points pela liderança.",
-        "Liderou equipe cross-funcional de 5 engenheiros em duas linhas de produto (UGVs agrícolas e infraestrutura de suporte a drones), reduzindo tempo de protótipo em ~30% com sprints Scrum estruturados.",
-        "Responsável pelo ciclo completo de desenvolvimento de sistemas UGV — controle, potência e comunicação — coordenando equipes mecânica e eletrônica em prazos apertados.",
-        "Entregou quadricóptero agrícola de 10 kg do conceito ao protótipo pronto para voo em menos de 6 meses, incluindo projeto elétrico, integração mecânica e sistemas de controle de voo e telemetria.",
-      ],
-    },
-  },
-  {
-    company: "Controvale",
-    role: {
-      en: "Automation Engineer",
-      pt: "Engenheiro de Automação",
-    },
-    period: "Jun 2018 – Jun 2024",
-    location: "São Paulo, Brazil",
-    bullets: {
-      en: [
-        "Engineered 20+ special industrial machines integrating mechatronic systems, IoT connectivity, SCADA supervision and industrial communication protocols (Modbus, Profinet, EtherCAT); average project delivered on time and within 5% budget variance.",
-        "Designed and executed full industrial electrical panel projects end-to-end: load calculations, schematics (EPLAN/AutoCAD), component specification, physical assembly, commissioning and field testing.",
-        "Programmed PLCs and configured HMI/SCADA systems (TIA Portal, CODESYS, Indusoft) for manufacturing and process automation projects.",
-        "Served as regional distributor for Wecon and Kinco; built and maintained a portfolio of 35+ industrial client partnerships over 6 years.",
-      ],
-      pt: [
-        "Engenheirou 20+ máquinas industriais especiais integrando sistemas mecatrônicos, IoT, SCADA e protocolos industriais (Modbus, Profinet, EtherCAT); projetos entregues no prazo e com variação de 5% no orçamento.",
-        "Projetou e executou projetos elétricos de painéis industriais ponta a ponta: cálculos de carga, esquemáticos (EPLAN/AutoCAD), especificação de componentes, montagem, comissionamento e testes.",
-        "Programou CLPs e configurou HMI/SCADA (TIA Portal, CODESYS, Indusoft) para projetos de automação de manufatura e processos.",
-        "Atuou como distribuidor regional de Wecon e Kinco; construiu e manteve portfólio de 35+ parcerias industriais em 6 anos.",
-      ],
-    },
-  },
-];
-
-export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
+export const EXPERIENCE_SAAS_AUTOMATION: Experience[] = [
   {
     company: "Personal Projects",
     role: {
@@ -268,23 +203,33 @@ export const EXPERIENCE_AUTOMATION_IT: Experience[] = [
 // ---------------------------------------------------------------------------
 // 4. Skills
 // ---------------------------------------------------------------------------
-export const SKILLS_INDUSTRY = [
+export const SKILLS_INDUSTRY_ENGINEERING = [
   "Industrial IoT (IIoT)",
   "IT/OT Convergence",
   "MQTT / Mosquitto / TLS",
   "OPC-UA",
-  "Modbus / Profinet / EtherCAT",
+  "Modbus / Profinet / EtherCAT / LoRa",
+  "PLC Programming (TIA Portal, CODESYS, GX Works)",
+  "SCADA / HMI (AVEVA, WinCC, Indusoft)",
+  "Electrical Panel Design & Wiring",
   "Node-RED",
   "Telegraf",
   "InfluxDB / Time-Series DBs",
   "Grafana",
-  "PLC / SCADA",
+  "Data Pipelines & Analytics",
   "Edge Computing",
   "Raspberry Pi / NVIDIA Jetson / ESP32",
   "Docker / Docker Compose",
   "Linux / VPS Operations",
   "Python (Analytics, Data Pipelines)",
   "Node.js / TypeScript",
+  "Control Systems & Motion Control",
+  "Power Electronics",
+  "Embedded Systems",
+  "UGV / AGV Development",
+  "Drone Systems",
+  "SolidWorks / EPLAN / AutoCAD Electrical",
+  "MATLAB / LabView",
   "WebRTC",
   "Industrial Cybersecurity",
   "AI / LLM-driven Analytics",
@@ -292,32 +237,10 @@ export const SKILLS_INDUSTRY = [
   "Digital Twin Concepts",
   "CI/CD (GitHub Actions)",
   "System Architecture & Monitoring",
-];
-
-export const SKILLS_ENGINEER = [
-  "PLC Programming (TIA Portal, CODESYS, GX Works)",
-  "SCADA/HMI (AVEVA, WinCC, Indusoft)",
-  "Industrial Protocols (Modbus, Profinet, EtherCAT, OPC-UA, LoRa)",
-  "Electrical Panel Design & Wiring",
-  "IT/OT Convergence",
-  "IIoT Architecture",
-  "Edge Computing",
-  "Control Systems",
-  "Power Electronics",
-  "Embedded Systems",
-  "Motion Control",
-  "UGV/AGV Development",
-  "Drone Systems",
-  "Python / Node.js / TypeScript",
-  "MQTT / Node-RED / InfluxDB",
-  "SolidWorks / EPLAN / AutoCAD Electrical",
-  "MATLAB / LabView",
-  "Raspberry Pi / NVIDIA Jetson",
-  "Industry 4.0",
   "Scrum / Kanban / JIRA",
 ];
 
-export const SKILLS_AUTOMATION_IT = [
+export const SKILLS_SAAS_AUTOMATION = [
   "n8n",
   "Make (Integromat)",
   "Zapier",
@@ -386,7 +309,7 @@ export interface Project {
   tags: string[];
 }
 
-export const PROJECTS_INDUSTRY: Project[] = [
+export const PROJECTS_INDUSTRY_ENGINEERING: Project[] = [
   {
     slug: "ai-data-platform-iot",
     title: "AI Data Platform",
@@ -408,45 +331,14 @@ export const PROJECTS_INDUSTRY: Project[] = [
     tags: ["Python", "MQTT", "Raspberry Pi", "React", "WebRTC", "IoT"],
   },
   {
-    slug: "industry-project-3",
-    title: "Project 3",
-    description: { en: "Coming soon", pt: "Em breve" },
-    coverImage: "/images/projects/industry/C1.png",
-    tags: ["TBD"],
-  },
-  {
-    slug: "industry-project-4",
-    title: "Project 4",
-    description: { en: "Coming soon", pt: "Em breve" },
-    coverImage: "/images/projects/industry/C2.png",
-    tags: ["TBD"],
-  },
-  {
-    slug: "industry-project-5",
-    title: "Project 5",
-    description: { en: "Coming soon", pt: "Em breve" },
-    coverImage: "/images/projects/industry/C3.png",
-    tags: ["TBD"],
-  },
-  {
-    slug: "industry-project-6",
-    title: "Project 6",
-    description: { en: "Coming soon", pt: "Em breve" },
-    coverImage: "/images/projects/industry/C4.png",
-    tags: ["TBD"],
-  },
-];
-
-export const PROJECTS_ENGINEER: Project[] = [
-  {
-    slug: "high-payload-ugv",
-    title: "High Payload UGV",
+    slug: "mlai-edge-ai",
+    title: "MLAI — Edge AI Visual Inspection",
     description: {
-      en: "1200 kg payload UGV (Armax) — full development with documentation, performance studies and commercial analyses.",
-      pt: "UGV de 1200 kg de payload (Armax) — desenvolvimento completo com documentação, estudos de desempenho e análises comerciais.",
+      en: "Dual-purpose edge AI visual inspection system running entirely on a Raspberry Pi 4 + Camera Module 3. Two independent modules — INDUST (PaDiM anomaly detection on industrial parts) and AGRO (SSD MobileNet V2 fruit detection + quality grading) — unified by a SCADA-style Next.js dashboard. No cloud, no internet, no telemetry.",
+      pt: "Sistema de inspeção visual com IA rodando inteiramente em um Raspberry Pi 4 + Camera Module 3. Dois módulos independentes — INDUST (detecção de anomalias PaDiM em peças industriais) e AGRO (detecção de frutas com SSD MobileNet V2 + classificação de qualidade) — unificados por um dashboard SCADA em Next.js. Sem nuvem, sem internet, sem telemetria.",
     },
-    coverImage: "/images/projects/engineer/ARMAX.png",
-    tags: ["UGV", "Control Systems", "Power Electronics"],
+    coverImage: "/images/projects/industry/mlai/camera-module.jpg",
+    tags: ["TensorFlow Lite", "PaDiM", "SSD MobileNet V2", "Raspberry Pi", "FastAPI", "Next.js 16", "Edge AI"],
   },
   {
     slug: "agro-drone",
@@ -498,9 +390,40 @@ export const PROJECTS_ENGINEER: Project[] = [
     coverImage: "/images/projects/engineer/SPIRIT-UGV.png",
     tags: ["UGV", "Sensors", "Autonomous Navigation", "Field Data"],
   },
+  {
+    slug: "high-payload-ugv",
+    title: "High Payload UGV",
+    description: {
+      en: "1200 kg payload UGV (Armax) — full development with documentation, performance studies and commercial analyses.",
+      pt: "UGV de 1200 kg de payload (Armax) — desenvolvimento completo com documentação, estudos de desempenho e análises comerciais.",
+    },
+    coverImage: "/images/projects/engineer/ARMAX.png",
+    tags: ["UGV", "Control Systems", "Power Electronics"],
+  },
+  {
+    slug: "industry-project-10",
+    title: "Project 10",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C2.png",
+    tags: ["TBD"],
+  },
+  {
+    slug: "industry-project-11",
+    title: "Project 11",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C3.png",
+    tags: ["TBD"],
+  },
+  {
+    slug: "industry-project-12",
+    title: "Project 12",
+    description: { en: "Coming soon", pt: "Em breve" },
+    coverImage: "/images/projects/industry/C4.png",
+    tags: ["TBD"],
+  },
 ];
 
-export const PROJECTS_AUTOMATION_IT: Project[] = [
+export const PROJECTS_SAAS_AUTOMATION: Project[] = [
   {
     slug: "julius-finance-bot",
     title: "Julius — AI Finance SaaS",
@@ -558,7 +481,7 @@ export interface ProjectDetail {
   title: string;
   subtitle: { en: string; pt: string };
   bannerImage: string;
-  career: "industry" | "engineer" | "automation-it";
+  career: "industry" | "automation-it";
   liveUrl?: string;
   sections: {
     heading: { en: string; pt: string };
@@ -570,30 +493,112 @@ export interface ProjectDetail {
 }
 
 export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
-  // ── Industry 4.0 placeholders ────────────────────────────
-  "industry-project-3": {
-    title: "Project 3",
-    subtitle: { en: "Coming soon", pt: "Em breve" },
-    bannerImage: "/images/projects/industry/C1.png",
+  // ── Industry 4.0 & Engineering placeholders ──────────────
+  "mlai-edge-ai": {
+    title: "MLAI — Edge AI Visual Inspection",
+    subtitle: {
+      en: "A dual-purpose AI quality station running fully offline on a Raspberry Pi 4 — industrial anomaly detection and agricultural fruit grading in one SCADA-style dashboard",
+      pt: "Uma estação de qualidade com IA de propósito duplo rodando 100% offline em um Raspberry Pi 4 — detecção de anomalias industriais e classificação de frutas agrícolas em um único dashboard SCADA",
+    },
+    bannerImage: "/images/projects/industry/mlai/camera-module.jpg",
     career: "industry",
-    sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
+    sections: [
+      {
+        heading: { en: "The Challenge", pt: "O Desafio" },
+        body: {
+          en: "Build a production-grade visual inspection system that runs entirely on commodity edge hardware — no cloud, no internet, no telemetry — and is versatile enough to handle two very different domains from the same box: industrial quality control on manufactured parts and agricultural produce grading on a rover-like platform.\n\nThe constraints were tight: a single Raspberry Pi 4 (8 GB) with the Camera Module 3 NoIR, end-to-end latency under 500 ms, at least 3 FPS on the live feed, one inference module active at a time, and a SCADA-style operator UI that could be trusted in a factory control room. Everything had to auto-start on boot, auto-restart on crash, and be installable by someone who had never touched machine learning before.",
+          pt: "Construir um sistema de inspeção visual de nível produção que roda inteiramente em hardware de borda comum — sem nuvem, sem internet, sem telemetria — e versátil o suficiente para lidar com dois domínios muito diferentes na mesma caixa: controle de qualidade industrial em peças manufaturadas e classificação de produtos agrícolas em uma plataforma tipo rover.\n\nAs restrições eram apertadas: um único Raspberry Pi 4 (8 GB) com o Camera Module 3 NoIR, latência ponta a ponta abaixo de 500 ms, pelo menos 3 FPS no feed ao vivo, um módulo de inferência ativo por vez, e uma UI do operador estilo SCADA confiável para uma sala de controle de fábrica. Tudo precisava iniciar no boot, reiniciar ao crashar, e ser instalável por alguém que nunca tivesse tocado machine learning antes.",
+        },
+        image: "/images/projects/industry/mlai/pi4-board.jpg",
+        imageCaption: {
+          en: "Raspberry Pi 4 Model B — the entire compute target. All ML inference runs here via TFLite + XNNPACK on the ARM Cortex-A72",
+          pt: "Raspberry Pi 4 Model B — o alvo completo de computação. Toda inferência de ML roda aqui via TFLite + XNNPACK no ARM Cortex-A72",
+        },
+      },
+      {
+        heading: { en: "Two Modules, One Box", pt: "Dois Módulos, Uma Única Caixa" },
+        body: {
+          en: "MLAI ships with two fully independent inference modules sharing the same infrastructure — camera capture, calibration, measurement pipeline, database, API, and web shell — but nothing else. Only one runs at a time; switching between them takes under 5 seconds.\n\n• INDUST — Industrial quality control using PaDiM anomaly detection (via Anomalib) trained on MVTec AD categories (bottle, metal nut, screw, and others, hot-swappable). For each frame it produces an anomaly score (0–1), a pixel-level heatmap overlaid on the live video, a PASS / WARN / FAIL verdict against a configurable threshold, and the defect's dimensional footprint in millimeters.\n\n• AGRO — Agricultural produce inspection using SSD MobileNet V2 for fruit detection (apple, orange, tomato — extendable) followed by a MobileNet V2 transfer-learned classifier for per-fruit quality grading (good / defective / unripe). Each detection is sized using classical CV contour analysis converted from pixels to millimeters via the camera calibration, and a live size histogram tracks the size distribution of what just passed under the camera.\n\nBoth modules feed into the same SQLite history, expose the same REST and WebSocket contracts, and render through the same SCADA shell — just with different sub-pages.",
+          pt: "O MLAI vem com dois módulos de inferência totalmente independentes compartilhando a mesma infraestrutura — captura de câmera, calibração, pipeline de medição, banco de dados, API e shell web — e nada além disso. Apenas um roda por vez; alternar entre eles leva menos de 5 segundos.\n\n• INDUST — Controle de qualidade industrial usando detecção de anomalias PaDiM (via Anomalib) treinado em categorias do MVTec AD (garrafa, porca metálica, parafuso, entre outras, hot-swappable). Para cada frame produz um anomaly score (0–1), um heatmap em nível de pixel sobreposto ao vídeo ao vivo, um veredito PASS / WARN / FAIL comparado a um threshold configurável, e a pegada dimensional do defeito em milímetros.\n\n• AGRO — Inspeção de produtos agrícolas usando SSD MobileNet V2 para detecção de frutas (maçã, laranja, tomate — extensível) seguido de um classificador MobileNet V2 com transfer learning para classificação de qualidade por fruta (boa / defeituosa / verde). Cada detecção é dimensionada usando análise de contorno CV clássica convertida de pixels para milímetros via calibração da câmera, e um histograma de tamanhos ao vivo acompanha a distribuição de tamanhos do que acabou de passar sob a câmera.\n\nOs dois módulos alimentam o mesmo histórico SQLite, expõem os mesmos contratos REST e WebSocket, e renderizam através do mesmo shell SCADA — apenas com sub-páginas diferentes.",
+        },
+        image: "/images/projects/industry/mlai/camera-module.jpg",
+        imageCaption: {
+          en: "Raspberry Pi Camera Module — the sole sensor input. MLAI is built around the Camera Module 3 NoIR (IMX708, 12 MP) connected via the CSI-2 ribbon",
+          pt: "Raspberry Pi Camera Module — a única entrada sensorial. O MLAI é construído em torno do Camera Module 3 NoIR (IMX708, 12 MP) conectado pelo cabo flat CSI-2",
+        },
+      },
+      {
+        heading: { en: "System Architecture", pt: "Arquitetura do Sistema" },
+        body: {
+          en: "Three systemd services working together, each with its own responsibility and its own restart policy:\n\n• mlai-engine — the Python inference daemon. Talks to picamera2, runs the active module's pipeline on each frame, writes results to SQLite, and pushes live frames + results to the API over a local IPC channel.\n\n• mlai-api — FastAPI (port 8000), REST endpoints for system health, module switching, camera configuration, and paginated history + stats per module (INDUST and AGRO keep their routes in separate files). A WebSocket at /ws/live streams frames, verdicts, bounding boxes, heatmaps and inference timings as fast as the Pi can produce them.\n\n• mlai-web — Next.js 16 (port 3000), App Router, React 19, Tailwind CSS 4, Recharts. Serves the SCADA dashboard, the INDUST live page (video + heatmap overlay + gauge + measurement card), the AGRO live page (bounding boxes + fruit cards + size histogram), history tables with CSV export, settings, a system health page, and a camera calibration wizard that walks the operator through a checkerboard capture.\n\nThe data flow is direct and cheap: picamera2 at 640×480 ~5 FPS → undistort using the camera calibration JSON → route to the active module → INDUST resizes to 256×256 and runs PaDiM, or AGRO resizes to 320×320 and runs SSD MobileNet V2 + MobileNet V2 classifier per detection → result object → persisted to SQLite + pushed over the WebSocket. Live UI updates are tied to the WebSocket; history pages use plain REST + React Query.",
+          pt: "Três serviços systemd trabalhando juntos, cada um com sua responsabilidade e sua política de restart:\n\n• mlai-engine — o daemon Python de inferência. Conversa com a picamera2, executa o pipeline do módulo ativo em cada frame, grava resultados no SQLite, e empurra frames ao vivo + resultados para a API via canal IPC local.\n\n• mlai-api — FastAPI (porta 8000), endpoints REST para saúde do sistema, troca de módulo, configuração de câmera, e histórico paginado + estatísticas por módulo (INDUST e AGRO mantêm suas rotas em arquivos separados). Um WebSocket em /ws/live transmite frames, vereditos, bounding boxes, heatmaps e tempos de inferência na velocidade máxima que o Pi consegue produzir.\n\n• mlai-web — Next.js 16 (porta 3000), App Router, React 19, Tailwind CSS 4, Recharts. Serve o dashboard SCADA, a página live INDUST (vídeo + overlay de heatmap + gauge + card de medições), a página live AGRO (bounding boxes + cards de frutas + histograma de tamanhos), tabelas de histórico com export CSV, settings, uma página de saúde do sistema, e um wizard de calibração de câmera que guia o operador por uma captura de tabuleiro xadrez.\n\nO fluxo de dados é direto e barato: picamera2 a 640×480 ~5 FPS → undistort usando o JSON de calibração da câmera → roteado para o módulo ativo → INDUST redimensiona para 256×256 e roda PaDiM, ou AGRO redimensiona para 320×320 e roda SSD MobileNet V2 + classificador MobileNet V2 por detecção → objeto de resultado → persistido no SQLite + empurrado pelo WebSocket. Atualizações da UI ao vivo são amarradas ao WebSocket; páginas de histórico usam REST puro + React Query.",
+        },
+      },
+      {
+        heading: { en: "The Measurement Pipeline", pt: "O Pipeline de Medição" },
+        body: {
+          en: "Both modules share a single dimensional measurement pipeline that turns pixels into millimeters with field-verifiable accuracy:\n\n[camera frame] → [undistort via intrinsic matrix] → [detect ROI] → [segment with OpenCV contours] → [pixel dimensions] → [px → mm conversion] → [output].\n\nCalibration is a guided, checkerboard-based OpenCV routine exposed through a step-by-step wizard in the web UI. The operator prints a checkerboard pattern, holds it at varied angles in front of the camera, and the engine collects enough views to solve for the camera's intrinsic matrix and distortion coefficients, which are saved to config/camera_calibration.json. From that point on every frame is undistorted before inference, and every contour measurement carries a real-world scale. Target accuracy is ±2 mm and the system is designed to be recalibrated on the fly if the lens or camera distance changes.",
+          pt: "Os dois módulos compartilham um único pipeline de medição dimensional que transforma pixels em milímetros com precisão verificável em campo:\n\n[frame da câmera] → [undistort via matriz intrínseca] → [detectar ROI] → [segmentar com contornos OpenCV] → [dimensões em pixels] → [conversão px → mm] → [output].\n\nA calibração é uma rotina OpenCV baseada em tabuleiro xadrez, guiada passo a passo por um wizard na UI web. O operador imprime um padrão de tabuleiro, segura em vários ângulos na frente da câmera, e o engine coleta vistas suficientes para resolver a matriz intrínseca da câmera e os coeficientes de distorção, salvos em config/camera_calibration.json. A partir daí todo frame é corrigido antes da inferência, e toda medida de contorno carrega uma escala do mundo real. A precisão alvo é ±2 mm e o sistema é projetado para ser recalibrado em tempo real se a lente ou distância da câmera mudar.",
+        },
+        image: "/images/projects/industry/mlai/pi4-side.jpg",
+        imageCaption: {
+          en: "Pi 4 side view — GPIO, USB 3.0 and CSI camera port. The Camera Module 3 NoIR connects via the CSI-2 ribbon",
+          pt: "Vista lateral do Pi 4 — GPIO, USB 3.0 e porta CSI da câmera. O Camera Module 3 NoIR conecta pelo cabo flat CSI-2",
+        },
+      },
+      {
+        heading: { en: "The ML Story", pt: "A História de ML" },
+        body: {
+          en: "Training happens on a separate PC using a Miniconda env and the TensorFlow ecosystem; inference happens on the Pi using only tflite-runtime with XNNPACK acceleration. The split matters — the Pi does not need TensorFlow installed, only a small runtime that loads .tflite files.\n\n• INDUST — Trained with Anomalib's PaDiM on MVTec AD. One model per category. The training CLI downloads the MVTec data, fits the model in a couple of epochs, and exports a TFLite artifact that the Pi loads through a thin wrapper. A single command trains on \"bottle\", exports, and copies into models/indust/ ready to be served.\n\n• AGRO detector — SSD MobileNet V2 fine-tuned with TF Model Maker on Fruits-360 for apple, orange, and tomato. A pretrained COCO-SSD TFLite can also be dropped in directly when time is scarce.\n\n• AGRO quality classifier — MobileNet V2 transfer-learned on a fresh-vs-rotten fruit dataset, producing a lightweight three-class head (good / defective / unripe) running at ~50–80 ms per detection on the Pi.\n\nAll training scripts are written for a developer with zero prior ML experience — every step is commented end-to-end, conda commands are spelled out, and a README walks through dataset download, train, export, and scp-to-Pi in order.",
+          pt: "O treinamento acontece em um PC separado usando um ambiente Miniconda e o ecossistema TensorFlow; a inferência acontece no Pi usando apenas tflite-runtime com aceleração XNNPACK. A divisão importa — o Pi não precisa ter TensorFlow instalado, apenas um runtime pequeno que carrega arquivos .tflite.\n\n• INDUST — Treinado com o PaDiM do Anomalib no MVTec AD. Um modelo por categoria. A CLI de treino baixa os dados MVTec, ajusta o modelo em algumas épocas, e exporta um artefato TFLite que o Pi carrega por um wrapper fino. Um único comando treina em \"bottle\", exporta e copia para models/indust/ pronto para ser servido.\n\n• AGRO detector — SSD MobileNet V2 fine-tuned com TF Model Maker no Fruits-360 para maçã, laranja e tomate. Um COCO-SSD pré-treinado em TFLite também pode ser conectado diretamente quando o tempo é curto.\n\n• AGRO classificador de qualidade — MobileNet V2 com transfer learning em um dataset de frutas fresh-vs-rotten, produzindo uma cabeça leve de três classes (boa / defeituosa / verde) rodando em ~50–80 ms por detecção no Pi.\n\nTodos os scripts de treino foram escritos para um desenvolvedor sem experiência prévia em ML — cada passo é comentado ponta a ponta, comandos conda são listados, e um README caminha por download do dataset, treino, export e scp-para-Pi em ordem.",
+        },
+      },
+      {
+        heading: { en: "Performance on Pi 4 (8 GB)", pt: "Desempenho no Pi 4 (8 GB)" },
+        body: {
+          en: "The entire stack is sized to stay within a single Pi 4's budget:\n\n• End-to-end latency < 500 ms (PaDiM ~300–500 ms, SSD MobileNet V2 ~100–150 ms, MobileNet V2 classifier ~50–80 ms).\n• Live feed ≥ 3 FPS on the WebSocket.\n• RAM footprint for all three services < 4 GB, leaving headroom for capture buffers and the web UI.\n• CPU averages under 80% across the four A72 cores during inference.\n• Model swap from INDUST → AGRO (or the reverse) in under 5 seconds, via POST /api/system/module.\n• SQLite queries stay under 50 ms thanks to WAL mode and a small number of well-indexed tables (system_state, indust_results, agro_results, agro_detections).\n• A capture auto-prune keeps disk usage below 5 GB with a 30-day rolling window; the full system survives a 1-hour continuous run with no memory leaks and no crashes.\n\nA dedicated scripts/benchmark.py measures all of these on any given Pi so performance claims are reproducible, not aspirational.",
+          pt: "A stack inteira é dimensionada para caber no orçamento de um único Pi 4:\n\n• Latência ponta a ponta < 500 ms (PaDiM ~300–500 ms, SSD MobileNet V2 ~100–150 ms, classificador MobileNet V2 ~50–80 ms).\n• Feed ao vivo ≥ 3 FPS no WebSocket.\n• Pegada de RAM dos três serviços < 4 GB, deixando folga para buffers de captura e a UI web.\n• CPU em média abaixo de 80% nos quatro núcleos A72 durante a inferência.\n• Troca de modelo INDUST → AGRO (ou vice-versa) em menos de 5 segundos, via POST /api/system/module.\n• Queries SQLite ficam abaixo de 50 ms graças ao modo WAL e um número pequeno de tabelas bem indexadas (system_state, indust_results, agro_results, agro_detections).\n• Um auto-prune de capturas mantém o uso de disco abaixo de 5 GB com uma janela rolante de 30 dias; o sistema completo sobrevive a uma execução contínua de 1 hora sem vazamentos de memória e sem crashes.\n\nUm scripts/benchmark.py dedicado mede todos esses números em qualquer Pi específico, de modo que as alegações de desempenho são reproduzíveis, não aspiracionais.",
+        },
+      },
+      {
+        heading: { en: "The SCADA Operator UI", pt: "A UI SCADA do Operador" },
+        body: {
+          en: "The design language is deliberate and opposite of generic AI: factory control room, not chatbot. Dark background around #0f1117 with a subtle grid texture, status colors borrowed from industrial HMIs (green for OK, amber for warn, red for fault, blue for info), monospaced typography for values and sans-serif for labels, blinking status dots, live FPS counters, gauge animations, timestamps on every reading.\n\nThe navigation splits along the two modules: INDUST pages (live view with heatmap overlay + anomaly gauge + verdict + measurements + category and threshold controls, history table with detail modal and CSV export, settings) and AGRO pages (live view with bounding boxes + count + per-fruit cards + size histogram, history, settings). A system page surfaces CPU / RAM / temperature gauges and per-service uptime, and a calibration wizard guides the operator through the checkerboard intrinsic-matrix routine. Charts are built with Recharts, the live canvas is plain HTML5 canvas driven by the WebSocket — no heavy video pipeline.",
+          pt: "A linguagem de design é deliberada e oposta à de IA genérica: sala de controle de fábrica, não de chatbot. Fundo escuro em torno de #0f1117 com uma textura sutil de grade, cores de status emprestadas de IHMs industriais (verde para OK, âmbar para warn, vermelho para falha, azul para info), tipografia monoespaçada para valores e sans-serif para labels, status dots piscando, contadores de FPS ao vivo, animações de gauges, timestamps em toda leitura.\n\nA navegação se divide entre os dois módulos: páginas INDUST (live view com overlay de heatmap + gauge de anomalia + veredito + medições + controles de categoria e threshold, tabela de histórico com modal de detalhe e export CSV, settings) e páginas AGRO (live view com bounding boxes + contagem + cards por fruta + histograma de tamanhos, histórico, settings). Uma página de sistema expõe gauges de CPU / RAM / temperatura e uptime por serviço, e um wizard de calibração guia o operador pela rotina de matriz intrínseca com tabuleiro. Gráficos são construídos com Recharts, o canvas ao vivo é HTML5 canvas puro alimentado pelo WebSocket — sem pipeline pesado de vídeo.",
+        },
+      },
+      {
+        heading: { en: "Tech Stack", pt: "Stack Tecnológico" },
+        body: {
+          en: "Every piece is open-source and intentional:\n\n• OS — Raspberry Pi OS Bookworm 64-bit (required for TFLite).\n• Camera — libcamera + picamera2, Camera Module 3 NoIR (IMX708, 12 MP).\n• CV — OpenCV 4.10 (headless on the Pi) for undistort, contour segmentation and px→mm conversion.\n• ML training (PC) — Miniconda + TensorFlow 2.16/2.18, Anomalib 1.1, TF Model Maker, Keras.\n• ML inference (Pi) — tflite-runtime with XNNPACK acceleration; zero full-TF on the Pi.\n• API — FastAPI 0.115, Pydantic 2, Uvicorn.\n• Realtime — FastAPI native WebSocket at /ws/live.\n• DB — SQLite 3 with WAL mode.\n• Frontend — Next.js 16 (App Router), React 19, Tailwind CSS 4, Recharts, shadcn/ui.\n• Process management — systemd units with Restart=always and graceful shutdown hooks.\n\nSetup is automated through two shell scripts (scripts/download_models.sh, systemd install) and a detailed SetupGuide.md aimed at a reader who has never used the terminal — from flashing the SD card through Raspberry Pi Imager to opening the dashboard in a LAN browser.",
+          pt: "Cada peça é open-source e intencional:\n\n• SO — Raspberry Pi OS Bookworm 64-bit (exigido pelo TFLite).\n• Câmera — libcamera + picamera2, Camera Module 3 NoIR (IMX708, 12 MP).\n• CV — OpenCV 4.10 (headless no Pi) para undistort, segmentação por contorno e conversão px→mm.\n• Treino ML (PC) — Miniconda + TensorFlow 2.16/2.18, Anomalib 1.1, TF Model Maker, Keras.\n• Inferência ML (Pi) — tflite-runtime com aceleração XNNPACK; zero TensorFlow completo no Pi.\n• API — FastAPI 0.115, Pydantic 2, Uvicorn.\n• Tempo real — WebSocket nativo do FastAPI em /ws/live.\n• Banco — SQLite 3 com modo WAL.\n• Frontend — Next.js 16 (App Router), React 19, Tailwind CSS 4, Recharts, shadcn/ui.\n• Gerenciamento de processo — unidades systemd com Restart=always e hooks de shutdown graceful.\n\nO setup é automatizado por dois scripts shell (scripts/download_models.sh, instalação do systemd) e um SetupGuide.md detalhado voltado para um leitor que nunca usou o terminal — do flash do SD card pelo Raspberry Pi Imager até abrir o dashboard em um browser da LAN.",
+        },
+      },
+      {
+        heading: { en: "Results", pt: "Resultados" },
+        body: {
+          en: "A complete, self-contained visual inspection platform that turns a $75 Raspberry Pi into a dual-purpose AI quality station — industrial anomaly detection and agricultural fruit grading — with zero cloud dependencies and full data sovereignty. The operator never gives up their data to a third party, never pays a subscription, and never needs an internet connection to run inference.\n\nArchitecturally the system proves that edge-first, module-separated design is viable for heterogeneous ML workloads on commodity hardware: INDUST and AGRO share only infrastructure (camera, measurement, API contract, UI shell), which keeps their code and their ML lifecycles independent while still presenting a unified experience to the operator. The same codebase will extend naturally to additional modules — the next planned iteration bridges to a VPS Mosquitto broker over MQTT so multiple field Pis can feed a central supervisory dashboard without losing local autonomy.",
+          pt: "Uma plataforma completa e autocontida de inspeção visual que transforma um Raspberry Pi de US$ 75 em uma estação de qualidade com IA de propósito duplo — detecção de anomalias industriais e classificação de frutas agrícolas — com zero dependências de nuvem e soberania total dos dados. O operador nunca entrega seus dados a um terceiro, nunca paga mensalidade, e nunca precisa de internet para rodar inferência.\n\nArquiteturalmente o sistema prova que um design edge-first com módulos separados é viável para workloads de ML heterogêneas em hardware comum: INDUST e AGRO compartilham apenas infraestrutura (câmera, medição, contrato de API, shell da UI), o que mantém seus códigos e seus ciclos de vida de ML independentes enquanto ainda apresenta uma experiência unificada para o operador. A mesma base de código se estenderá naturalmente para módulos adicionais — a próxima iteração planejada liga a um broker Mosquitto em VPS via MQTT, permitindo que vários Pis de campo alimentem um dashboard supervisório central sem perder autonomia local.",
+        },
+      },
+    ],
   },
-  "industry-project-4": {
-    title: "Project 4",
+  "industry-project-10": {
+    title: "Project 10",
     subtitle: { en: "Coming soon", pt: "Em breve" },
     bannerImage: "/images/projects/industry/C2.png",
     career: "industry",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
-  "industry-project-5": {
-    title: "Project 5",
+  "industry-project-11": {
+    title: "Project 11",
     subtitle: { en: "Coming soon", pt: "Em breve" },
     bannerImage: "/images/projects/industry/C3.png",
     career: "industry",
     sections: [{ heading: { en: "About", pt: "Sobre" }, body: { en: "Coming soon", pt: "Em breve" } }],
   },
-  "industry-project-6": {
-    title: "Project 6",
+  "industry-project-12": {
+    title: "Project 12",
     subtitle: { en: "Coming soon", pt: "Em breve" },
     bannerImage: "/images/projects/industry/C4.png",
     career: "industry",
@@ -895,7 +900,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "UGV de 1200 kg de payload — Armax",
     },
     bannerImage: "/images/projects/engineer/ProjectARMAX.png",
-    career: "engineer",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -927,7 +932,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Drone quadricóptero agrícola de carga média",
     },
     bannerImage: "/images/projects/engineer/drone-banner.png",
-    career: "engineer",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -959,7 +964,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Complexo autônomo de suporte a drones com hub de controle inteligente",
     },
     bannerImage: "/images/projects/engineer/AURA-BANNER.png",
-    career: "engineer",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -991,7 +996,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Dispositivo de Teste de Empuxo (TTD) — Utilizado para teste e avaliação de motores de propulsão de UAVs",
     },
     bannerImage: "/images/projects/engineer/bannerTTD.png",
-    career: "engineer",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -1023,7 +1028,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Uma maleta controladora didática plug-and-play da Siemens acionando uma Plataforma de Stewart 6-DOF em malha fechada com controle PID auto-tuned de posição",
     },
     bannerImage: "/images/projects/engineer/siemens-stewart-banner.jpeg",
-    career: "engineer",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -1114,7 +1119,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetail> = {
       pt: "Plataforma UGV modular para coleta de dados em operações de campo agrícolas e industriais.",
     },
     bannerImage: "/images/projects/engineer/SPIRIT-BANNER.png",
-    career: "engineer",
+    career: "industry",
     sections: [
       {
         heading: { en: "The Challenge", pt: "O Desafio" },
@@ -1215,7 +1220,6 @@ export const NAV_LINKS = [
   { label: "nav.home" as const, href: "/" },
   { label: "nav.industry" as const, href: "/career/industry" },
   { label: "nav.automation" as const, href: "/career/automation-it" },
-  { label: "nav.engineer" as const, href: "/career/engineer" },
   { label: "nav.hobbies" as const, href: "/hobbies" },
 ];
 

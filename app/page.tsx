@@ -6,7 +6,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail, Factory, Cpu, ArrowRight, Workflow } from "lucide-react";
+import { Github, Linkedin, Mail, Factory, ArrowRight, Workflow } from "lucide-react";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 import Spotlight from "@/components/ui/Spotlight";
 import TextGenerateEffect from "@/components/ui/TextGenerateEffect";
@@ -97,8 +97,8 @@ export default function HomePage() {
           </h2>
         </FadeIn>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* Industry 4.0 card */}
+        <div className="grid gap-8 md:grid-cols-2">
+          {/* Industry 4.0 & Engineering card */}
           <FadeIn delay={0.1} className="h-full">
             <Link href="/career/industry" className="block h-full">
               <AnimatedCard className="h-full p-8">
@@ -116,7 +116,7 @@ export default function HomePage() {
             </Link>
           </FadeIn>
 
-          {/* IT Automation card */}
+          {/* SaaS & Automation card */}
           <FadeIn delay={0.2} className="h-full">
             <Link href="/career/automation-it" className="block h-full">
               <AnimatedCard className="h-full p-8">
@@ -127,24 +127,6 @@ export default function HomePage() {
                   <h3 className="text-xl font-bold text-zinc-50">{t("career.automation.title")}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.automation.desc")}</p>
                   <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-emerald-400">
-                    {t("career.viewMore")}
-                  </span>
-                </div>
-              </AnimatedCard>
-            </Link>
-          </FadeIn>
-
-          {/* Engineer card */}
-          <FadeIn delay={0.3} className="h-full">
-            <Link href="/career/engineer" className="block h-full">
-              <AnimatedCard className="h-full p-8">
-                <div className="flex h-full flex-col items-center text-center md:items-start md:text-left">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10">
-                    <Cpu size={28} className="text-purple-400" />
-                  </div>
-                  <h3 className="text-xl font-bold text-zinc-50">{t("career.engineer.title")}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-400">{t("career.engineer.desc")}</p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-purple-400">
                     {t("career.viewMore")}
                   </span>
                 </div>

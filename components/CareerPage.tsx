@@ -14,11 +14,11 @@ import AnimatedCard from "@/components/ui/AnimatedCard";
 import FadeIn from "@/components/ui/FadeIn";
 import SkillBadge from "@/components/ui/SkillBadge";
 import { useLocale } from "@/lib/locale-context";
-import { SITE_OWNER, EDUCATION, type Project, type Experience } from "@/lib/constants";
-import type { Locale, TranslationKey } from "@/lib/i18n";
+import { EDUCATION, type Project, type Experience } from "@/lib/constants";
+import type { TranslationKey } from "@/lib/i18n";
 
 interface CareerPageProps {
-  career: "industry" | "engineer" | "automation-it";
+  career: "industry" | "automation-it";
   accentColor: "blue" | "purple" | "green";
   titleKey: TranslationKey;
   subtitleKey: TranslationKey;
@@ -27,11 +27,13 @@ interface CareerPageProps {
   experience: Experience[];
   skills: string[];
   cvUrl: string;
+  cvLabelKey?: TranslationKey;
+  secondaryCvUrl?: string;
+  secondaryCvLabelKey?: TranslationKey;
   projectBasePath: string;
 }
 
 export default function CareerPage({
-  career,
   accentColor,
   titleKey,
   subtitleKey,
@@ -40,6 +42,9 @@ export default function CareerPage({
   experience,
   skills,
   cvUrl,
+  cvLabelKey,
+  secondaryCvUrl,
+  secondaryCvLabelKey,
   projectBasePath,
 }: CareerPageProps) {
   const { locale, t } = useLocale();
@@ -98,25 +103,46 @@ export default function CareerPage({
             {t(bioKey)}
           </motion.p>
 
-          {/* CTA */}
-          <motion.a
-            href={cvUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* CTAs */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}
-            className={`mt-8 inline-flex items-center gap-2 rounded-full bg-linear-to-r ${gradientFrom} ${gradientTo} px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:opacity-90 ${
-              accent === "blue"
-                ? "shadow-blue-500/20"
-                : accent === "purple"
-                  ? "shadow-purple-500/20"
-                  : "shadow-emerald-500/20"
-            }`}
+            className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
-            <Download size={16} />
-            {t("hero.downloadCV")}
-          </motion.a>
+            <a
+              href={cvUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`inline-flex items-center gap-2 rounded-full bg-linear-to-r ${gradientFrom} ${gradientTo} px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:opacity-90 ${
+                accent === "blue"
+                  ? "shadow-blue-500/20"
+                  : accent === "purple"
+                    ? "shadow-purple-500/20"
+                    : "shadow-emerald-500/20"
+              }`}
+            >
+              <Download size={16} />
+              {t(cvLabelKey ?? "hero.downloadCV")}
+            </a>
+            {secondaryCvUrl && (
+              <a
+                href={secondaryCvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 rounded-full border px-8 py-3.5 text-base font-semibold transition-all hover:scale-105 ${
+                  accent === "blue"
+                    ? "border-blue-500/40 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20"
+                    : accent === "purple"
+                      ? "border-purple-500/40 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20"
+                      : "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20"
+                }`}
+              >
+                <Download size={16} />
+                {t(secondaryCvLabelKey ?? "hero.downloadCV")}
+              </a>
+            )}
+          </motion.div>
 
           {/* Scroll indicator */}
           <motion.div
