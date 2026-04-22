@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[70879,["/_next/static/chunks/99018be496282e8c.js","/_next/static/chunks/8f4683ad7d690faa.js","/_next/static/chunks/04a614506de48d1c.js","/_next/static/chunks/72d84dfa2fe9857a.js"],"default"]
+3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"YDb-RbHHWesWGu_if4Kv5","rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"agro-drone","backHref":"/career/industry","accentColor":"blue"}],[["$","script","script-0",{"src":"/_next/static/chunks/04a614506de48d1c.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/72d84dfa2fe9857a.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
