@@ -30,6 +30,8 @@ interface CareerPageProps {
   cvLabelKey?: TranslationKey;
   secondaryCvUrl?: string;
   secondaryCvLabelKey?: TranslationKey;
+  tertiaryCvUrl?: string;
+  tertiaryCvLabelKey?: TranslationKey;
   projectBasePath: string;
 }
 
@@ -45,6 +47,8 @@ export default function CareerPage({
   cvLabelKey,
   secondaryCvUrl,
   secondaryCvLabelKey,
+  tertiaryCvUrl,
+  tertiaryCvLabelKey,
   projectBasePath,
 }: CareerPageProps) {
   const { locale, t } = useLocale();
@@ -140,6 +144,23 @@ export default function CareerPage({
               >
                 <Download size={16} />
                 {t(secondaryCvLabelKey ?? "hero.downloadCV")}
+              </a>
+            )}
+            {tertiaryCvUrl && (
+              <a
+                href={tertiaryCvUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`inline-flex items-center gap-2 rounded-full border px-8 py-3.5 text-base font-semibold transition-all hover:scale-105 ${
+                  accent === "blue"
+                    ? "border-blue-500/40 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20"
+                    : accent === "purple"
+                      ? "border-purple-500/40 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20"
+                      : "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20"
+                }`}
+              >
+                <Download size={16} />
+                {t(tertiaryCvLabelKey ?? "hero.downloadCV")}
               </a>
             )}
           </motion.div>

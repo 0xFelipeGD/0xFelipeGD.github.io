@@ -15,6 +15,7 @@ export const SITE_OWNER = {
   // CVs — one per career (Industry 4.0 & Engineering exposes two: main + Data Engineer specialization)
   cvIndustryEngineering: "/files/Engineer_Industry_4_0.pdf",
   cvDataEngineer: "/files/Data_Engineer.pdf",
+  cvRobotics: "/files/Robotics_Engineer.pdf",
   cvSaasAutomation: "/files/Automation_Engineer.pdf",
 };
 

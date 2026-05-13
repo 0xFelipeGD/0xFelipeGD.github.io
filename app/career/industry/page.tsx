@@ -26,6 +26,8 @@ export default function IndustryEngineeringPage() {
       cvLabelKey="hero.downloadCVMain"
       secondaryCvUrl={SITE_OWNER.cvDataEngineer}
       secondaryCvLabelKey="hero.downloadCVDataEngineer"
+      tertiaryCvUrl={SITE_OWNER.cvRobotics}
+      tertiaryCvLabelKey="hero.downloadCVRobotics"
       projectBasePath="/career/industry/projects"
     />
   );

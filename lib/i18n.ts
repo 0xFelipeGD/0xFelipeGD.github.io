@@ -8,7 +8,7 @@ export type Locale = "en" | "pt";
 const translations = {
   // ── Navbar ──────────────────────────────────────────────────────────────
   "nav.home": { en: "Home", pt: "Início" },
-  "nav.industry": { en: "Industry 4.0 & Engineering", pt: "Indústria 4.0 & Engenharia" },
+  "nav.industry": { en: "Engineering", pt: "Engenharia" },
   "nav.automation": { en: "SaaS & Automation", pt: "SaaS & Automação" },
   "nav.hobbies": { en: "Hobbies", pt: "Hobbies" },
   "nav.projects": { en: "Projects", pt: "Projetos" },
@@ -20,8 +20,9 @@ const translations = {
     pt: "Engenheiro de Controle e Automação, Desenvolvedor de SaaS & Automações e Arquiteto de Indústria 4.0 — conectando dispositivos de campo, IoT industrial e analytics com IA. Fundador de startup focada em veículos terrestres não tripulados (UGVs), entregando soluções autônomas para clientes industriais, agrícolas e logísticos. Desenvolver automações é minha paixão. Baseado em Portugal 🇵🇹🇪🇺",
   },
   "hero.downloadCV": { en: "Download CV", pt: "Baixar CV" },
-  "hero.downloadCVMain": { en: "Main CV", pt: "CV Principal" },
+  "hero.downloadCVMain": { en: "Industry 4.0 Engineer", pt: "Engenheiro Indústria 4.0" },
   "hero.downloadCVDataEngineer": { en: "Data Engineer CV", pt: "CV Data Engineer" },
+  "hero.downloadCVRobotics": { en: "Robotics Engineer", pt: "Engenheiro de Robótica" },
   "hero.explore": {
     en: "Explore my careers",
     pt: "Explore minhas carreiras",
