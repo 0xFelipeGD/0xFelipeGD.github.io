@@ -30,8 +30,8 @@ const translations = {
 
   // ── Career cards on main page ──────────────────────────────────────────
   "career.industry.title": {
-    en: "Industry 4.0 & Engineering",
-    pt: "Indústria 4.0 & Engenharia",
+    en: "Engineering",
+    pt: "Engenharia",
   },
   "career.industry.desc": {
     en: "Industrial IoT, edge-to-cloud architectures, PLC/SCADA, electrical panels, UGV/drone development and data engineering — with a Data Engineer specialization for time-series analytics on industrial data.",
@@ -49,8 +49,8 @@ const translations = {
 
   // ── Career pages ───────────────────────────────────────────────────────
   "industry.hero.title": {
-    en: "Industry 4.0 & Engineering",
-    pt: "Indústria 4.0 & Engenharia",
+    en: "Engineering",
+    pt: "Engenharia",
   },
   "industry.hero.subtitle": {
     en: "From industrial control cabinets to autonomous UGVs and edge-to-cloud IIoT",
