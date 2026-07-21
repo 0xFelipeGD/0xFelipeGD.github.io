@@ -19,10 +19,14 @@ const translations = {
     en: "Control & Automation Engineer, SaaS & Automation Developer and Industry 4.0 Architect — bridging field devices, industrial IoT and AI-driven analytics. Robotics Engineer with experience developing unmanned ground vehicles (UGVs) and delivering autonomous solutions to industrial, agricultural and logistics clients. Developing automations is my passion. Based in Portugal 🇵🇹🇪🇺",
     pt: "Engenheiro de Controle e Automação, Desenvolvedor de SaaS & Automações e Arquiteto de Indústria 4.0 — conectando dispositivos de campo, IoT industrial e analytics com IA. Engenheiro de Robótica com experiência no desenvolvimento de veículos terrestres não tripulados (UGVs) e na entrega de soluções autônomas para clientes industriais, agrícolas e logísticos. Desenvolver automações é minha paixão. Baseado em Portugal 🇵🇹🇪🇺",
   },
-  "hero.downloadCV": { en: "Download CV", pt: "Baixar CV" },
-  "hero.downloadCVMain": { en: "Industry 4.0 Engineer", pt: "Engenheiro Indústria 4.0" },
-  "hero.downloadCVDataEngineer": { en: "Data Engineer CV", pt: "CV Data Engineer" },
-  "hero.downloadCVRobotics": { en: "Robotics Engineer", pt: "Engenheiro de Robótica" },
+  "hero.contact": { en: "Contact me", pt: "Entre em contato" },
+  "contact.title": { en: "Let's talk", pt: "Vamos conversar" },
+  "contact.description": {
+    en: "For professional opportunities, projects or collaborations, please get in touch by email.",
+    pt: "Para oportunidades profissionais, projetos ou colaborações, entre em contato por email.",
+  },
+  "contact.sendEmail": { en: "Send email", pt: "Enviar email" },
+  "contact.close": { en: "Close", pt: "Fechar" },
   "hero.explore": {
     en: "Explore my careers",
     pt: "Explore minhas carreiras",

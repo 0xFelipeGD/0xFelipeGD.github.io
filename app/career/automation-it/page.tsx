@@ -4,12 +4,7 @@
 "use client";
 
 import CareerPage from "@/components/CareerPage";
-import {
-  SITE_OWNER,
-  PROJECTS_SAAS_AUTOMATION,
-  EXPERIENCE_SAAS_AUTOMATION,
-  SKILLS_SAAS_AUTOMATION,
-} from "@/lib/constants";
+import { PROJECTS_SAAS_AUTOMATION, EXPERIENCE_SAAS_AUTOMATION, SKILLS_SAAS_AUTOMATION } from "@/lib/constants";
 
 export default function SaasAutomationPage() {
   return (
@@ -22,7 +17,6 @@ export default function SaasAutomationPage() {
       projects={PROJECTS_SAAS_AUTOMATION}
       experience={EXPERIENCE_SAAS_AUTOMATION}
       skills={SKILLS_SAAS_AUTOMATION}
-      cvUrl={SITE_OWNER.cvSaasAutomation}
       projectBasePath="/career/automation-it/projects"
     />
   );

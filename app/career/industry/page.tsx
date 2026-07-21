@@ -5,7 +5,6 @@
 
 import CareerPage from "@/components/CareerPage";
 import {
-  SITE_OWNER,
   PROJECTS_INDUSTRY_ENGINEERING,
   EXPERIENCE_INDUSTRY_ENGINEERING,
   SKILLS_INDUSTRY_ENGINEERING,
@@ -22,12 +21,6 @@ export default function IndustryEngineeringPage() {
       projects={PROJECTS_INDUSTRY_ENGINEERING}
       experience={EXPERIENCE_INDUSTRY_ENGINEERING}
       skills={SKILLS_INDUSTRY_ENGINEERING}
-      cvUrl={SITE_OWNER.cvIndustryEngineering}
-      cvLabelKey="hero.downloadCVMain"
-      secondaryCvUrl={SITE_OWNER.cvDataEngineer}
-      secondaryCvLabelKey="hero.downloadCVDataEngineer"
-      tertiaryCvUrl={SITE_OWNER.cvRobotics}
-      tertiaryCvLabelKey="hero.downloadCVRobotics"
       projectBasePath="/career/industry/projects"
     />
   );

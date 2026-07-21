@@ -3,10 +3,11 @@
 // ============================================================================
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { Download, ArrowRight, ChevronDown } from "lucide-react";
+import { Mail, ArrowRight, ChevronDown } from "lucide-react";
 import AuroraBackground from "@/components/ui/AuroraBackground";
 import Spotlight from "@/components/ui/Spotlight";
 import TextGenerateEffect from "@/components/ui/TextGenerateEffect";
@@ -14,7 +15,7 @@ import AnimatedCard from "@/components/ui/AnimatedCard";
 import FadeIn from "@/components/ui/FadeIn";
 import SkillBadge from "@/components/ui/SkillBadge";
 import { useLocale } from "@/lib/locale-context";
-import { EDUCATION, type Project, type Experience } from "@/lib/constants";
+import { EDUCATION, SITE_OWNER, type Project, type Experience } from "@/lib/constants";
 import type { TranslationKey } from "@/lib/i18n";
 
 interface CareerPageProps {
@@ -26,12 +27,6 @@ interface CareerPageProps {
   projects: Project[];
   experience: Experience[];
   skills: string[];
-  cvUrl: string;
-  cvLabelKey?: TranslationKey;
-  secondaryCvUrl?: string;
-  secondaryCvLabelKey?: TranslationKey;
-  tertiaryCvUrl?: string;
-  tertiaryCvLabelKey?: TranslationKey;
   projectBasePath: string;
 }
 
@@ -43,18 +38,14 @@ export default function CareerPage({
   projects,
   experience,
   skills,
-  cvUrl,
-  cvLabelKey,
-  secondaryCvUrl,
-  secondaryCvLabelKey,
-  tertiaryCvUrl,
-  tertiaryCvLabelKey,
   projectBasePath,
 }: CareerPageProps) {
   const { locale, t } = useLocale();
+  const contactDialogRef = useRef<HTMLDialogElement>(null);
   const accent = accentColor;
   const spotlightFill = accent === "blue" ? "#3b82f6" : accent === "purple" ? "#8b5cf6" : "#10b981";
-  const gradientFrom = accent === "blue" ? "from-blue-600" : accent === "purple" ? "from-purple-600" : "from-emerald-600";
+  const gradientFrom =
+    accent === "blue" ? "from-blue-600" : accent === "purple" ? "from-purple-600" : "from-emerald-600";
   const gradientTo = accent === "blue" ? "to-cyan-500" : accent === "purple" ? "to-pink-500" : "to-teal-400";
   const accentText = accent === "blue" ? "text-blue-400" : accent === "purple" ? "text-purple-400" : "text-emerald-400";
   const accentBorder =
@@ -114,10 +105,11 @@ export default function CareerPage({
             transition={{ delay: 0.9, duration: 0.5 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
-            <a
-              href={cvUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              aria-controls="contact-dialog"
+              onClick={() => contactDialogRef.current?.showModal()}
               className={`inline-flex items-center gap-2 rounded-full bg-linear-to-r ${gradientFrom} ${gradientTo} px-8 py-3.5 text-base font-semibold text-white shadow-lg transition-all hover:scale-105 hover:opacity-90 ${
                 accent === "blue"
                   ? "shadow-blue-500/20"
@@ -126,43 +118,66 @@ export default function CareerPage({
                     : "shadow-emerald-500/20"
               }`}
             >
-              <Download size={16} />
-              {t(cvLabelKey ?? "hero.downloadCV")}
-            </a>
-            {secondaryCvUrl && (
-              <a
-                href={secondaryCvUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 rounded-full border px-8 py-3.5 text-base font-semibold transition-all hover:scale-105 ${
-                  accent === "blue"
-                    ? "border-blue-500/40 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20"
-                    : accent === "purple"
-                      ? "border-purple-500/40 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20"
-                      : "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20"
-                }`}
-              >
-                <Download size={16} />
-                {t(secondaryCvLabelKey ?? "hero.downloadCV")}
-              </a>
-            )}
-            {tertiaryCvUrl && (
-              <a
-                href={tertiaryCvUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 rounded-full border px-8 py-3.5 text-base font-semibold transition-all hover:scale-105 ${
-                  accent === "blue"
-                    ? "border-blue-500/40 bg-blue-500/10 text-blue-300 hover:bg-blue-500/20"
-                    : accent === "purple"
-                      ? "border-purple-500/40 bg-purple-500/10 text-purple-300 hover:bg-purple-500/20"
-                      : "border-emerald-500/40 bg-emerald-500/10 text-emerald-300 hover:bg-emerald-500/20"
-                }`}
-              >
-                <Download size={16} />
-                {t(tertiaryCvLabelKey ?? "hero.downloadCV")}
-              </a>
-            )}
+              <Mail size={17} aria-hidden="true" />
+              {t("hero.contact")}
+            </button>
+
+            <dialog
+              id="contact-dialog"
+              ref={contactDialogRef}
+              aria-labelledby="contact-dialog-title"
+              aria-describedby="contact-dialog-description"
+              onClick={(event) => {
+                if (event.target === event.currentTarget) {
+                  event.currentTarget.close();
+                }
+              }}
+              className="m-auto w-[calc(100%_-_2rem)] max-w-md rounded-2xl border border-zinc-700 bg-zinc-950 p-0 text-left text-zinc-200 shadow-2xl backdrop:bg-zinc-950/80"
+            >
+              <div className="p-6 sm:p-8">
+                <div
+                  className={`mb-5 flex h-11 w-11 items-center justify-center rounded-full ${
+                    accent === "blue"
+                      ? "bg-blue-500/12 text-blue-400"
+                      : accent === "purple"
+                        ? "bg-purple-500/12 text-purple-400"
+                        : "bg-emerald-500/12 text-emerald-400"
+                  }`}
+                >
+                  <Mail size={20} aria-hidden="true" />
+                </div>
+                <h2 id="contact-dialog-title" className="text-2xl font-bold tracking-tight text-zinc-50">
+                  {t("contact.title")}
+                </h2>
+                <p id="contact-dialog-description" className="mt-3 text-sm leading-relaxed text-zinc-400">
+                  {t("contact.description")}
+                </p>
+                <a
+                  href={`mailto:${SITE_OWNER.email}`}
+                  className={`mt-4 inline-block text-sm font-semibold underline decoration-zinc-700 underline-offset-4 transition-colors ${accentText}`}
+                >
+                  {SITE_OWNER.email}
+                </a>
+
+                <div className="mt-7 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+                  <form method="dialog">
+                    <button
+                      type="submit"
+                      className="w-full rounded-full border border-zinc-700 px-5 py-2.5 text-sm font-semibold text-zinc-300 transition-colors hover:border-zinc-600 hover:bg-zinc-900 sm:w-auto"
+                    >
+                      {t("contact.close")}
+                    </button>
+                  </form>
+                  <a
+                    href={`mailto:${SITE_OWNER.email}`}
+                    className={`inline-flex items-center justify-center gap-2 rounded-full bg-linear-to-r ${gradientFrom} ${gradientTo} px-5 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90`}
+                  >
+                    <Mail size={16} aria-hidden="true" />
+                    {t("contact.sendEmail")}
+                  </a>
+                </div>
+              </div>
+            </dialog>
           </motion.div>
 
           {/* Scroll indicator */}
