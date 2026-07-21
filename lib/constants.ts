@@ -44,10 +44,10 @@ export const EXPERIENCE_INDUSTRY_ENGINEERING: Experience[] = [
   {
     company: "Movewer Technologies",
     role: {
-      en: "Founder & Engineer — Robotics, Industry 4.0 & Edge AI",
-      pt: "Fundador & Engenheiro — Robótica, Indústria 4.0 & Edge AI",
+      en: "Robotics Engineer",
+      pt: "Engenheiro de Robótica",
     },
-    period: "Jun 2025 – Present",
+    period: "Jun 2025 – Jul 2026",
     location: "Lisbon, Portugal",
     bullets: {
       en: [
@@ -55,14 +55,14 @@ export const EXPERIENCE_INDUSTRY_ENGINEERING: Experience[] = [
         "Shipped MLAI — an edge AI visual-inspection system on Raspberry Pi 4 running PaDiM anomaly detection (Anomalib) and TensorFlow/TFLite for dual-use industrial QC and agricultural grading; SCADA-style Next.js dashboard, FastAPI + WebSocket backend, camera calibration pipeline and SQLite history, with <500 ms end-to-end latency, fully offline.",
         "Engineered multiple UGV platforms end-to-end up to 1,200 kg payload — power electronics, by-wire actuation (steer/brake), automotive ECU integration, CAN networking, multi-sensor integration (LiDAR / GNSS / cameras) and Starlink/5G connectivity.",
         "Delivered production-grade real-time teleoperation over the public internet — 50 Hz HOTAS input, 720p WebRTC video at 30 fps via TURN relay, MQTT-over-TLS in a ROS2-inspired pub/sub architecture, with a hardware fail-safe watchdog enforcing sub-second motor lockout on communication loss; 74-test automated suite across three repositories.",
-        "Founded the practice and operated as solo lead engineer — owning commercial scoping, technical architecture, supplier selection and the full delivery lifecycle across UGV, IIoT and edge AI engagements.",
+        "Worked as a robotics engineer across UGV, IIoT and edge AI engagements — owning technical architecture, supplier selection and the full engineering delivery lifecycle.",
       ],
       pt: [
         "Arquitetou e implantou uma plataforma de monitoramento IIoT de nível produção (MQTT/TLS → Telegraf → InfluxDB → Grafana → analytics em Python) em seis serviços Docker com segurança em seis camadas — TLS 1.2+, backups criptografados AES-256, firewall UFW, containers não-root, credenciais geradas via OpenSSL e dashboards provisionados. GDPR-compliant por design, com camada de IA gerando insights em linguagem natural sobre streams brutos de sensores via serviço REST FastAPI.",
         "Entregou o MLAI — sistema de inspeção visual com IA em Raspberry Pi 4 com detecção de anomalias PaDiM (Anomalib) e TensorFlow/TFLite para QC industrial e classificação agrícola; dashboard SCADA-style em Next.js, backend FastAPI + WebSocket, pipeline de calibração de câmera e histórico SQLite, com latência ponta a ponta <500 ms, totalmente offline.",
         "Engenheirou múltiplas plataformas UGV ponta a ponta com até 1.200 kg de carga útil — eletrônica de potência, atuação by-wire (direção/freio), integração de ECUs automotivas, rede CAN, integração multissensorial (LiDAR / GNSS / câmeras) e conectividade Starlink/5G.",
         "Entregou teleoperação em tempo real pela internet pública em nível de produção — entrada HOTAS a 50 Hz, vídeo WebRTC 720p a 30 fps via TURN, MQTT sobre TLS em arquitetura pub/sub inspirada em ROS2, com watchdog fail-safe por hardware aplicando lockout de motor em sub-segundos na perda de comunicação; suíte automatizada de 74 testes em três repositórios.",
-        "Fundou a prática e atuou como engenheiro líder solo — responsável por escopo comercial, arquitetura técnica, seleção de fornecedores e ciclo completo de entrega em projetos de UGV, IIoT e edge AI.",
+        "Atuou como engenheiro de robótica em projetos de UGV, IIoT e edge AI — responsável pela arquitetura técnica, seleção de fornecedores e ciclo completo de entrega de engenharia.",
       ],
     },
   },
@@ -122,10 +122,10 @@ export const EXPERIENCE_SAAS_AUTOMATION: Experience[] = [
   {
     company: "Movewer Technologies",
     role: {
-      en: "Founder & Lead Automation Engineer",
-      pt: "Fundador & Engenheiro Líder de Automação",
+      en: "Robotics Engineer",
+      pt: "Engenheiro de Robótica",
     },
-    period: "Jun 2025 – Present",
+    period: "Jun 2025 – Jul 2026",
     location: "Lisbon, Portugal",
     bullets: {
       en: [
