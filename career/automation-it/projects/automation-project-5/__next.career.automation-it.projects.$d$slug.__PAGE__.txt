@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[70879,["/_next/static/chunks/487d6df26671a0e9.js","/_next/static/chunks/fdffaf61f9d514b6.js","/_next/static/chunks/04a614506de48d1c.js","/_next/static/chunks/72d84dfa2fe9857a.js"],"default"]
+2:I[70879,["/_next/static/chunks/9df13b651f42a9ac.js","/_next/static/chunks/96ae0612116eb0be.js","/_next/static/chunks/04a614506de48d1c.js","/_next/static/chunks/72d84dfa2fe9857a.js"],"default"]
 3:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"buildId":"ZVPrYd3gXbBFMOavGg2yk","rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"automation-project-5","backHref":"/career/automation-it","accentColor":"green"}],[["$","script","script-0",{"src":"/_next/static/chunks/04a614506de48d1c.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/72d84dfa2fe9857a.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+0:{"buildId":"HLbtTbKD6gI5DHf6GfO96","rsc":["$","$1","c",{"children":[["$","$L2",null,{"slug":"automation-project-5","backHref":"/career/automation-it","accentColor":"green"}],[["$","script","script-0",{"src":"/_next/static/chunks/04a614506de48d1c.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/72d84dfa2fe9857a.js","async":true}]],["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
 5:null
